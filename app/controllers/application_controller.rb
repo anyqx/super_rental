@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-
+    skip_before_action :verify_authenticity_token
     #CRLLL
     helper_method :current_user, :logged_in?
 
@@ -7,8 +7,10 @@ class ApplicationController < ActionController::Base
         @current_user ||= User.find_by(session_token: session[:session_token])
     end
 
-    def require_login ## does not match
-        redirect_to new_session_url unless logged_in?
+    def require_login
+        unless current_user
+            render json: { base: ['invalid credentials'] }, status: 401
+        end
     end
 
     def logged_in?

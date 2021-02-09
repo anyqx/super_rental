@@ -8,6 +8,7 @@ class Signup extends Component {
             email: '',
             password: '',
         }
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     handleInput(type){

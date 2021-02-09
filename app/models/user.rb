@@ -6,8 +6,7 @@ class User < ApplicationRecord
     attr_reader :password
 
     after_initialize :ensure_session_token
-
-
+    
     #SPIRE
     def self.find_by_credentials(username, pw)
         user = User.find_by_credentials(username: username)
