@@ -8,8 +8,8 @@ class User < ApplicationRecord
     after_initialize :ensure_session_token
 
     #SPIRE
-    def self.find_by_credentials(username, pw)
-        user = User.find_by_credentials(username: username)
+    def self.find_by_credentials(email, pw)
+        user = User.find_by_credentials(email: email)
         if user && user.is_password?(pw)
             user
         else
@@ -18,6 +18,7 @@ class User < ApplicationRecord
     end
 
     def password=(pw)
+        @password = pw
         self.password_digest = BCrypt::Password.create(pw)
     end
 
