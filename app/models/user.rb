@@ -1,12 +1,12 @@
 class User < ApplicationRecord
-    validates :email. :password_digest, :session_token, presence: true
+    validates :email, :password_digest, :session_token, presence: true
     validates :email, uniqueness: true
     validates :password, length: {minimum: 8}, allow_nil: true
 
     attr_reader :password
 
     after_initialize :ensure_session_token
-    
+
     #SPIRE
     def self.find_by_credentials(username, pw)
         user = User.find_by_credentials(username: username)
@@ -32,6 +32,6 @@ class User < ApplicationRecord
     end
 
     def ensure_session_token
-        self.session_token || SecureRandom::urlsafe_base64
+        self.session_token ||= SecureRandom::urlsafe_base64
     end
 end
