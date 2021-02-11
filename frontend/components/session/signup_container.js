@@ -1,11 +1,13 @@
 import { connect } from 'react-redux';
-import { createNewUser } from '../../actions/session';
-import Signup from './signup'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { signup } from '../../util/session';
+import Signup from './signup';
 
 
 // mapDispatchToProps
 const mDTP = dispatch => ({
-    createNewUser: formUser => dispatch(createNewUser(formUser))
+    createNewUser: user => dispatch(signup(user))
 })
 
 export default connect(null, mDTP)(Signup);
