@@ -1,6 +1,6 @@
 import React from 'react';
 import SignupContainer from './session/signup_container';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import GreetingContainer from './greeting/greeting_container';
 
 //functional component
@@ -13,8 +13,8 @@ const App = () => (
             <GreetingContainer />
         </header>
         <Switch>
-
-            <Route path="/signup" component={SignupContainer} />
+            <Route path='/login' component={LogInContainer} />
+            <Route path='/signup' component={SignUpContainer} />
         </Switch>
     </div>
 )
