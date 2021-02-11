@@ -2,6 +2,7 @@ import React from 'react';
 import SignupContainer from './session/signup_container';
 import { Route, Switch, Link } from 'react-router-dom';
 import GreetingContainer from './greeting/greeting_container';
+import { AuthRoute } from '../util/route_util';
 
 //functional component
 const App = () => (
@@ -13,8 +14,8 @@ const App = () => (
             <GreetingContainer />
         </header>
         <Switch>
-            <Route path='/login' component={LogInContainer} />
-            <Route path='/signup' component={SignUpContainer} />
+            <AuthRoute path='/login' component={LogInContainer} />
+            <AuthRoute path='/signup' component={SignupContainer} />
         </Switch>
     </div>
 )
