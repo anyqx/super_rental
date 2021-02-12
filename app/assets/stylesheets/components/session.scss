@@ -1,0 +1,60 @@
+.login-form-container{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   font-family: 'Fira Sans', sans-serif;
+   background: white;
+   min-height: 300px;
+   width:425px;
+   padding: 35px 10px;
+   border: radius 2px;
+
+ }
+ .form-container{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+ }
+
+ .form-container .login-form{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   margin-top: 15px;
+ }
+
+ .login-form-container .modal-title{
+   font-family: 'Hind Siliguri', sans-serif;
+   margin-bottom: 30px;
+   margin-bottom: 2px;
+   font-size: 40px;
+   text-align: center;
+ }
+
+ .login-form-container .login-input {
+   display: block;
+   margin-bottom: 4px;
+   height: 35px;
+   border: 2px solid rgba(223, 218, 218, 0.973);
+   border-radius: 10px;
+   padding-left: 12px;
+   font-style: inherit;
+   width:100%;
+  
+ }
+
+
+ .session-submit {
+   text-transform: capitalize;
+   background-color: orange;
+   color:white;
+   font-weight:bold;
+   border-radius: 20px;
+   border-width: 0;
+   width: 100%;
+   box-sizing: border-box;
+   height:35px;
+   margin-top: 15px;
+ }

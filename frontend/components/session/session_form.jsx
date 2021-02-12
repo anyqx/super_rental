@@ -7,7 +7,9 @@ class SessionForm extends React.Component {
             email: '',
             password: ''
         }
-        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
+
     }
 
     update(field) {
@@ -22,29 +24,29 @@ class SessionForm extends React.Component {
         this.props.processForm(user);
     }
 
-    renderErrors(){
+    renderErrors() { // need to fix
         return (
             <ul>
-                {this.props.errors.map((error,i) => (
-                    <li key={`error-${i}`}>
+                {/* {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`} className="session-errors">
                         {error}
                     </li>
-                ))}
+                ))} */}
             </ul>
-        )
+        );
     }
 
     render() {
         return (
-            <div className="login-container">
+            <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-box">
                     Welcome to Roofstock!
           <br />
-                Please {this.props.formType} or {this.props.navLink}
+                Please {this.props.formType}
                     {this.renderErrors()}
                     <div className="login-form">
                         <br />
-                        <label>email:
+                        <label>Email:
                             <input type="text" value={this.state.email} onChange={this.update('email')} className="login-input"/>
                         </label>
                         <br />
@@ -58,6 +60,8 @@ class SessionForm extends React.Component {
         )
     }
 }
+
+
 
 export default SessionForm;
 

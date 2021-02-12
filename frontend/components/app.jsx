@@ -4,14 +4,13 @@ import LogInContainer from './session/login_container'
 import { Route, Switch, Link } from 'react-router-dom';
 import GreetingContainer from './greeting/greeting_container';
 import { AuthRoute } from '../util/route_util';
+import NavBar from './header/nav_bar';
 
 //functional component
 const App = () => (
     <div>
         <header>
-            <Link to='/'>
-                <h1>RoofStock</h1>
-            </Link>
+            <NavBar />
             <GreetingContainer />
         </header>
         <Switch>
