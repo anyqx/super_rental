@@ -1,15 +1,23 @@
 .login-form-container{
    display: flex;
    align-items: center;
-   flex-direction: column;
    justify-content: center;
-   font-family: 'Fira Sans', sans-serif;
+   font-family: $main-font-family;
    background: white;
-   min-height: 300px;
    width:425px;
    padding: 35px 10px;
    border: radius 2px;
+ }
 
+ ul {
+     column-count: 3;
+     column-gap :10px;
+ }
+ li {
+    display: flex;
+    font-family: $main-font-family;
+    font-size: 16px;
+    justify-content: space-between;
  }
  .form-container{
     display: flex;
@@ -25,11 +33,11 @@
    margin-top: 15px;
  }
 
- .login-form-container .modal-title{
-   font-family: 'Hind Siliguri', sans-serif;
+ .login-form-container{
+   font-family: $main-font-family;
    margin-bottom: 30px;
    margin-bottom: 2px;
-   font-size: 40px;
+   font-size: 16px;
    text-align: center;
  }
 

@@ -1,0 +1,26 @@
+.header-nav-bar {
+    display:flex;
+    justify-content: space-between;
+    font-family: $main-font-family;
+    font-size: 18px;
+    background-color: white;
+    color:#515151;
+    height: 80px;
+    margin: 10px;
+    align-items: center;
+
+}
+
+.header-nav-bar-right {
+    display: flex;
+}
+.sign-up-link {
+    display: flex;
+    color: #ff7b0f;
+    font-family: $main-font-family;
+    padding: 10px, 20px;
+}
+
+.sign-up-link:hover{
+    cursor: pointer;
+}

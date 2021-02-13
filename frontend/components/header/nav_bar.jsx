@@ -7,17 +7,17 @@ class NavBar extends React.Component {
     }
     render() {
         return (
-            <div id='header-nav-bar'>
-                <span id='header-nav-bar-left'>
+            <div class='header-nav-bar'>
+                <span class='header-nav-bar-left'>
                     <Link to='/' id='logo-link'>SuperRental</Link>
 
 
                 </span>
-                <span id='header-nav-bar-right'>
-                    <span id='login-link'>
+                <span class='header-nav-bar-right'>
+                    <span class='login-link'>
                         <Link to='/login'>LOG IN</Link>
                     </span>
-                    <span id='sign-up-link'>
+                    <span class='sign-up-link'>
                         <Link to='/signup'>SIGN UP</Link>
                     </span>
                 </span>
