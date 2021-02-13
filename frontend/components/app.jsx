@@ -5,6 +5,7 @@ import { Route, Switch, Link } from 'react-router-dom';
 import GreetingContainer from './greeting/greeting_container';
 import { AuthRoute } from '../util/route_util';
 import NavBar from './header/nav_bar';
+import PageNotFound from './page_not_found';
 
 //functional component
 const App = () => (
@@ -16,6 +17,7 @@ const App = () => (
         <Switch>
             <AuthRoute path='/login' component={LogInContainer} />
             <AuthRoute path='/signup' component={SignupContainer} />
+            <Route path='*' component={PageNotFound} />
         </Switch>
     </div>
 )
