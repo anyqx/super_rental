@@ -37,30 +37,49 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        return (
-            <>
-            <div className="login-form-container">
-                    Welcome to Roofstock </div>
-            <div>
-                    <ul classname='intro-msg'>
-                        <li>Buy and sell tenant-occupied rental houses outside your local market</li>
-                        <li>Properties on our marketplace are certified so you can invest with confidence</li>
-                        <li>Select a trusted local property manager and own without the hassle</li>
-                    </ul>
-                <form onSubmit={this.handleSubmit} className="welcome-msg">
-                Please {this.props.formType}
-                    {this.renderErrors()}
-                    <div className="login-form">
-                        <input type="text" value={this.state.email} onChange={this.update('email')} className="login-input" placeholder='Your Email'/>
-                        <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" placeholder='Password'/>
-                        <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" placeholder='Confirm Password' />
-
-                        <input className="session-submit" type="submit" value={this.props.formType} />
+        const {formType} = this.props;
+        if (formType === 'signup') {
+            return (
+                <>
+                <div className='session-form-container'>
+                    <div className='signup-form-container'>
+                        <h1>Welcome to Roofstock</h1>
                     </div>
-                </form>
-            </div>
-        </>
-        )
+                    <div>
+                        <ul className='intro-msg'>
+                            <li>Buy and sell tenant-occupied rental houses outside your local market</li>
+                            <li>Properties on our marketplace are certified so you can invest with confidence</li>
+                            <li>Select a trusted local property manager and own without the hassle</li>
+                        </ul>
+                    </div>
+                    <form onSubmit={this.handleSubmit} className="welcome-msg">
+                        <h2>SIGN UP</h2>
+                        {this.renderErrors()}
+                        <div className="signup-form">
+                            <input type="text" value={this.state.email} onChange={this.update('email')} className="login-input" placeholder='Your Email'/>
+                            <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" placeholder='Password'/>
+                            <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" placeholder='Confirm Password' />
+                            <input className="session-submit" type="submit" value='signup' />
+                        </div>
+                    </form>
+                </div>
+            </>
+            )
+        } else {
+            return(
+                <div className='login-form-container'>
+                    <form onSubmit={this.handleSubmit}>
+                        <h2>LOG IN</h2>
+                        {this.renderErrors()}
+                        <div className="login-form">
+                            <input type="text" value={this.state.email} onChange={this.update('email')} className="login-input" placeholder='Your Email' />
+                            <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" placeholder='Password' />
+                            <input className="session-submit" type="submit" value='login' />
+                        </div>
+                    </form>
+                </div>
+            )
+        }
     }
 }
 

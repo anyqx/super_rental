@@ -7,15 +7,15 @@ class NavBar extends React.Component {
     }
     render() {
         return (
-            <div class='header-nav-bar'>
-                <span class='header-nav-bar-left'>
+            <div className='header-nav-bar'>
+                <span className='header-nav-bar-left'>
                     <Link to='/' id='logo-link'>SuperRental</Link>
                 </span>
-                <span class='header-nav-bar-right'>
-                    <span class='login-link'>
+                <span className='header-nav-bar-right'>
+                    <span className='login-link'>
                         <Link to='/login'>LOG IN</Link>
                     </span>
-                    <span class='sign-up-link'>
+                    <span className='sign-up-link'>
                         <Link to='/signup'>SIGN UP</Link>
                     </span>
                 </span>
