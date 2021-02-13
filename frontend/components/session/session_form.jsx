@@ -38,8 +38,10 @@ class SessionForm extends React.Component {
 
     render() {
         return (
+            <>
             <div className="login-form-container">
-                    Welcome to Roofstock
+                    Welcome to Roofstock </div>
+            <div>
                     <ul classname='intro-msg'>
                         <li>Buy and sell tenant-occupied rental houses outside your local market</li>
                         <li>Properties on our marketplace are certified so you can invest with confidence</li>
@@ -57,6 +59,7 @@ class SessionForm extends React.Component {
                     </div>
                 </form>
             </div>
+        </>
         )
     }
 }

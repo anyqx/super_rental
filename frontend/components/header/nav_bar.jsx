@@ -10,8 +10,6 @@ class NavBar extends React.Component {
             <div class='header-nav-bar'>
                 <span class='header-nav-bar-left'>
                     <Link to='/' id='logo-link'>SuperRental</Link>
-
-
                 </span>
                 <span class='header-nav-bar-right'>
                     <span class='login-link'>
