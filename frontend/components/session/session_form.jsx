@@ -45,9 +45,9 @@ class SessionForm extends React.Component {
                     <div className='welcome'>Welcome to Roofstock</div>
                     <div>
                         <ul className='intro'>
-                            <li>Buy and sell tenant-occupied rental houses outside your local market</li>
-                            <li>Properties on our marketplace are certified so you can invest with confidence</li>
-                            <li>Select a trusted local property manager and own without the hassle</li>
+                            <li><img id='intro-img' src={window.signup1URL} />Buy and sell tenant-occupied rental houses outside your local market</li>
+                            <li><img id='intro-img' src={window.signup2URL} />Properties on our marketplace are certified so you can invest with confidence</li>
+                            <li><img id='intro-img' src={window.signup3URL} />Select a trusted local property manager and own without the hassle</li>
                         </ul>
                     </div>
                     <form onSubmit={this.handleSubmit} className="welcome-msg">

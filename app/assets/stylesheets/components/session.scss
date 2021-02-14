@@ -33,6 +33,11 @@
     justify-content: space-between;
  }
  
+ #intro-img {
+    display: flex;
+    height: 80px;
+    width: 100px;
+ }
 
 .signup-submit {
    text-transform: uppercase;
@@ -70,3 +75,5 @@
    height: 44px;
    width: 320px;
  }
+
+
