@@ -1,6 +1,7 @@
-.login-form-container{
+.signup-form-container{
    display: flex;
    align-items: center;
+   flex-direction: column;
    justify-content: center;
    font-family: $main-font-family;
    background: white;
@@ -9,60 +10,63 @@
    border: radius 2px;
  }
 
- ul {
+.welcome {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: $main-font-family;
+   background: white;
+   color: $main-font-color;
+   margin: 48px, 0px, 16px;
+}
+
+.intro {
      column-count: 3;
      column-gap :10px;
  }
- li {
+
+.intro > li {
     display: flex;
     font-family: $main-font-family;
+    color: $main-font-color;
     font-size: 16px;
     justify-content: space-between;
  }
- .form-container{
-    display: flex;
-    flex-direction: column;
-    width: 250px;
- }
+ 
 
- .form-container .login-form{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   width: 100%;
-   margin-top: 15px;
- }
-
- .login-form-container{
-   font-family: $main-font-family;
-   margin-bottom: 30px;
-   margin-bottom: 2px;
-   font-size: 16px;
-   text-align: center;
- }
-
- .login-form-container .login-input {
-   display: block;
-   margin-bottom: 4px;
-   height: 35px;
-   border: 2px solid rgba(223, 218, 218, 0.973);
-   border-radius: 10px;
-   padding-left: 12px;
-   font-style: inherit;
-   width:100%;
-  
- }
-
-
- .session-submit {
-   text-transform: capitalize;
-   background-color: orange;
+.signup-submit {
+   text-transform: uppercase;
+   background-color: #6259c3;
    color:white;
    font-weight:bold;
-   border-radius: 20px;
-   border-width: 0;
-   width: 100%;
+   padding: 10px 20px;
+   font-size: 16px;
    box-sizing: border-box;
-   height:35px;
-   margin-top: 15px;
+   height: 44px;
+   width: 320px;
+}
+
+
+.login-form-container{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   font-family: $main-font-family;
+   background: white;
+   width:425px;
+   padding: 35px 10px;
+   border: radius 2px;
+ }
+
+.login-submit {
+   text-transform: uppercase;
+   background-color: #6259c3;
+   color:white;
+   font-weight:bold;
+   padding: 10px 20px;
+   font-size: 16px;
+   box-sizing: border-box;
+   height: 44px;
+   width: 320px;
  }

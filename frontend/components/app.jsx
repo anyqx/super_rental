@@ -12,7 +12,7 @@ const App = () => (
     <div>
         <header>
             <NavBar />
-            <GreetingContainer />
+            {/* <GreetingContainer /> */}
         </header>
         <Switch>
             <AuthRoute path='/login' component={LogInContainer} />

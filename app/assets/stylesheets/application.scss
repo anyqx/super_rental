@@ -21,8 +21,8 @@
  //core
  //base
  @import 'base/fonts.scss';
+ @import 'base/colors.scss';
 
  // Components
- @import 'components/session.scss';
- @import 'components/header_nav_bar.scss';
+ @import 'components/*';
 
