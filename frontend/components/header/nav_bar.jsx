@@ -9,6 +9,7 @@ class NavBar extends React.Component {
         return (
             <div className='header-nav-bar'>
                 <span className='header-nav-bar-left'>
+                    <img id='logo-img' src={window.logoURL} />
                     <Link to='/' id='logo-link'>SuperRental</Link>
                 </span>
                 <span className='header-nav-bar-right'>
