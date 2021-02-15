@@ -9,21 +9,35 @@ class NavBar extends React.Component {
 
 
     render() {
+        
         return (
-            <div className='header-nav-bar'>
-                <span className='header-nav-bar-left'>
+            
+            <header className='main-nav-container'>
+                <div className='main-nav'>
+                <span className='left-nav'>
                     <img id='logo-img' src={window.logoURL} />
                     <span><Link to='/' id='logo-link'>SuperRental</Link></span>
                 </span>
-                <span className='header-nav-bar-right'>
-                    <span className='login-link'>
-                        <Link to='/login'>LOG IN</Link>
+                {if this.props.logged_in?} (
+                    <span className='right-nav'>
+                        <span className='login-link'>
+                            <Link to='/login'>LOG IN</Link>
+                        </span>
+                        <span className='sign-up-link'>
+                            <Link to='/signup'>SIGN UP</Link>
+                        </span>
                     </span>
-                    <span className='sign-up-link'>
-                        <Link to='/signup'>SIGN UP</Link>
-                    </span>
-                </span>
-            </div>
+                ) : (
+                    <div className="right-nav">
+                        <button onClick={this.props.logout}>LOG OUT</button>
+                        <span>{this.props.currentUser}</span>
+                    </div>
+                )}
+
+                
+      
+                </div>
+            </header>
 
         )
     }

@@ -2,10 +2,9 @@
     font-family: $main-font-family;
 }
 
-.header-nav-bar {
+.main-nav {
     display:flex;
     justify-content: space-between;
-    font-size: 18px;
     background-color: white;
     color:#515151;
     height: 80px;
@@ -13,18 +12,14 @@
     align-items: center;
 }
 
-img{
+.left-nav, .right-nav {
+    display: flex;
+    align-items: center;
+}
+
+.left-nav > img{
     display: flex;
     height: 35px;
-}
-
-.header-nav-bar-left {
-    display: flex;
-}
-
-.header-nav-bar-right {
-    display: flex;
-    text-decoration: none;
 }
 
 .sign-up-link {
@@ -43,6 +38,7 @@ img{
 
 .sign-up-link:hover{
     cursor: pointer;
+    background-color: gray;
 }
 
 .login-link {
@@ -56,6 +52,7 @@ img{
     line-height: 3;
 }
 
-.login-link > Link {
-    color: orange;
+.login-link:hover{
+    cursor: pointer;
+    background-color: gray;
 }
