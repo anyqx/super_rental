@@ -22,7 +22,7 @@
     height: 35px;
 }
 
-.sign-up-link {
+.link-box {
     display: flex;
     color: #ff7b04;
     width: 96px;
@@ -36,12 +36,12 @@
     line-height: 3;
 }
 
-.sign-up-link:hover{
+.link-box:hover{
     cursor: pointer;
     background-color: gray;
 }
 
-.login-link {
+.link-box {
     display: flex;
     justify-content: center;
     margin: 0px 10px 0px;
@@ -52,7 +52,17 @@
     line-height: 3;
 }
 
-.login-link:hover{
+.link-box:hover{
+    cursor: pointer;
+    background-color: gray;
+}
+
+.logout-button {
+    display: flex;
+    color: #ff7b04;
+}
+
+.logout-button:hover {
     cursor: pointer;
     background-color: gray;
 }

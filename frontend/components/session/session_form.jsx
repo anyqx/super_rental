@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
+        this.demoLogIn = this.demoLogIn.bind(this)
 
     }
 
@@ -28,23 +29,24 @@ class SessionForm extends React.Component {
     renderErrors() { // need to fix
         return (
             <ul>
-                {/* {this.props.errors.map((error, i) => (
+                {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`} className="session-errors">
                         {error}
                     </li>
-                ))} */}
+                ))}
             </ul>
         )
     }
 
     demoLogIn(e) {
         e.preventDefault();
+        e.stopPropagation();
         const demoUser = {
             email: 'demo@gmail.com',
             password: '12345678'
         }
-        this.props.demoLogin(demoUser)
-            .then(() => this.props.history.push('/signin'))
+        this.props.processForm(demoUser)
+            // .then(() => this.props.history.push('/'))
     }
 
     render() {
@@ -63,13 +65,13 @@ class SessionForm extends React.Component {
                     </div>
                 </div>
                 <div>
-                    <form onSubmit={this.handleSubmit} className="welcome-msg">
+                    <form onSubmit={this.handleSubmit} className="user-form">
                         <h2>SIGN UP</h2>
                         {this.renderErrors()}
-                        <div className="user-form">
-                            <input type="text" value={this.state.email} onChange={this.update('email')} className="login-input" placeholder='Your Email'/>
-                            <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" placeholder='Password'/>
-                            <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" placeholder='Confirm Password' />
+                        <div className="entry-form">
+                            <input type="text" value={this.state.email} onChange={this.update('email')} className="form-input" placeholder='Your Email'/>
+                            <input type="password" value={this.state.password} onChange={this.update('password')} className="form-input" placeholder='Password'/>
+                            <input type="password" value={this.state.password} onChange={this.update('password')} className="form-input" placeholder='Confirm Password' />
                             <input className="submit-button" type="submit" value='signup' />
                         </div>
                             <span className='other-form-link'>Already a member? {this.props.navLink}</span>
@@ -83,14 +85,14 @@ class SessionForm extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                         <h2>LOG IN</h2>
                         {this.renderErrors()}
-                        <div className="user-form">
-                            <input type="text" value={this.state.email} onChange={this.update('email')} placeholder='Your Email' />
-                            <input type="password" value={this.state.password} onChange={this.update('password')} placeholder='Password' />
+                        <div className="entry-form">
+                            <input type="text" value={this.state.email} onChange={this.update('email')} className="form-input" placeholder='Your Email' />
+                            <input type="password" value={this.state.password} onChange={this.update('password')} className="form-input" placeholder='Password' />
                             <input className="submit-button" type="submit" value='login'/>
                         </div>
-                        <button type="submit" onClick={this.demoLogIn} className="submit-button">Demo Login</button>
                         <span className='other-form-link'>Don't have an account? {this.props.navLink}</span>
                     </form>
+                        <div onClick={this.demoLogIn} className="submit-button">Demo Login</div>
                 </div>
             )
         }

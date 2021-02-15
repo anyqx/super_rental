@@ -5,8 +5,8 @@ import NavBar from './nav_bar'
 
 const mapStateToProps = (state) => {
     return {
-        currentUser: state.users.current_user,
-        logged_in: Boolean(state.users.current_user ? state.users.current_user.id != null : false)
+        currentUser: state.session.id,
+        logged_in: Boolean(state.session.id ? true : false)
     }
 }
 
