@@ -1,31 +1,45 @@
+* {
+    font-family: $main-font-family;
+}
+
 .header-nav-bar {
     display:flex;
     justify-content: space-between;
-    font-family: $main-font-family;
     font-size: 18px;
     background-color: white;
     color:#515151;
     height: 80px;
-    margin: 10px;
+    margin: 20px;
     align-items: center;
 
 }
 
 img{
     display: flex;
-    height: 35px
+    height: 35px;
+}
+
+.header-nav-bar-left {
+    display: flex;
 }
 
 .header-nav-bar-right {
     display: flex;
 }
+
 .sign-up-link {
     display: flex;
-    color: #ff7b0f;
-    font-family: $main-font-family;
+    color: #ff7b04;
     padding: 10px, 20px;
+    border: 2px;
+    border-color: #ff7b04;
 }
 
 .sign-up-link:hover{
     cursor: pointer;
+}
+
+.login-link {
+    display: flex;
+
 }

@@ -24,16 +24,6 @@ class SessionForm extends React.Component {
         this.props.processForm(user);
     }
 
-    demoSignIn(e) {
-        e.preventDefault();
-        const demoUser = {
-            email: 'demo@email.com',
-            password: '1234567'
-        }
-        this.props.demoLogin(demoUser)
-            .then(() => this.props.history.push('/home'))
-            .then(this.props.closeModal)
-    }
     
     renderErrors() { // need to fix
         return (
@@ -47,6 +37,16 @@ class SessionForm extends React.Component {
         )
     }
 
+    demoLogIn(e) {
+        e.preventDefault();
+        const demoUser = {
+            email: 'demo@gmail.com',
+            password: '12345678'
+        }
+        this.props.demoLogin(demoUser)
+            .then(() => this.props.history.push('/signin'))
+    }
+
     render() {
         const {formType} = this.props;
         if (formType === 'signup') {
@@ -56,7 +56,7 @@ class SessionForm extends React.Component {
                     <div className='welcome'>Welcome to Roofstock</div>
                     <div>
                         <ul className='intro'>
-                            <li><img id='intro-img' src={window.signup1URL} />Buy and sell tenant-occupied rental houses outside your local market</li>
+                            <li><img id='intro-img' src={window.signup1URL} /><p>Buy and sell tenant-occupied rental houses outside your local market</p></li>
                             <li><img id='intro-img' src={window.signup2URL} />Properties on our marketplace are certified so you can invest with confidence</li>
                             <li><img id='intro-img' src={window.signup3URL} />Select a trusted local property manager and own without the hassle</li>
                         </ul>
@@ -66,14 +66,14 @@ class SessionForm extends React.Component {
                     <form onSubmit={this.handleSubmit} className="welcome-msg">
                         <h2>SIGN UP</h2>
                         {this.renderErrors()}
-                        <div className="signup-form">
+                        <div className="user-form">
                             <input type="text" value={this.state.email} onChange={this.update('email')} className="login-input" placeholder='Your Email'/>
                             <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" placeholder='Password'/>
                             <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" placeholder='Confirm Password' />
-                            <input className="signup-submit" type="submit" value='signup' />
+                            <input className="submit-button" type="submit" value='signup' />
                         </div>
-                        <span className='other-form-link'>Already a member?</span>
-                        {this.props.navLink}
+                            <span className='other-form-link'>Already a member? {this.props.navLink}</span>
+                            {formType === 'signup' ? <button type="submit" onClick={this.demoLogIn} className="submit-button">Demo Login</button> : ""}
                     </form>
                 </div>
             </>
@@ -84,13 +84,12 @@ class SessionForm extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                         <h2>LOG IN</h2>
                         {this.renderErrors()}
-                        <div className="login-form">
-                            <input type="text" value={this.state.email} onChange={this.update('email')} className="login-input" placeholder='Your Email' />
-                            <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" placeholder='Password' />
-                            <input className="signin-submit" type="submit" value='login' className="login-input" />
+                        <div className="user-form">
+                            <input type="text" value={this.state.email} onChange={this.update('email')} placeholder='Your Email' />
+                            <input type="password" value={this.state.password} onChange={this.update('password')} placeholder='Password' />
+                            <input className="submit-button" type="submit" value='login'/>
                         </div>
-                        <span className='other-form-link'>Don't have an account?</span>
-                        {this.props.navLink}
+                        <span className='other-form-link'>Don't have an account? {this.props.navLink}</span>
                     </form>
                 </div>
             )

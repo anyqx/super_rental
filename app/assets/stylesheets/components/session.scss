@@ -1,6 +1,7 @@
 * {
     font-family: $main-font-family;
     background-color: white;
+    font-size: 16px;
 }
 
 .signup-form-container{
@@ -15,11 +16,15 @@
     align-items: center;   
     justify-content: center;
     color: $main-font-color;
+    font-size: 26px;
+    margin: 48px 0px 16px;
 }
 
 .intro {
-     column-count: 3;
-     column-gap :10px;
+    column-count: 3;
+    column-gap :10px;
+    margin: 50px;
+    padding: 8px;
  }
 
 .intro > li {
@@ -35,7 +40,15 @@
     width: 100px;
  }
 
-.signup-submit {
+ h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    color: $main-font-color;
+    padding: 20px;
+ }
+
+.submit-button {
    text-transform: uppercase;
    background-color: #6259c3;
    color:white;
@@ -47,39 +60,30 @@
    width: 320px;
 }
 
-.signup-form{
+.user-form{
+    display: flex;
     align-items: center;
     justify-content: center;
-
+    flex-direction: column;
+    height: 200px;
+    padding: 11px, 12px, 11px, 10px;
+    font-size: 16px;
 }
 
 .login-form-container{
-   display: flex;
-   justify-content: center;
-//    flex-direction: column;
-   width:425px;
-   padding: 35px 10px;
-   border: radius 2px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: white;
  }
 
  .login-input {
-    flex-direction: column;
+    font-size: 16px;
+    padding: 11px 12px 11px 10px;
  }
 
- .login-form{
-     flex-direction: column;
+ .other-form-link {
+     display: flex;
+     justify-content: center;
  }
-
-.login-submit {
-   text-transform: uppercase;
-   background-color: #6259c3;
-   color:white;
-   font-weight:bold;
-   padding: 10px 20px;
-   font-size: 16px;
-   box-sizing: border-box;
-   height: 44px;
-   width: 320px;
- }
-
-
