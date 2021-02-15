@@ -7,7 +7,6 @@ class NavBar extends React.Component {
     }
 
 
-
     render() {
         
         return (
@@ -18,7 +17,7 @@ class NavBar extends React.Component {
                     <img id='logo-img' src={window.logoURL} />
                     <span><Link to='/' id='logo-link'>SuperRental</Link></span>
                 </span>
-                {if this.props.logged_in?} (
+                {/* {if this.props.logged_in? ? (
                     <span className='right-nav'>
                         <span className='login-link'>
                             <Link to='/login'>LOG IN</Link>
@@ -32,8 +31,16 @@ class NavBar extends React.Component {
                         <button onClick={this.props.logout}>LOG OUT</button>
                         <span>{this.props.currentUser}</span>
                     </div>
-                )}
+                )} */}
 
+                    <span className='right-nav'>
+                        <span className='login-link'>
+                            <Link to='/login'>LOG IN</Link>
+                        </span>
+                        <span className='sign-up-link'>
+                            <Link to='/signup'>SIGN UP</Link>
+                        </span>
+                    </span>
                 
       
                 </div>
