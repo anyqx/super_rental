@@ -1,22 +1,20 @@
-.signup-form-container{
-    margin: 20px;
-    padding: 35px 10px;
-    align-items: center;
+* {
     font-family: $main-font-family;
+    background-color: white;
+}
+
+.signup-form-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background: white;
-    width:425px;
-    border: radius 2px;
 }
 
 .welcome {
-   display: flex;
-//    align-items: center;   
-   flex-direction: column;
-   justify-content: center;
-   font-family: $main-font-family;
-   background: white;
-   color: $main-font-color;
-   margin: 48px, 0px, 16px;
+    align-items: center;   
+    justify-content: center;
+    color: $main-font-color;
 }
 
 .intro {
@@ -25,11 +23,10 @@
  }
 
 .intro > li {
-    display: flex;
-    font-family: $main-font-family;
     color: $main-font-color;
     font-size: 16px;
     justify-content: space-between;
+    align-items: flex-start;
  }
  
  #intro-img {
@@ -50,17 +47,27 @@
    width: 320px;
 }
 
+.signup-form{
+    align-items: center;
+    justify-content: center;
 
-.login-form{
-   display: block;
-   align-items: center;
-   flex-direction: column;
+}
+
+.login-form-container{
+   display: flex;
    justify-content: center;
-   font-family: $main-font-family;
-   background: white;
+//    flex-direction: column;
    width:425px;
    padding: 35px 10px;
    border: radius 2px;
+ }
+
+ .login-input {
+    flex-direction: column;
+ }
+
+ .login-form{
+     flex-direction: column;
  }
 
 .login-submit {

@@ -61,6 +61,8 @@ class SessionForm extends React.Component {
                             <li><img id='intro-img' src={window.signup3URL} />Select a trusted local property manager and own without the hassle</li>
                         </ul>
                     </div>
+                </div>
+                <div>
                     <form onSubmit={this.handleSubmit} className="welcome-msg">
                         <h2>SIGN UP</h2>
                         {this.renderErrors()}
@@ -85,7 +87,7 @@ class SessionForm extends React.Component {
                         <div className="login-form">
                             <input type="text" value={this.state.email} onChange={this.update('email')} className="login-input" placeholder='Your Email' />
                             <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" placeholder='Password' />
-                            <input className="signin-submit" type="submit" value='login' />
+                            <input className="signin-submit" type="submit" value='login' className="login-input" />
                         </div>
                         <span className='other-form-link'>Don't have an account?</span>
                         {this.props.navLink}
