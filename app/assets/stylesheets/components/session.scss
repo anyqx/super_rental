@@ -1,18 +1,17 @@
 .signup-form-container{
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   justify-content: center;
-   font-family: $main-font-family;
-   background: white;
-   width:425px;
-   padding: 35px 10px;
-   border: radius 2px;
- }
+    margin: 20px;
+    padding: 35px 10px;
+    align-items: center;
+    font-family: $main-font-family;
+    background: white;
+    width:425px;
+    border: radius 2px;
+}
 
 .welcome {
    display: flex;
-   align-items: center;
+//    align-items: center;   
+   flex-direction: column;
    justify-content: center;
    font-family: $main-font-family;
    background: white;
