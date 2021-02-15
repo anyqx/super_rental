@@ -53,12 +53,12 @@ class SessionForm extends React.Component {
             return (
                 <>
                 <div className='signup-form-container'>
-                    <div className='welcome'>Welcome to Roofstock</div>
+                    <div className='welcome'>Welcome to SuperRental</div>
                     <div>
                         <ul className='intro'>
                             <li><img id='intro-img' src={window.signup1URL} /><p>Buy and sell tenant-occupied rental houses outside your local market</p></li>
-                            <li><img id='intro-img' src={window.signup2URL} />Properties on our marketplace are certified so you can invest with confidence</li>
-                            <li><img id='intro-img' src={window.signup3URL} />Select a trusted local property manager and own without the hassle</li>
+                            <li><img id='intro-img' src={window.signup2URL} /><p>Properties on our marketplace are certified so you can invest with confidence</p></li>
+                            <li><img id='intro-img' src={window.signup3URL} /><p>Select a trusted local property manager and own without the hassle</p></li>
                         </ul>
                     </div>
                 </div>
@@ -73,7 +73,6 @@ class SessionForm extends React.Component {
                             <input className="submit-button" type="submit" value='signup' />
                         </div>
                             <span className='other-form-link'>Already a member? {this.props.navLink}</span>
-                            {formType === 'signup' ? <button type="submit" onClick={this.demoLogIn} className="submit-button">Demo Login</button> : ""}
                     </form>
                 </div>
             </>
@@ -89,6 +88,7 @@ class SessionForm extends React.Component {
                             <input type="password" value={this.state.password} onChange={this.update('password')} placeholder='Password' />
                             <input className="submit-button" type="submit" value='login'/>
                         </div>
+                        <button type="submit" onClick={this.demoLogIn} className="submit-button">Demo Login</button>
                         <span className='other-form-link'>Don't have an account? {this.props.navLink}</span>
                     </form>
                 </div>

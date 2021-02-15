@@ -9,9 +9,9 @@
     background-color: white;
     color:#515151;
     height: 80px;
+    width: 985px;
     margin: 20px;
     align-items: center;
-
 }
 
 img{
@@ -25,14 +25,20 @@ img{
 
 .header-nav-bar-right {
     display: flex;
+    text-decoration: none;
 }
 
 .sign-up-link {
     display: flex;
     color: #ff7b04;
-    padding: 10px, 20px;
-    border: 2px;
-    border-color: #ff7b04;
+    width: 96px;
+    height: 44px;
+    padding: 8px, 20px;
+    border: 1px solid #ff7b04;
+    justify-content: center;
+    margin: 0px 10px 0px;
+    padding: 5px;
+    font-size: 13px;
 }
 
 .sign-up-link:hover{
@@ -41,5 +47,16 @@ img{
 
 .login-link {
     display: flex;
+    justify-content: center;
+    margin: 0px 10px 0px;
+    width: 68px;
+    height: 80px;
+    padding: 6px 12px;
+    font-size: 13px;
+    line-height: 3;
 
+}
+
+.login-link > Link {
+    color: orange;
 }
