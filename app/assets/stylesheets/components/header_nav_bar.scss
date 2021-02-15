@@ -9,8 +9,7 @@
     background-color: white;
     color:#515151;
     height: 80px;
-    width: 985px;
-    margin: 20px;
+    margin: 30px 100px 30px;
     align-items: center;
 }
 
@@ -39,6 +38,7 @@ img{
     margin: 0px 10px 0px;
     padding: 5px;
     font-size: 13px;
+    line-height: 3;
 }
 
 .sign-up-link:hover{
@@ -54,7 +54,6 @@ img{
     padding: 6px 12px;
     font-size: 13px;
     line-height: 3;
-
 }
 
 .login-link > Link {

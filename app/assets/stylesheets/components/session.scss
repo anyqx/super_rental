@@ -10,6 +10,7 @@
     flex-direction: column;
     align-items: center;
     background: white;
+    margin: 5px 150px 5px;
 }
 
 .welcome {
@@ -17,13 +18,13 @@
     justify-content: center;
     color: $main-font-color;
     font-size: 26px;
-    margin: 48px 0px 16px;
+    margin: 20px 0px 0px;
 }
 
 .intro {
     column-count: 3;
     column-gap :10px;
-    margin: 50px;
+    margin: 30px 50px 20px;
     padding: 8px;
  }
 
@@ -33,6 +34,7 @@
     font-size: 16px;
     justify-content: space-between;
     align-items: flex-start;
+    padding: 10px;
  }
  
  #intro-img {
@@ -50,7 +52,7 @@
     justify-content: center;
     font-size: 26px;
     color: $main-font-color;
-    padding: 20px;
+    margin: 20px 10px 5px;
     font-family: $main-font-family;
  }
 
