@@ -34,7 +34,7 @@ class SessionForm extends React.Component {
             .then(() => this.props.history.push('/home'))
             .then(this.props.closeModal)
     }
-     
+    
     renderErrors() { // need to fix
         return (
             <ul>
