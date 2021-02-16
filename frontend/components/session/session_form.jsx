@@ -71,8 +71,8 @@ class SessionForm extends React.Component {
                 <div>
                     <form onSubmit={this.handleSubmit} className="user-form">
                         <h2>SIGN UP</h2>
-                        {this.renderErrors()}
                         <div className="entry-form">
+                            {this.renderErrors()}
                             <input type="text" value={this.state.email} onChange={this.update('email')} className="form-input" placeholder='Your Email'/>
                             <input type="password" value={this.state.password} onChange={this.update('password')} className="form-input" placeholder='Password'/>
                             <input type="password" value={this.state.password} onChange={this.update('password')} className="form-input" placeholder='Confirm Password' />
@@ -89,8 +89,8 @@ class SessionForm extends React.Component {
                 <div className='login-form-container'>
                     <form onSubmit={this.handleSubmit}>
                         <h2>LOG IN</h2>
-                        {this.renderErrors()}
                         <div className="entry-form">
+                            {this.renderErrors()}
                             <input type="text" value={this.state.email} onChange={this.update('email')} className="form-input" placeholder='Your Email' />
                             <input type="password" value={this.state.password} onChange={this.update('password')} className="form-input" placeholder='Password' />
                             <input className="submit-button" type="submit" value='login'/>
