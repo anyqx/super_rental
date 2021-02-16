@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
         this.demoLogIn = this.demoLogIn.bind(this)
+        this.clearErrors = this.clearErrors.bind(this)
 
     }
 
@@ -50,6 +51,7 @@ class SessionForm extends React.Component {
     }
 
     clearErrors (){
+        // debugger
         this.props.removeErrors();
     }
 
@@ -75,11 +77,12 @@ class SessionForm extends React.Component {
                             {this.renderErrors()}
                             <input type="text" value={this.state.email} onChange={this.update('email')} className="form-input" placeholder='Your Email'/>
                             <input type="password" value={this.state.password} onChange={this.update('password')} className="form-input" placeholder='Password'/>
-                            <input type="password" value={this.state.password} onChange={this.update('password')} className="form-input" placeholder='Confirm Password' />
+                            {/* <input type="password" value={this.state.password} onChange={this.update('password')} className="form-input" placeholder='Confirm Password' /> */}
                             <input className="submit-button" type="submit" value='signup' />
                         </div>
                     </form>
-                        <span onClick={this.clearErrors} className='other-form-link'>Already a member? &ensp;{this.props.navLink}</span>
+                        <span onClick={this.clearErrors()} className='other-form-link'>Already a member? &ensp;{this.props.navLink}</span>
+                    
 
                 </div>
             </>
@@ -97,7 +100,7 @@ class SessionForm extends React.Component {
                         </div>
                     </form>
                     <div onClick={this.demoLogIn} className="demo-button">Demo Login</div>
-                    <span onClick={this.clearErrors} className='other-form-link'>Don't have an account? &ensp; {this.props.navLink}</span>
+                    <span onClick={this.clearErrors()} className='other-form-link'>Don't have an account? &ensp; {this.props.navLink}</span>
                 </div>
             )
         }
