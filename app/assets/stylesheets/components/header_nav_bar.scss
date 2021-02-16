@@ -6,7 +6,7 @@
     display:flex;
     justify-content: space-between;
     background-color: white;
-    color:#515151;
+    color: $main-font-color;
     height: 80px;
     margin: 30px 100px 30px;
     align-items: center;
@@ -22,26 +22,46 @@
     height: 35px;
 }
 
-.link-box {
+.signup-box {
     display: flex;
-    color: #ff7b04;
+    color: $logo-color;
     width: 96px;
     height: 44px;
-    padding: 8px, 20px;
-    border: 1px solid #ff7b04;
+    border: 1px solid $logo-color;
     justify-content: center;
     margin: 0px 10px 0px;
-    padding: 5px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 3;
 }
 
-.link-box:hover{
+.signup-box:hover{
     cursor: pointer;
     background-color: gray;
 }
 
-.link-box {
+.login-box {
+    display: flex;
+    color: $logo-color;
+    width: 96px;
+    height: 44px;
+    justify-content: center;
+    margin: 0px 10px 0px;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 3;
+}
+
+.login-box:hover{
+    cursor: pointer;
+    background-color: gray;
+}
+
+.header-link {
+    text-decoration: none;
+    color: $logo-color;
+}
+
+.logout-box {
     display: flex;
     justify-content: center;
     margin: 0px 10px 0px;
@@ -52,14 +72,9 @@
     line-height: 3;
 }
 
-.link-box:hover{
-    cursor: pointer;
-    background-color: gray;
-}
-
 .logout-button {
     display: flex;
-    color: #ff7b04;
+    color: $logo-color;
 }
 
 .logout-button:hover {

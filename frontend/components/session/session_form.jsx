@@ -74,8 +74,8 @@ class SessionForm extends React.Component {
                             <input type="password" value={this.state.password} onChange={this.update('password')} className="form-input" placeholder='Confirm Password' />
                             <input className="submit-button" type="submit" value='signup' />
                         </div>
-                            <span className='other-form-link'>Already a member? {this.props.navLink}</span>
                     </form>
+                        <span className='other-form-link'>Already a member? &ensp;{this.props.navLink}</span>
                 </div>
             </>
             )
@@ -90,9 +90,9 @@ class SessionForm extends React.Component {
                             <input type="password" value={this.state.password} onChange={this.update('password')} className="form-input" placeholder='Password' />
                             <input className="submit-button" type="submit" value='login'/>
                         </div>
-                        <span className='other-form-link'>Don't have an account? {this.props.navLink}</span>
                     </form>
-                        <div onClick={this.demoLogIn} className="submit-button">Demo Login</div>
+                    <div onClick={this.demoLogIn} className="demo-button">Demo Login</div>
+                    <span className='other-form-link'>Don't have an account? &ensp; {this.props.navLink}</span>
                 </div>
             )
         }
