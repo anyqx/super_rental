@@ -55,6 +55,7 @@
     display: flex;
     color: $logo-color;
     background-color: transparent;
+    text-decoration: none;
 }
 
 .login-box:hover{
@@ -69,12 +70,18 @@
 
 .logout-box {
     display: flex;
+    color: $logo-color;
+    width: 96px;
+    height: 44px;
     justify-content: center;
     margin: 0px 10px 0px;
-    width: 68px;
-    height: 80px;
-    padding: 6px 12px;
-    font-size: 13px;
+    padding: 5px;
+    font-size: 14px;
     line-height: 3;
+}
+
+.logout-box:hover {
+    cursor: pointer;
+    background-color: lightgray;
 }
 
