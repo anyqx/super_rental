@@ -24,15 +24,15 @@ class NavBar extends React.Component {
                 { !this.props.logged_in ? (
                     <span className='right-nav'>
                         <span className='login-box'>
-                            <Link to='/login' className='header-link'>LOG IN</Link>
+                            <Link to='/login' className='button'>LOG IN</Link>
                         </span>
                         <span className='signup-box'>
-                            <Link to='/signup' className='header-link'>SIGN UP</Link>
+                            <Link to='/signup' className='button'>SIGN UP</Link>
                         </span>
                     </span>
                 ) : (
                     <div className="right-nav">
-                        <div onClick={this.handleLogout} className='logout-button'>LOG OUT</div>
+                        <div onClick={this.handleLogout} className='button'>LOG OUT</div>
                         {/* <span>{this.props.currentUser}</span> */}
                     </div>
                 )}

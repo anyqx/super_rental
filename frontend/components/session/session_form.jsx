@@ -49,6 +49,10 @@ class SessionForm extends React.Component {
             // .then(() => this.props.history.push('/'))
     }
 
+    clearErrors (){
+        this.props.removeErrors();
+    }
+
     render() {
         const {formType} = this.props;
         if (formType === 'signup') {
@@ -75,7 +79,8 @@ class SessionForm extends React.Component {
                             <input className="submit-button" type="submit" value='signup' />
                         </div>
                     </form>
-                        <span className='other-form-link'>Already a member? &ensp;{this.props.navLink}</span>
+                        <span onClick={this.clearErrors} className='other-form-link'>Already a member? &ensp;{this.props.navLink}</span>
+
                 </div>
             </>
             )
@@ -92,7 +97,7 @@ class SessionForm extends React.Component {
                         </div>
                     </form>
                     <div onClick={this.demoLogIn} className="demo-button">Demo Login</div>
-                    <span className='other-form-link'>Don't have an account? &ensp; {this.props.navLink}</span>
+                    <span onClick={this.clearErrors} className='other-form-link'>Don't have an account? &ensp; {this.props.navLink}</span>
                 </div>
             )
         }

@@ -74,6 +74,12 @@
     font-size: 16px;
     height: 44px;
     width: 320px;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.submit-button:hover{
+    cursor: pointer;
 }
 
 .login-form-container{
@@ -89,6 +95,10 @@
     padding: 11px 12px 11px 10px;
     width: 290px;
     margin: 5px;
+    outline: 0px;
+    border-color: lightgray;
+    border-style: solid;
+    border-radius: 5px;
  }
 
  .other-form-link {
@@ -108,4 +118,9 @@
     background-color: #6259c3;
     color:white;
     padding: 5px 10px;
+    border-radius: 5px;
+ }
+
+ .demo-button:hover{
+    cursor: pointer;
  }

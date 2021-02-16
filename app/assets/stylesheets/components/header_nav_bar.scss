@@ -22,6 +22,11 @@
     height: 35px;
 }
 
+.header-link {
+    text-decoration: none;
+    color: $logo-color;
+}
+
 .signup-box {
     display: flex;
     color: $logo-color;
@@ -32,11 +37,6 @@
     margin: 0px 10px 0px;
     font-size: 14px;
     line-height: 3;
-}
-
-.signup-box:hover{
-    cursor: pointer;
-    background-color: gray;
 }
 
 .login-box {
@@ -51,14 +51,14 @@
     line-height: 3;
 }
 
-.login-box:hover{
-    cursor: pointer;
-    background-color: gray;
+.button {
+    display: flex;
+    color: $logo-color;
 }
 
-.header-link {
-    text-decoration: none;
-    color: $logo-color;
+.button:hover{
+    cursor: pointer;
+    background-color: rgb(218, 218, 218);
 }
 
 .logout-box {
@@ -72,12 +72,3 @@
     line-height: 3;
 }
 
-.logout-button {
-    display: flex;
-    color: $logo-color;
-}
-
-.logout-button:hover {
-    cursor: pointer;
-    background-color: gray;
-}
