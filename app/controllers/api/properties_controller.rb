@@ -1,0 +1,13 @@
+class Api::PropertiesController < ApplicationController
+    def index
+        @properties = Property.all
+        render :index
+    end
+
+    def show
+        @property = Property.find_by(:id)
+        render :show
+    end
+
+
+end

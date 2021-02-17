@@ -9,6 +9,6 @@ class Property < ApplicationRecord
     belongs_to :owner_id,
         primary_key: :id,
         foreign_key: :owner_id,
-        className: :User
+        class_name: :User
     
 end

@@ -10,7 +10,7 @@ class User < ApplicationRecord
     has_many :properties,
         primary_key: :id,
         foreign_key: :owner_id,
-        className: :Property
+        class_name: :Property
 
     #SPIRE
     def self.find_by_credentials(email, pw)
