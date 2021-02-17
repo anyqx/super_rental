@@ -5,7 +5,7 @@ class Api::PropertiesController < ApplicationController
     end
 
     def show
-        @property = Property.find_by(:id)
+        @property = Property.find_by(id: params[:id])
         render :show
     end
 

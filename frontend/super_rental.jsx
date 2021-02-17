@@ -5,6 +5,7 @@ import ReactDOM from "react-dom";
 import Root from './components/root';
 import configureStore from './store/store'
 import {logout} from './actions/session_actions'
+import { fetchProperty } from "./actions/property_action";
 
 
 
@@ -24,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     window.store = store;
     window.getState = store.getState;
+    window.dispatch = store.dispatch;
+    window.fetchProperty = fetchProperty;
     const root = document.getElementById("root");
     ReactDOM.render(<Root store={store} />, root);
 });
@@ -45,3 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // // // when you shouldn't
 // window.getState = store.getState;
 // window.dispatch = store.dispatch;
+
+//test 3: test AJAX calls for properties
+// window.store = store;
+// window.getState = store.getState;
+// window.dispatch = store.dispatch;
+// window.fetchProperty = fetchProperty;

@@ -1,19 +1,15 @@
 import { $CombinedState } from "redux"
 
-export const fetchProperties = data => {
-    $.ajax({
+export const fetchProperties = () => {
+    return $.ajax({
         method: 'GET',
-        url: 'api/properties',
-        data
+        url: 'api/properties'
     })
 }
 
 export const fetchProperty = id => {
-    $.ajax({
+    return $.ajax({
         method: 'GET',
         url: `api/properties/${id}`
     })
 }
-
-export const 
-export const 

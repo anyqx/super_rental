@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_17_004004) do
+ActiveRecord::Schema.define(version: 2021_02_17_181806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,16 +46,16 @@ ActiveRecord::Schema.define(version: 2021_02_17_004004) do
     t.string "city", null: false
     t.string "state", null: false
     t.integer "zipcode", null: false
-    t.integer "longitude", null: false
-    t.integer "altitude", null: false
     t.integer "price", null: false
     t.integer "rent", null: false
-    t.integer "cap_rate", null: false
-    t.integer "annualized_return", null: false
-    t.integer "total_return", null: false
-    t.integer "gross_yield", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "longitude"
+    t.float "altitude"
+    t.float "cap_rate"
+    t.float "annualized_return"
+    t.float "total_return"
+    t.float "gross_yield"
     t.index ["title"], name: "index_properties_on_title", unique: true
   end
 
