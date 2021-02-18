@@ -1,3 +1,8 @@
+// main intro
+
+* {
+    font-family: $main-font-family;
+}
 .welcome-box {
     display: flex;
     justify-content: center;
@@ -6,3 +11,64 @@
     font-size: 20px;
     font-family: $main-font-family;
 }
+
+
+
+
+
+
+// why-invest
+.why-invest-box{
+    font-family: $main-font-family;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    margin: 5px 150px 5px;
+}
+
+.why-invest-box .why-text {
+    color: #282828;
+    font-size: 38px;
+    font-weight: bold;
+    letter-spacing: -.75px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.why-invest-box ul {
+    column-count: 3;
+    column-gap :10px;
+    margin: 30px 50px 20px;
+    padding: 8px;
+ }
+
+.why-invest-box ul > li {
+    display: flex;
+    color: $main-font-color;
+    font-size: 16px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+ }
+
+.why-invest-box h2{
+    text-transform: uppercase;
+}
+
+
+//featured box
+
+
+
+//why sfh
+
+
+
+//meet-investors
+
+
+//story-box
