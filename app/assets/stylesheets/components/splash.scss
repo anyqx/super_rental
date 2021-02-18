@@ -1,49 +1,99 @@
-// main intro
 
 * {
     font-family: $main-font-family;
     color: $main-font-color
 }
-.welcome-box {
+
+// main intro
+.main-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: space-between;
     color: $main-font-color;
     font-size: 20px;
     font-family: $main-font-family;
+    background: #172642;
 }
 
+#main-img {
+    justify-content: flex-end;
+    height: 25vh;
+    background-color: transparent;
+    padding: 180px 20px 20px 40px;
+}
 
-// why-invest
+.main-container ul{
+    background: transparent;
+    padding: 30px 10px 30px;
+
+    li {
+        background-color: transparent;
+        color: white;
+    }
+    
+    #line1{
+        text-transform: uppercase;
+        font-size: 16px;
+        padding: 15px;
+        line-height: 1.5;
+    }
+
+    #line2{
+        text-transform: capitalize;
+        font-weight: bolder;
+        font-size: 38px;
+        padding: 15px;
+        line-height: 1.5;
+    }
+
+    #line3{
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 15px;
+        line-height: 1.5;
+    }
+}
+
+// why-invest, why-sfh
 .section-container{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: white;
-    margin: 5px 150px 5px;
+    background: #f8f8f8;
+    padding: 40px 100px 40px;
 }
 
-.section-head-text {
+.section-title{
     color: #282828;
     font-size: 36px;
     font-weight: bolder;
     letter-spacing: -.75px;
     line-height: 40px;
     text-align: center;
-    margin-top: 0;
+    margin-top: 10px;
     margin-bottom: 20px;
-    
+    background: transparent;
+}
+
+.section-subheader {
+    color: $main-font-color;
+    background: transparent;
+
 }
 
 .why-details-container {
     display: flex;
-    flex-direction: column;
     column-count: 3;
     column-gap :10px;
-    margin: 30px 50px 20px;
-    padding: 8px;
+    padding: 30px 80px 20px;
+    background: #f8f8f8;
  }
+
+.why-details-container ul{
+    background-color: transparent;
+}
 
 .why-details-container > li {
     display: flex;
@@ -53,40 +103,66 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 10px;
+    background: transparent;
  }
 
-.why-details-container h2{
+#title{
     font-family: $main-font-family;
     text-transform: uppercase;
     font-size: 22px;
-    
+    background: transparent;
 }
 
-.why-details-container p{
+#text {
     font-family: $main-font-family;
     text-transform: capitalize;
     font-size: 14px;
+    background: transparent;
+    line-height: 1.2;
+
+
 }
 
  #why-img {
     display: flex;
-    height: 80px;
-    width: 100px;
+    height: 100px;
+    background: transparent;
  }
 
-.why-details-container > li p{
-    margin: 15px 5px 2px;
-}
 
 //featured box
 
 
 
-//why sfh
-
-
 
 //meet-investors
-
+.investor {
+    background-color: white;
+}
 
 //story-box
+.story-container {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+}
+
+.story-title {
+    margin: 0px 0px 20px;
+    color: #282828;
+    font-size: 38px;
+    font-weight: bolder;
+    // justify-content: center;
+}
+
+#text1{
+    font-size: 20px;
+    margin: 50px 0px 0px;
+    color: #333333;
+}
+
+#text2{
+    font-size: 26px;
+    margin: 50px 0px 0px;
+    color: #333333;
+}

@@ -10,70 +10,80 @@ class Splash extends React.Component {
         return (
             <>
             {/* main intro */}
-            <div className='main-box'>
+            <div className='main-container'>
+                <ul>
+                    <li id='line1'>for investors</li>
+                    <li id='line2'>Build wealth through real estate</li>
+                    <li id='line3'>Roofstock makes investing in single-family properties radically simple.</li>
+                </ul>
                 <img id='main-img' src={window.splash1URL}></img>
-                <h3>for investors</h3>
-                <p>Build wealth through real estate</p>
-                <p>Roofstock makes investing in single-family properties radically simple.</p>
 
             </div>    
 
             {/* why-invest */}
             <div className='section-container'>
-                <div className='section-head-text'>Why invest through SuperRental?</div>
+                <div className='section-title'>Why invest through SuperRental?</div>
                 <div>
-                    <ul className='why-details-container'>
-                        <li>
+                    <div className='why-details-container'>
+                        <ul>
                             <img id='why-img' src={window.splashWhyInvest1URL} />
-                            <h2>completed transactions</h2>
-                            <p>more than $2 billion in completed SFR transactions in less than four years</p>
-                        </li>
-                        <li>
+                            <li id='title'>completed transactions</li>
+                            <li id='text'>more than $2 billion in completed SFR transactions in less than four years</li>
+                        </ul>
+                        <ul>
                             <img id='why-img' src={window.splashWhyInvest2URL} />
-                            <h2>roofstock guarantee</h2>
-                            <p>unique 30-day money-back guarantee + guaranteed lease up on vacant properties</p>
-                        </li>
-                        <li>
+                            <li id='title'>roofstock guarantee</li>
+                            <li id='text'>unique 30-day money-back guarantee + guaranteed lease up on vacant properties</li>
+                        </ul>
+                        <ul>
                             <img id='why-img' src={window.splashWhyInvest3URL} />
-                            <h2>technology advantage</h2>
-                            <p>make investment decisions using insights, proprietary data and technology</p>
-                        </li>
-                    </ul>
+                            <li id='title'>technology advantage</li>
+                            <li id='text'>make investment decisions using insights, proprietary data and technology</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
             {/* featured properties */}
             <div className='featured-box'>
-
                 <Link className='link-box'>view all properties</Link>
             </div>
 
             {/* why sfr */}
             <div className='section-container'>
-                <div className='section-head-text'>Why single-family rentals(SFR)</div>
-                    <h2>Provides strong, stable cash flows even through economic cycles</h2>
-                <ul className='why-details-container'>
-                    <li><img id='why-img' src={window.splashWhySfh1URL} />sfr market</li>
-                    <li><img id='why-img' src={window.splashWhySfh2URL} />current sfrs in us</li>
-                    <li><img id='why-img' src={window.splashWhySfh3URL} />new rental households by 2030</li>
-                </ul>
+                <div className='section-title'>Why single-family rentals(SFR)</div>
+                <div className='section-subheader'>Provides strong, stable cash flows even through economic cycles</div>
+                <div className='why-details-container'>
+                    <ul>
+                        <li><img id='why-img' src={window.splashWhySfh1URL} /></li>
+                        <li id='title'>sfr market</li>
+                    </ul>
+                    <ul>
+                        <li><img id='why-img' src={window.splashWhySfh2URL} /></li>
+                        <li id='title'>current sfrs in us</li>
+                    </ul>
+                    <ul>
+                        <li><img id='why-img' src={window.splashWhySfh3URL} /></li>
+                        <li id='title'>new rental households by 2030</li>
+                    </ul>
+                </div>
             </div>
 
-            <div className='section-container'>
-                <div className='section-head-text'>Meet our investor/site creator</div>
-                <p>Annie Xu</p>
-                <p> intro </p>
+            <div className='investor-container'>
+                <div className='section-title'>Meet our investor/site creator</div>
+                <div>Annie Xu</div>
+                <div> intro </div>
 
             </div>
 
 
             {/* story box */}
-            <div className='section-container'>
-                <div className='section-head-text'>Our Story</div>
-                <h2>Founded by pioneers in the single-family rental space, 
+            <div className='story-container'>
+                <div className='story-title'>Our Story</div>
+                <div id='text1'>Founded by pioneers in the single-family rental space, 
                     SuperRental has assembled a world-class team of real estate 
-                    and technology professionals committed to a clear mission:</h2>
-                    <h3>Making real estate investing radically accessible, cost-effective and simple</h3>
+                    and technology professionals committed to a clear mission:</div>
+                    <div id='text2'>Making real estate investing radically accessible, cost-effective and simple</div>
             </div>
             </>
                                                                                                                                         
