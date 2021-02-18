@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    fetchProperties: () => dispatch(fetchProperties)
+    fetchProperties: () => dispatch(fetchProperties())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(BenchIndex)
