@@ -14,7 +14,7 @@ class Splash extends React.Component {
                 <ul>
                     <li id='line1'>for investors</li>
                     <li id='line2'>Build wealth through real estate</li>
-                    <li id='line3'>Roofstock makes investing in single-family properties radically simple.</li>
+                    <li id='line3'>SuperRental makes investing in single-family properties radically simple.</li>
                 </ul>
                 <img id='main-img' src={window.splash1URL}></img>
 
@@ -75,8 +75,9 @@ class Splash extends React.Component {
                 <div className='investor-intro-container'>
                     <p id='name'>Annie Xu</p>
                     <p id='intro-text'>I love real estate since I was a child! I've been involved in multiple
-                    real estate transactions including sale, design, cost analysis! Super Rental helps you find out comps about rental property invesment
-                    and makes it easy to invest out-of-state.</p>
+                    real estate transactions including sales, design, fundrasing and cost analysis! 
+                    Super Rental helps you find out comps about rental property investment
+                    and makes it easy to invest even if you are out-of-state.</p>
                 </div>
 
             </div>
