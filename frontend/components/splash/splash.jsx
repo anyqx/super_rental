@@ -45,8 +45,8 @@ class Splash extends React.Component {
             </div>
 
             {/* featured properties */}
-            <div className='featured-box'>
-                <Link className='link-box'>view all properties</Link>
+            <div className='featured-container'>
+                <Link className='link-button'>view all properties</Link>
             </div>
 
             {/* why sfr */}
@@ -71,9 +71,13 @@ class Splash extends React.Component {
 
             {/* investor container */}
             <div className='investor-container'>
-                <div className='section-title'>Meet our investor/site creator</div>
-                <div>Annie Xu</div>
-                <div> intro </div>
+                <div className='section-title'>Meet our investor</div>
+                <div className='investor-intro-container'>
+                    <p id='name'>Annie Xu</p>
+                    <p id='intro-text'>I love real estate since I was a child! I've been involved in multiple
+                    real estate transactions including sale, design, cost analysis! Super Rental helps you find out comps about rental property invesment
+                    and makes it easy to invest out-of-state.</p>
+                </div>
 
             </div>
 

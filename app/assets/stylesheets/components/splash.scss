@@ -24,7 +24,7 @@
 
 .main-container ul{
     background: transparent;
-    padding: 30px 10px 30px;
+    padding: 30px 10px 20px;
 
     li {
         background-color: transparent;
@@ -122,12 +122,16 @@
     font-size: 14px;
     background: transparent;
     line-height: 1.2;
+    padding: 5px;
 }
 
  #why-img {
-    display: flex;
+    display: block;
     height: 100px;
     background: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    // padding: 10px;
  }
 
  #why-img-text{
@@ -138,8 +142,36 @@
  }
 
 
-//featured box
+//featured container
+.featured-container{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
 
+.link-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bolder;
+    margin: 20px 0px 0px;
+    background-color: $logo-color;
+    color:white;
+    padding: 20px 20px 12px;
+    font-size: 18px;
+    height: 40px;
+    width: 280px;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.link-button:hover{
+    cursor: pointer;
+    background-color: #ff9b0f;
+}
 
 
 
@@ -148,6 +180,27 @@
     background-color: white;
 }
 
+.investor-intro-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #f8f8f8;
+    padding: 40px 100px 40px;
+    text-align: center;
+}
+
+#name {
+    background: transparent;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#intro-text{
+    background: transparent;
+    font-size: 19px;
+    line-height: 1.2;
+}
 //story-box
 .story-container {
     display: flex;
