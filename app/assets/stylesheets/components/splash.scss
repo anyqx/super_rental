@@ -63,6 +63,7 @@
     align-items: center;
     background: #f8f8f8;
     padding: 40px 100px 40px;
+    text-align: center;
 }
 
 .section-title{
@@ -80,7 +81,9 @@
 .section-subheader {
     color: $main-font-color;
     background: transparent;
-
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
 }
 
 .why-details-container {
@@ -119,14 +122,19 @@
     font-size: 14px;
     background: transparent;
     line-height: 1.2;
-
-
 }
 
  #why-img {
     display: flex;
     height: 100px;
     background: transparent;
+ }
+
+ #why-img-text{
+     text-transform: uppercase;
+     font-size: 14px;
+     font-weight: bolder;
+     background-color: transparent;
  }
 
 
@@ -144,7 +152,10 @@
 .story-container {
     display: flex;
     background-color: white;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 60px 200px 60px;
+    text-align: center;
 }
 
 .story-title {
@@ -152,17 +163,22 @@
     color: #282828;
     font-size: 38px;
     font-weight: bolder;
-    // justify-content: center;
+    padding: 10px;
 }
 
 #text1{
     font-size: 20px;
-    margin: 50px 0px 0px;
     color: #333333;
+    padding: 5px 200px;
+    line-height: 1.2;
 }
+
 
 #text2{
     font-size: 26px;
-    margin: 50px 0px 0px;
+    margin: 20px 0px 0px;
     color: #333333;
+    line-height: 1.2;
+    padding: 5px 200px;
+    font-weight: bold;
 }

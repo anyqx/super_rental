@@ -56,19 +56,20 @@ class Splash extends React.Component {
                 <div className='why-details-container'>
                     <ul>
                         <li><img id='why-img' src={window.splashWhySfh1URL} /></li>
-                        <li id='title'>sfr market</li>
+                        <li id='why-img-text'>sfr market</li>
                     </ul>
                     <ul>
                         <li><img id='why-img' src={window.splashWhySfh2URL} /></li>
-                        <li id='title'>current sfrs in us</li>
+                        <li id='why-img-text'>current sfrs in us</li>
                     </ul>
                     <ul>
                         <li><img id='why-img' src={window.splashWhySfh3URL} /></li>
-                        <li id='title'>new rental households by 2030</li>
+                        <li id='why-img-text'>new rental households by 2030</li>
                     </ul>
                 </div>
             </div>
 
+            {/* investor container */}
             <div className='investor-container'>
                 <div className='section-title'>Meet our investor/site creator</div>
                 <div>Annie Xu</div>
@@ -77,7 +78,7 @@ class Splash extends React.Component {
             </div>
 
 
-            {/* story box */}
+            {/* story container */}
             <div className='story-container'>
                 <div className='story-title'>Our Story</div>
                 <div id='text1'>Founded by pioneers in the single-family rental space, 
