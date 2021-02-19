@@ -32,7 +32,7 @@ class Splash extends React.Component {
                         </ul>
                         <ul>
                             <img id='why-img' src={window.splashWhyInvest2URL} />
-                            <li id='title'>roofstock guarantee</li>
+                            <li id='title'>SuperRental guarantee</li>
                             <li id='text'>unique 30-day money-back guarantee + guaranteed lease up on vacant properties</li>
                         </ul>
                         <ul>
