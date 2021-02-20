@@ -1,15 +1,15 @@
-// import { connect } from 'react-redux'
-// import component from '../components/component'
-// import { actionCreator } from '../actionPath'
-// import PropertyShow from './property_show'
-// import { fetchProperty } from '../../util/property_api_util'
+import { connect } from 'react-redux'
+import component from '../components/component'
+import { actionCreator } from '../actionPath'
+import PropertyShow from './property_show'
+import { fetchProperty } from '../../util/property_api_util'
 
-// const mapStateToProps = (state, ownProps) => ({
+const mapStateToProps = (state, ownProps) => ({
     
-// })
+})
 
-// const mapDispatchToProps = dispatch => ({
-//     fetchProperty: id => dispatch(fetchProperty(id))
-// })
+const mapDispatchToProps = dispatch => ({
+    fetchProperty: id => dispatch(fetchProperty(id))
+})
 
-// export default connect(mapStateToProps, mapDispatchToProps)(PropertyShow)
+export default connect(mapStateToProps, mapDispatchToProps)(PropertyShow)
