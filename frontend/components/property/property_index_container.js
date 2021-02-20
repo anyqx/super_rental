@@ -3,12 +3,12 @@ import component from '../components/component'
 import { actionCreator } from '../actionPath'
 import { fetchProperties } from '../../util/property_api_util'
 
-// const mapStateToProps = (state, ownProps) => ({
+const mapStateToProps = (state, ownProps) => ({
     
-// })
+})
 
-// const mapDispatchToProps = dispatch => ({
-//     fetchProperties: () => dispatch(fetchProperties())
-// })
+const mapDispatchToProps = dispatch => ({
+    fetchProperties: () => dispatch(fetchProperties())
+})
  
-// export default connect(mapStateToProps, mapDispatchToProps)(BenchIndex)
+export default connect(mapStateToProps, mapDispatchToProps)(BenchIndex)
