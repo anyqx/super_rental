@@ -10,5 +10,5 @@ import { fetchProperties } from '../../util/property_api_util'
 // const mapDispatchToProps = dispatch => ({
 //     fetchProperties: () => dispatch(fetchProperties())
 // })
-
+ 
 // export default connect(mapStateToProps, mapDispatchToProps)(BenchIndex)
