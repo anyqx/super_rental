@@ -12,3 +12,4 @@ demo = User.create(email:'demo@gmail.com', password:'12345678')
 Property.destroy_all
 property1 = Property.create(title: 'beach house', owner_id: demo.id, bedroom:3, bathroom:2,sqft:1050, address:'100 wonderland', city:'Los Angeles', state:'CA', zipcode:90000,longitude:321.22, altitude:231.22, price:99999, rent:3000, cap_rate:0.08, annualized_return:0.08, total_return:0.35, gross_yield:0.066)
 property2 = Property.create(title: 'Big Bear Cabin', owner_id: demo.id,bedroom:3, bathroom:2,sqft:1050, address:'100 wonderland', city:'Los Angeles', state:'CA', zipcode:90000,longitude:321.22, altitude:231.22, price:99999, rent:3000, cap_rate:0.08, annualized_return:0.08, total_return:0.35, gross_yield:0.066)
+ 
