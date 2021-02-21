@@ -8,4 +8,4 @@ class PropertyShow extends React.Component {
     }
 }
  
-export default PropertyShow; 
+export default PropertyShow;
