@@ -19,10 +19,13 @@ class PropertyIndex extends React.Component {
             <>
             <div>
                 <h1>Browse All Properties</h1>
-                <ul>
+                <ul className='properties-index-container'>
                     {properties.map(property => (
-                        <div key={property.id}>
-                            <li>{property.sqft}</li>
+                        <div key={property.id} className='property-container'>
+                            <li>{property.price}</li>
+                            <li>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</li>
+                            <li>Current Rent ${property.rent}</li>
+                            <li>Cap Rate {property.cap_rate}%</li>
                             <li>{property.address}</li>
                         </div>
                     ))}

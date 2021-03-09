@@ -1,0 +1,14 @@
+.properties-index-container {
+    display: flex;
+    margin: 20px 100px 20px;
+    flex-wrap: wrap;
+}
+
+.property-container {
+    display: flex;
+    margin: 30px;
+}
+
+.property-container > li {
+    background: red;
+}
