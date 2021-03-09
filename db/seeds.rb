@@ -37,7 +37,7 @@ Property.destroy_all
     zipcode = rand(91000..92000)
     longitude = rand(35..35.2).round(4)
     altitude = rand(118..118.5).round(4)
-    price = rand(200000..5000000)
+    price = rand(200000..1500000)
     rent = price * (rand(0.006..0.009))
     cap_rate = (rent * 12 / price * rand(0.75..0.88) * 100).round(2)
     annualized_return = (cap_rate + rand(-1..1)).round(2)
