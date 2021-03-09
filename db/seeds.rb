@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
 
 User.destroy_all
 demo = User.create(email:'demo@gmail.com', password:'12345678')
@@ -16,7 +17,7 @@ test3 = User.create(email:'test3@email.com', password:'12345678')
 
 Property.destroy_all
 
-(0..22).each do |house_num|
+(1..23).each do |house_num|
     bedrooms = rand(3..10)
     bathrooms = bedrooms / 2 + rand(2)
     sqft = rand(2500..8000)
@@ -44,7 +45,7 @@ Property.destroy_all
     total_return = (annualized_return / 100 * price * rand(0.5..0.7) * 10).round(2)
     gross_yield = (annualized_return + rand(-1..1)).round(2)
   
-    Property.create(
+    newProperty = Property.create(
         owner_id: demo.id,
         bedroom: bedrooms,
         bathroom: bathrooms,
@@ -62,6 +63,10 @@ Property.destroy_all
         total_return: total_return,
         gross_yield: gross_yield
     )
+
+    house_photo = open("https://active-storage-aa-superental-seeds.s3-us-west-1.amazonaws.com/house_#{house_num}.jpg")
+    newProperty.photo.attach(io: house_photo, filename: "house_#{house_num}.jpg")
+
 end
 # property1 = Property.create(
 #     owner_id: demo.id, bedroom:3, bathroom:2,sqft:1050, 

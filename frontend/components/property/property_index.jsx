@@ -14,7 +14,7 @@ class PropertyIndex extends React.Component {
 
     render() {
         if (!this.props.properties[0])  return null;
-        const { properties } = this.props
+        const { properties } = this.props;
         return (
             <>
             <div>
@@ -22,11 +22,15 @@ class PropertyIndex extends React.Component {
                 <ul className='properties-index-container'>
                     {properties.map(property => (
                         <div key={property.id} className='property-container'>
-                            <li>{property.price}</li>
+                            <div className='house-pic'>
+                                <img src={property.photoUrl}></img>
+                            </div>
+                            <li>$ {property.price}</li>
                             <li>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</li>
                             <li>Current Rent ${property.rent}</li>
                             <li>Cap Rate {property.cap_rate}%</li>
                             <li>{property.address}</li>
+                            <li>{property.city}, {property.state} &nbsp; {property.zipcode}</li>
                         </div>
                     ))}
                 </ul>
