@@ -2,7 +2,7 @@
 export const fetchProperties = () => {
     return $.ajax({
         method: 'GET',
-        url: 'api/properties'
+        url: 'api/properties',
     })
 }
 

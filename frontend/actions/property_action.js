@@ -13,11 +13,11 @@ export const receiveProperty = property => ({
     property
 })
 
-export const fetchProperties = () => dispatch => (
-    APIUtil.fetchProperties()
+export const fetchProperties = () => dispatch => {
+    return APIUtil.fetchProperties()
         .then( properties => dispatch(receiveProperties(properties)))
-)
-export const fetchProperty = id => dispatch => (
-    APIUtil.fetchProperty(id)
+}
+export const fetchProperty = id => dispatch => {
+    return APIUtil.fetchProperty(id)
         .then (property => dispatch(receiveProperty(property)))
-)
+}

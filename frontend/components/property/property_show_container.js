@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import component from '../components/component'
+
 import { actionCreator } from '../actionPath'
 import PropertyShow from './property_show'
 import { fetchProperty } from '../../util/property_api_util'
