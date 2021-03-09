@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_17_181806) do
+ActiveRecord::Schema.define(version: 2021_03_09_054607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 2021_02_17_181806) do
 
   create_table "properties", force: :cascade do |t|
     t.integer "owner_id", null: false
-    t.string "title", null: false
     t.integer "bedroom", null: false
     t.integer "bathroom", null: false
     t.integer "sqft", null: false
@@ -56,7 +55,6 @@ ActiveRecord::Schema.define(version: 2021_02_17_181806) do
     t.float "annualized_return"
     t.float "total_return"
     t.float "gross_yield"
-    t.index ["title"], name: "index_properties_on_title", unique: true
   end
 
   create_table "users", force: :cascade do |t|

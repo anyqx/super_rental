@@ -1,5 +1,4 @@
 class Property < ApplicationRecord
-    validates :title, uniqueness: true
     validates :owner_id, presence: true #foreign key
     validates :bedroom, :bathroom, :sqft, :address, :city, :state, :zipcode, presence: true
     validates :longitude, :altitude, :price, :rent, presence: true
