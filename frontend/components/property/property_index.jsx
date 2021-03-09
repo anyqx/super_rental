@@ -6,7 +6,7 @@ class PropertyIndex extends React.Component {
         super(props);
     }
     componentDidMount() {
-        this.props.fetchProducts();
+        this.props.fetchProperties();
     }
 
     render() {
@@ -15,7 +15,7 @@ class PropertyIndex extends React.Component {
             <div>
                 <h1>Browse All Properties</h1>
                 <ul>
-                    {properties[1]}
+                    
                 </ul>
             </div>
             </>

@@ -1,6 +1,6 @@
 import PropertyIndex from './property_index';
 import { connect } from 'react-redux';
-import { fetchProperties } from '../../util/property_api_util';
+import { fetchProperties } from '../../actions/property_action';
 import { asArray } from '../../reducers/selectors'
 
 const mapStateToProps = (state) => {

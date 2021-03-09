@@ -46,7 +46,7 @@ class Splash extends React.Component {
 
             {/* featured properties */}
             <div className='featured-container'>
-                <Link className='link-button'>view all properties</Link>
+                <Link to='/properties' className='link-button'>view all properties</Link>
             </div>
 
             {/* why sfr */}

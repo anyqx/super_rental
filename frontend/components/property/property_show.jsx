@@ -1,12 +1,11 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { login } from '../../util/session';
-import property_show_container from './property_show_container';
 
 class PropertyShow extends React.Component {
     constructor(props) {
         super(props);
-        this.handleClick = this.handleClick.bind(this)
+        this.state = { };
+        // this.handleClick = this.handleClick.bind(this)
     }
 
     // componentDidMount(){

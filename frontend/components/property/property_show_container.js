@@ -1,13 +1,13 @@
 import { connect } from 'react-redux'
 import PropertyShow from './property_show'
-import { fetchProperty } from '../../util/property_api_util'
+import { fetchProperty } from '../../actions/property_action';
+import { selectProperty } from '../../reducers/selectors';
 
-const mapStateToProps = (state) => ({
-    userId: state.session.id,
-    currentUser: state.entities.users[state.session.id],
-    propertyId,
-    property
-})
+const mapStateToProps = (state) => {
+    return {
+        currentUser: state.session.id,
+    }
+}
 
 const mapDispatchToProps = dispatch => ({
     fetchProperty: id => dispatch(fetchProperty(id))
