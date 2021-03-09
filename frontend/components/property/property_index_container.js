@@ -1,7 +1,7 @@
-import { connect } from 'react-redux'
-import component from '../components/component'
-import { actionCreator } from '../actionPath'
-import { fetchProperties } from '../../util/property_api_util'
+import PropertyIndex from './property_index';
+import { connect } from 'react-redux';
+import { fetchProperties } from '../../util/property_api_util';
+import { asArray } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => ({
     

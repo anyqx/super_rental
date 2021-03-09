@@ -1,17 +1,26 @@
+import React from 'react';
+import PropertyIndexItem from './property_index_item';
 
-
-class BenchIndex extends React.Component {
+class PropertyIndex extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {  }
     }
     componentDidMount() {
-        // request benches from your API here
+        this.props.fetchProducts();
     }
 
     render() {
-        return null;
+        return (
+            <>
+            <div>
+                <h1>Browse All Properties</h1>
+                <ul>
+                    {properties[1]}
+                </ul>
+            </div>
+            </>
+        )
     }
 }
  
-export default BenchIndex;
+export default PropertyIndex;
