@@ -24,8 +24,8 @@
 
 .main-container ul{
     background: transparent;
-    padding: 30px 10px 20px;
-
+    padding: 30px 10px 50px;
+    
     li {
         background-color: transparent;
         color: white;
@@ -37,7 +37,7 @@
         padding: 15px;
         line-height: 1.5;
     }
-
+    
     #line2{
         text-transform: capitalize;
         font-weight: bolder;
@@ -45,15 +45,42 @@
         padding: 15px;
         line-height: 1.5;
     }
-
+    
     #line3{
         text-transform: capitalize;
         font-weight: bold;
         font-size: 20px;
         padding: 15px;
         line-height: 1.5;
+        margin-bottom: 50px;
     }
 }
+
+
+.link-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bolder;
+    margin: 50px 30px 50px;
+    background-color: $logo-color;
+    color:white;
+    padding: 20px;
+    font-size: 18px;
+    height: 40px;
+    width: 280px;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.link-button:hover{
+    cursor: pointer;
+    background-color: #ff9b0f;
+}
+
+
 
 // why-invest, why-sfh
 .section-container{
@@ -140,39 +167,6 @@
      font-weight: bolder;
      background-color: transparent;
  }
-
-
-//featured container
-.featured-container{
-    display: flex;
-    margin: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
-.link-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bolder;
-    margin: 20px 0px 0px;
-    background-color: $logo-color;
-    color:white;
-    padding: 20px 20px 12px;
-    font-size: 18px;
-    height: 40px;
-    width: 280px;
-    border-style: none;
-    border-radius: 5px;
-}
-
-.link-button:hover{
-    cursor: pointer;
-    background-color: #ff9b0f;
-}
-
 
 
 //meet-investors

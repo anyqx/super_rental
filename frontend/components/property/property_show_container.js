@@ -2,10 +2,12 @@ import { connect } from 'react-redux'
 import PropertyShow from './property_show'
 import { fetchProperty } from '../../actions/property_action';
 import { selectProperty } from '../../reducers/selectors';
+import PropertyIndex from './property_index';
 
 const mapStateToProps = (state) => {
     return {
-        currentUser: state.session.id,
+        debugger
+        // properties[PropertyId] 
     }
 }
 

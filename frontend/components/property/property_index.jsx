@@ -5,11 +5,16 @@ import PropertyIndexItem from './property_index_item';
 class PropertyIndex extends React.Component {
     constructor(props) {
         super(props);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount() {
-        // debugger
         this.props.fetchProperties();
+    }
+
+    handleClick() {
+        const propertyId = this.props.properties.id;
+        this.props.history.push(`/property/${propertyId}`);
     }
 
     render() {
@@ -23,7 +28,7 @@ class PropertyIndex extends React.Component {
                     {properties.map(property => (
                         <div key={property.id} className='property-container'>
                             <div className='house-pic'>
-                                <img src={property.photoUrl}></img>
+                                <img src={property.photoUrl} onClick={this.handleClick}></img>
                             </div>
                             <li>$ {property.price}</li>
                             <li>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</li>

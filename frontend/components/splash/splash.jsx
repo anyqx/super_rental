@@ -15,6 +15,7 @@ class Splash extends React.Component {
                     <li id='line1'>for investors</li>
                     <li id='line2'>Build wealth through real estate</li>
                     <li id='line3'>SuperRental makes investing in single-family properties radically simple.</li>
+                    <Link to='/properties' className='link-button'>view all properties</Link>
                 </ul>
                 <img id='main-img' src={window.splash1URL}></img>
 
@@ -44,10 +45,7 @@ class Splash extends React.Component {
                 </div>
             </div>
 
-            {/* featured properties */}
-            <div className='featured-container'>
-                <Link to='/properties' className='link-button'>view all properties</Link>
-            </div>
+          
 
             {/* why sfr */}
             <div className='section-container'>
