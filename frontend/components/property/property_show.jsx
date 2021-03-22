@@ -4,31 +4,28 @@ import { withRouter } from 'react-router-dom';
 class PropertyShow extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { };
+        // this.state = { };
         // this.handleClick = this.handleClick.bind(this)
     }
 
-    // componentDidMount(){
-    //     const propertyId = this.props.propertyId;
-    //     this.props.fetchPorperty(propertyId);
-    // }
+    componentDidMount(){
+        debugger
+        const propertyId = this.props.productId;
+        this.props.fetchProperty(propertyId);
+    }
 
     // handleClick() {
     //     e.preventDefault();
     //     const { currentUser, addCartItem, propertyId, userId } = this.props;
     //     currentUser ? addCartItem({propertyId: propertyId, user_id: userId}) :  '/login'
     // }
-    render() { 
+    render() {
+        debugger
+        const {property} = this.props
         return (
             <>
-                <div className='property-show-container'>
-                    <p>{property.title}</p>
-                    <p>{property.address}</p>
-                    <p>{property.city},&nbsp;{property,state}&nbsp;{property.zipcode}</p>
-                </div>
-                <div>
-                    <img src={property.photoUrl} alt="" />
-                </div>
+            <h2>property</h2>
+            {property.title}
             </>
         )
     }

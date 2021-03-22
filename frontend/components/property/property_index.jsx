@@ -11,7 +11,6 @@ class PropertyIndex extends React.Component {
     }
 
     render() {
-
         const { properties } = this.props;
         return (
             <>

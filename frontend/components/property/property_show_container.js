@@ -3,14 +3,23 @@ import PropertyShow from './property_show'
 import { fetchProperty } from '../../actions/property_action';
 import { selectProperty } from '../../reducers/selectors';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, {match}) => {
+    debugger
+    const propertyId = parseInt(match.params.propertyId);
+    const property = selectProperty(state.entities, propertyId);
+    // const cartitemId = 
     return {
-        currentUser: state.session.id,
+        // userId: state.session.id,
+        // currentUser: state.entities.users[session.id],
+        propertyId,
+        property
     }
 }
 
-const mapDispatchToProps = dispatch => ({
-    fetchProperty: id => dispatch(fetchProperty(id))
-})
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchProperty: id => dispatch(fetchProperty(id))
+    }
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(PropertyShow)
