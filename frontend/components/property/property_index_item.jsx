@@ -19,18 +19,36 @@ class PropertyIndexItem extends React.Component {
         const { property } = this.props;
         return (
             <>
-           <li key={property.id} >
+           <div key={property.id} >
               <Link to={`/properties/${property.id}`} onClick={()=> this.handleClick}>
                 <img src={property.photoUrl} alt=""/>
-                ${property.price}
+                <li>$ {property.price}</li>
+                <li>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</li>
+                <li>Current Rent ${property.rent}</li>
+                <li>Cap Rate {property.cap_rate}%</li>
+                <li>{property.address}</li>
+                <li>{property.city}, {property.state} &nbsp; {property.zipcode}</li>
               </Link>
-          </li>
-            <div>
-                <h1>this is index container</h1>
-            </div>
+          </div>
             </>
         )
     }
 }
+
+                // <ul className='properties-index-container'>
+                //     {properties.map(property => (
+                //         <div key={property.id} className='property-container'>
+                //             <div className='house-pic'>
+                //                 <img src={property.photoUrl} onClick={this.handleClick}></img>
+                //             </div>
+                //             <li>$ {property.price}</li>
+                //             <li>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</li>
+                //             <li>Current Rent ${property.rent}</li>
+                //             <li>Cap Rate {property.cap_rate}%</li>
+                //             <li>{property.address}</li>
+                //             <li>{property.city}, {property.state} &nbsp; {property.zipcode}</li>
+                //         </div>
+                //     ))}
+                // </ul>
 
 export default withRouter(PropertyIndexItem);
