@@ -13,6 +13,7 @@ class PropertyIndex extends React.Component {
     }
 
     handleClick() {
+        debugger
         const propertyId = this.props.properties.id;
         this.props.history.push(`/property/${propertyId}`);
     }

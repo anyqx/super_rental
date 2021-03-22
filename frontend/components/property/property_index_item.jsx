@@ -7,26 +7,24 @@ class PropertyIndexItem extends React.Component {
         this.state = {
             properties: []
         }
-        // this.handleClick = this.handleClick.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
 
-    // handleClick(e) {
-    //     const propertyId = this.props.property.id;
-    //     this.props.history.push(`/properties/${propertyId}`);
-    // }
+    handleClick(e) {
+        const propertyId = this.props.property.id;
+        this.props.history.push(`/properties/${propertyId}`);
+    }
     render() {
         const { property } = this.props;
         return (
             <>
-            {/* <div>
-                <li key={property.id} >
-                    {property.title}
-                    {property.address}
-                    handle submit
-                    <img src={product.photoUrl} alt='' />
-                </li>
-            </div> */}
+           <li key={property.id} >
+              <Link to={`/properties/${property.id}`} onClick={()=> this.handleClick}>
+                <img src={property.photoUrl} alt=""/>
+                ${property.price}
+              </Link>
+          </li>
             <div>
                 <h1>this is index container</h1>
             </div>

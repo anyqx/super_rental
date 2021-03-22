@@ -5,16 +5,27 @@
 }
 
 .property-container {
-    display: flex;
+    display: block;
     margin: 30px;
     flex-direction: column;
+    border: gray solid 1px;
+
+
 }
 
 .property-container > li {
-    display: flex;
+    display: block;
+    border-top: gray solid 0.5px;;
+    border-radius: 5px;
+    padding: 2px;
 }
 
 img {
     display: flex;
-    height: 200px;
+    max-height: 25vh;
+    max-width: 20vh;;
+}
+
+img:hover {
+    cursor: pointer;
 }
