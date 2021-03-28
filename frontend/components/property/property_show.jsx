@@ -26,6 +26,7 @@ class PropertyShow extends React.Component {
             <>
             <h2>property</h2>
             {property.title}
+            {property.price}
             </>
         )
     }
