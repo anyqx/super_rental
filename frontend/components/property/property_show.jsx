@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 
 class PropertyShow extends React.Component {
     constructor(props) {
@@ -9,9 +9,9 @@ class PropertyShow extends React.Component {
     }
 
     componentDidMount(){
+        const propertyId = this.props.propertyId;
         debugger
-        const propertyId = this.props.productId;
-        this.props.fetchProperty(propertyId);
+        this.props.fetchProperties(propertyId);
     }
 
     // handleClick() {
@@ -20,12 +20,13 @@ class PropertyShow extends React.Component {
     //     currentUser ? addCartItem({propertyId: propertyId, user_id: userId}) :  '/login'
     // }
     render() {
+        const {property} = this.props;
         debugger
-        const {property} = this.props
+        if (!property) return null;
         return (
             <>
             <h2>property</h2>
-            {property.title}
+            {property.zipcode}
             {property.price}
             </>
         )

@@ -1,12 +1,12 @@
 import { connect } from 'react-redux'
 import PropertyShow from './property_show'
-import { fetchProperty } from '../../actions/property_action';
+import { fetchProperties, fetchProperty } from '../../actions/property_action';
 import { selectProperty } from '../../reducers/selectors';
 
 const mapStateToProps = (state, {match}) => {
-    debugger
     const propertyId = parseInt(match.params.propertyId);
     const property = selectProperty(state.entities, propertyId);
+    debugger
     // const cartitemId = 
     return {
         // userId: state.session.id,
@@ -18,6 +18,7 @@ const mapStateToProps = (state, {match}) => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        fetchProperties: () => dispatch(fetchProperties()),
         fetchProperty: id => dispatch(fetchProperty(id))
     }
 }
