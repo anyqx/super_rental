@@ -12,6 +12,14 @@ class User < ApplicationRecord
         foreign_key: :owner_id,
         class_name: :Property
 
+    has_many :cartitems,
+    foreign_key: :user_id,
+    class_name: :CartItem
+
+    has_many :properties,
+    through: :cartitems,
+    source: :product
+
     #SPIRE
     def self.find_by_credentials(email, pw)
         user = User.find_by(email: email)

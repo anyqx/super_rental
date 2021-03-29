@@ -11,5 +11,9 @@ class Property < ApplicationRecord
         class_name: :User
 
     has_one_attached :photo
+
+    has_many :carts,
+    foreign_key: property_id,
+    className: :CartItem
     
 end
