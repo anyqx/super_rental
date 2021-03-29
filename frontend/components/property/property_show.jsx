@@ -10,7 +10,6 @@ class PropertyShow extends React.Component {
 
     componentDidMount(){
         const propertyId = this.props.propertyId;
-        debugger
         this.props.fetchProperties(propertyId);
     }
 
@@ -21,13 +20,20 @@ class PropertyShow extends React.Component {
     // }
     render() {
         const {property} = this.props;
-        debugger
         if (!property) return null;
         return (
             <>
-            <h2>property</h2>
-            {property.zipcode}
-            {property.price}
+            <div className='property-show-container'>
+
+            <h2>Property</h2>
+            <img src={property.photoUrl} alt=""/>
+                <li>$ {property.price}</li>
+                <li>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</li>
+                <li>Current Rent ${property.rent}</li>
+                <li>Cap Rate {property.cap_rate}%</li>
+                <li>{property.address}</li>
+                <li>{property.city}, {property.state} &nbsp; {property.zipcode}</li>
+            </div>
             </>
         )
     }

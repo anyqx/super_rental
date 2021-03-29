@@ -9,8 +9,6 @@
     margin: 30px;
     flex-direction: column;
     border: gray solid 1px;
-
-
 }
 
 .property-container > li {
@@ -29,3 +27,21 @@ img {
 img:hover {
     cursor: pointer;
 }
+
+//property show
+
+.property-show-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    h2{
+        justify-content: center;
+    }
+
+    img{
+        justify-content: center;
+    }
+}
+
+
