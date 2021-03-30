@@ -25,26 +25,34 @@ class PropertyShow extends React.Component {
         if (!property) return null;
         return (
             <>
+                <div className="google-maps">
+                    <PropertyMap property={property} type="show" zoom="false" />
+                </div>
             <div className='property-show-container'>
-                <h2>Property</h2>
+                {/* <h2>Property</h2> */}
+                <p id='address1'>
+                    {property.address}
+                </p>
+                <p id='address2'>
+                    {property.city}, {property.state} &nbsp; {property.zipcode}
+                </p>
                 <img src={property.photoUrl} alt=""/>
-                <li>$ {property.price}</li>
-                <li>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</li>
-                <li>Current Rent ${property.rent}</li>
-                <li>Cap Rate {property.cap_rate}%</li>
-                <li>{property.address}</li>
-                <li>{property.city}, {property.state} &nbsp; {property.zipcode}</li>
-                 {/* <a
+                <p>$ {property.price}</p>
+                <p>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</p>
+                <p>Current Rent${property.rent}</p>
+                <p>Cap Rate {property.cap_rate}%</p>
+                <p>Gross Yield: {property.gross_yield}%</p>
+                <p>Annualized Return: {property.annualized_return} %</p>
+                <p>10 year total return: ${property.total_return} </p>
+                {/* get direction  */}
+                <a
                       className="location-link"
                       href={`https://www.google.com/maps/dir/?api=1&destination=${property.lat},${property.lng}`}
                       target="_blank"
-                    ></a> */}
+                    ></a>
             </div>
-            <div className="google-maps">
-                {/* <BusinessMap businesses={business} type="show" zoom="false" /> */}
-              </div>
-            <div>
                 <CartCreateContainer propertyId={property.id}/>
+                <div>
             </div>
             </>
         )

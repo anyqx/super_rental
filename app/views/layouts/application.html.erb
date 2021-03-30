@@ -10,7 +10,8 @@
      <meta property="og:url"
        content="https://superental.herokuapp.com/"
      />
-
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyBQf1ahKg7gbuVHd9daHMMvm0zfPEpnBd8&key=AIzaSyBQf1ahKg7gbuVHd9daHMMvm0zfPEpnBd8&libraries=places" %>
+    
     <title>SuperRental</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -41,7 +42,7 @@
   <script type="text/javascript">
       window.currentUser = {
         'id': <%= current_user.id %>,
-        'email': <%= current_user.email %>
+        'email': '<%= current_user.email %>'
       }
   </script>
 <% end %>

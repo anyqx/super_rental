@@ -29,12 +29,12 @@ class CartForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='cart-container'>
                 <h2>Cart feature</h2>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" value={this.state.price} onChange={this.handlePrice} placeholder='write your offer ...'/>
-                    <textarea type="text" value={this.state.terms} onChange={this.handleTerms} placeholder='terms...' />
-                <button>Make An Offer</button>
+                <form className='cart-create-form'onSubmit={this.handleSubmit}>
+                    <input type="text" value={this.state.price} onChange={this.handlePrice} placeholder='Your magic number...'/>
+                    <textarea type="text" value={this.state.terms} onChange={this.handleTerms} placeholder='terms: downpayment. mortgage amount, etc' />
+                <button className='submit-button'>Make An Offer</button>
                 </form>
             </div>
         )

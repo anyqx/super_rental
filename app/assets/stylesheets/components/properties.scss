@@ -1,8 +1,14 @@
+* {
+    text-decoration: none;
+    font-family: $main-font-family;
+}
+
 .properties-index-container {
     display: flex;
     margin: 20px 100px 20px;
     flex-wrap: wrap;
 }
+
 
 .property-container {
     display: block;
@@ -32,16 +38,30 @@ img:hover {
 
 .property-show-container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-direction: column;
+    align-items: center;
 
-    h2{
+    #address1{
         justify-content: center;
+        color: #515151;
+        font-size: 18px;
+    }
+
+    #address2 {
+        color: #a3a2a2;
+        font-size: 14px;
     }
 
     img{
         justify-content: center;
     }
+}
+
+.google-maps {
+    height: 1000px;
+    width: 1000px;
+    background: none;
 }
 
 

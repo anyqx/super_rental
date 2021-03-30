@@ -16,6 +16,9 @@ test3 = User.create(email:'test3@email.com', password:'12345678')
 
 
 Property.destroy_all
+ActiveRecord::Base.connection.tables.each do |t|
+  ActiveRecord::Base.connection.reset_pk_sequence!(t)
+end
 
 (1..23).each do |house_num|
     bedrooms = rand(3..10)
@@ -36,8 +39,8 @@ Property.destroy_all
         'Frozen'
     ]
     zipcode = rand(91000..92000)
-    longitude = rand(35..35.2).round(4)
-    altitude = rand(118..118.5).round(4)
+    longitude = rand(35..35.2).round(8)
+    altitude = rand(-118.5..-118).round(8)
     price = rand(200000..1500000)
     rent = price * (rand(0.006..0.009))
     cap_rate = (rent * 12 / price * rand(0.75..0.88) * 100).round(2)

@@ -22,15 +22,18 @@ class PropertyIndexItem extends React.Component {
            <div key={property.id} >
               <Link to={`/properties/${property.id}`} onClick={()=> this.handleClick}>
                 <img src={property.photoUrl} alt=""/>
-                <li>$ {property.price}</li>
-                <li>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</li>
-                <li>Current Rent ${property.rent}</li>
-                <li>Cap Rate {property.cap_rate}%</li>
-                <li>{property.address}</li>
-                <li>{property.city}, {property.state} &nbsp; {property.zipcode}</li>
+                <p>$ {property.price}</p>
+                <p>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</p>
+                <p>
+                    <span>Current Rent${property.rent}</span>
+                    <span>Cap Rate {property.cap_rate}%</span>
+                </p>
+                <p>
+                    {property.address}<br></br>{property.city}, {property.state} &nbsp; {property.zipcode}
+                </p>
               </Link>
           </div>
-            </>
+          </>
         )
     }
 }

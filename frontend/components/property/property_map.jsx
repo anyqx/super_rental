@@ -6,12 +6,15 @@ class PropertyMap extends React.Component {
     super(props)
   }
   componentDidMount() {
+    debugger
     let mapLoc
-    if (Array.isArray(this.props.properties)) {
+    if (Array.isArray(this.props.property)) {
       mapLoc = {
         center: {
-          lat: +this.props.properties[0].altitude,
-          lng: +this.props.properties[0].longitude,
+          // lat: +this.props.property[0].altitude,
+          // lng: +this.props.property[0].longitude,
+          lat: 37.62668435579264,
+          lng: -122.07381861400056,
         },
         zoom: 10,
         mapTypeControl: false,
@@ -23,8 +26,10 @@ class PropertyMap extends React.Component {
     } else {
       mapLoc = {
         center: {
-          lat: +this.props.properties.altitude,
-          lng: +this.props.properties.longitude,
+          // lat: +this.props.property.altitude,
+          // lng: +this.props.property.longitude,
+                    lat: 37.62668435579264,
+          lng: -122.07381861400056,
         },
         zoom: 10,
         mapTypeControl: false,
@@ -37,17 +42,19 @@ class PropertyMap extends React.Component {
 
     this.map = new google.maps.Map(this.mapNode, mapLoc)
 
-    this.MarkerManager = new MarkerManager(this.map)
-    this.MarkerManager.updateMarkers(this.props.properties)
+    // this.MarkerManager = new MarkerManager(this.map)
+    // this.MarkerManager.updateMarkers(this.props.property)
   }
 
   componentDidUpdate() {
     let mapLoc
-    if (Array.isArray(this.props.properties)) {
+    if (Array.isArray(this.props.property)) {
       mapLoc = {
         center: {
-          lat: +this.props.properties[0].altitude,
-          lng: +this.props.properties[0].longitude,
+          // lat: +this.props.property[0].altitude,
+          // lng: +this.props.property[0].longitude,
+                    lat: 37.62668435579264,
+          lng: -122.07381861400056,
         },
         zoom: 10,
         mapTypeControl: false,
@@ -59,8 +66,10 @@ class PropertyMap extends React.Component {
     } else {
       mapLoc = {
         center: {
-          lat: +this.props.properties.altitude,
-          lng: +this.props.properties.longitude,
+          // lat: +this.props.property.altitude,
+          // lng: +this.props.property.longitude,
+                    lat: 37.62668435579264,
+          lng: -122.07381861400056,
         },
         zoom: 10,
         mapTypeControl: false,
@@ -72,12 +81,12 @@ class PropertyMap extends React.Component {
     }
 
     this.map = new google.maps.Map(this.mapNode, mapLoc)
-    this.MarkerManager = new MarkerManager(this.map)
-    this.MarkerManager.updateMarkers(this.props.properties)
+    // this.MarkerManager = new MarkerManager(this.map)
+    // this.MarkerManager.updateMarkers(this.props.property)
   }
 
   render() {
-    if (!this.props.properties) return null
+    if (!this.props.property) return null
     return (
       <div style={{ height: '100%' }} ref={(map) => (this.mapNode = map)}></div>
     )
