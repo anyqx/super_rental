@@ -29,6 +29,7 @@ class CartIndex extends React.Component {
                 </ul>
             </div>
             </>
+        )
     }
 }
 export default withRouter(CartIndex);
