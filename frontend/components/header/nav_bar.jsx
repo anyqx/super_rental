@@ -32,6 +32,7 @@ class NavBar extends React.Component {
                     </span>
                 ) : (
                     <div className="right-nav">
+                        <span>Welcome! &nbsp; &nbsp;&nbsp;&nbsp;</span>
                         <span>
                             <Link to='/cart' className='button'>Cart</Link>
                         </span>

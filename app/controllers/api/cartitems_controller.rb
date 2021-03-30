@@ -3,7 +3,6 @@ class Api::CartitemsController < ApplicationController
         # @cartitems = CartItem.all.select{|item| item.user_id == current_user.id }
         if current_user
             @cartitems = current_user.cartitems
-            # debugger
             render 'api/cartitems/index'
         end
         # render 'api/cartitems/index'

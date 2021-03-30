@@ -18,7 +18,7 @@ class PropertyIndexItem extends React.Component {
     render() {
         const { property } = this.props;
         return (
-            <>
+           <>
            <div key={property.id} >
               <Link to={`/properties/${property.id}`} onClick={()=> this.handleClick}>
                 <img src={property.photoUrl} alt=""/>

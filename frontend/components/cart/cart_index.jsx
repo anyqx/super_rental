@@ -5,10 +5,11 @@ import { withRouter } from 'react-router-dom';
 class CartIndex extends React.Component {
     constructor(props) {
         super(props);
-
+        this.state = {
+            cartitems: []
+        }
     }
     componentDidMount() {
-        debugger
         this.props.fetchCartItems();
     }
 
@@ -28,9 +29,6 @@ class CartIndex extends React.Component {
                 </ul>
             </div>
             </>
-        )
     }
-
-    
 }
 export default withRouter(CartIndex);

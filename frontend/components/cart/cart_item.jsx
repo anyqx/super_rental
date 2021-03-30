@@ -5,8 +5,9 @@ class CartItem extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            price: this.props.item.price,
-            terms: this.props.item.terms
+            // price: this.props.item.price,
+            // terms: this.props.item.terms
+            cartitems: []
         };
 
         this.handleClick = this.handleClick.bind(this);
@@ -15,7 +16,7 @@ class CartItem extends React.Component {
         this.updateDB = this.updateDB.bind(this);
     }
     handleChange(field){
-        this.setState({[field]: parseInt(e.target.value)}, ()=>{
+        this.setState({[field]: e.target.value}, ()=>{
             this.updateDB();
         });
     }
@@ -23,8 +24,7 @@ class CartItem extends React.Component {
     updateDB(){
         const { item } = this.props;
         const cartitem = {property_id: item.property_id, user_id: item.user_id, price: this.state.price, terms: this.state.terms}
-        const offered = false;
-        this.props.updateCartItem(item.id, cartitem, offered);
+        this.props.updateCartItem(item.id, cartitem);
     }
 
     handleClick(e) {

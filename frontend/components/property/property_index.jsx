@@ -1,5 +1,6 @@
 import React from 'react';
 import PropertyIndexItem from './property_index_item';
+import PropertyMap from './property_map';
 
 class PropertyIndex extends React.Component {
     constructor(props) {
@@ -22,6 +23,7 @@ class PropertyIndex extends React.Component {
                     })}
                 </ul>
             </div>
+            {/* <PropertyMap properties={this.props.properties} /> */}
             </>
         )
     }

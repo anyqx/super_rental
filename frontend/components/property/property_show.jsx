@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import CartCreateContainer from '../cart/cart_create_container';
-
+import PropertyMap from './property_map'
 
 class PropertyShow extends React.Component {
     constructor(props) {
@@ -34,7 +34,15 @@ class PropertyShow extends React.Component {
                 <li>Cap Rate {property.cap_rate}%</li>
                 <li>{property.address}</li>
                 <li>{property.city}, {property.state} &nbsp; {property.zipcode}</li>
+                 {/* <a
+                      className="location-link"
+                      href={`https://www.google.com/maps/dir/?api=1&destination=${property.lat},${property.lng}`}
+                      target="_blank"
+                    ></a> */}
             </div>
+            <div className="google-maps">
+                {/* <BusinessMap businesses={business} type="show" zoom="false" /> */}
+              </div>
             <div>
                 <CartCreateContainer propertyId={property.id}/>
             </div>

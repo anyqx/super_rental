@@ -4,7 +4,6 @@ import { itemsArray } from '../../reducers/selectors';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
-    debugger
     return {
         items: itemsArray(state.entities)
     }
