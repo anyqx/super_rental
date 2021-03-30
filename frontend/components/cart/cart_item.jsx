@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import { fetchProperties } from '../../util/property_api_util';
 
 class CartItem extends React.Component {
     constructor(props) {

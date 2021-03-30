@@ -32,6 +32,9 @@ class NavBar extends React.Component {
                     </span>
                 ) : (
                     <div className="right-nav">
+                        <span>
+                            <Link to='/cart' className='button'>Cart</Link>
+                        </span>
                         <span className='logout-box'>
                             <div onClick={this.handleLogout} className='button'>LOG OUT</div>
                             {/* <span>{this.props.currentUser}</span> */}

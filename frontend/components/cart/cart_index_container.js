@@ -1,11 +1,12 @@
 import CartIndex from "./cart_index";
 import { fetchCartItems, deleteCartItem, updateCartItem } from '../../actions/cartitem_actions';
-import { itemsAsArray } from '../../reducers/selectors';
+import { itemsArray } from '../../reducers/selectors';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
+    debugger
     return {
-        items: itemsAsArray(state.entities)
+        items: itemsArray(state.entities)
     }
 }
 
