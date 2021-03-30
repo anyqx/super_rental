@@ -14,8 +14,9 @@ class CartIndex extends React.Component {
     }
 
     render() {
-
-        const { items } = this.props;
+        const items = this.props.items;
+        debugger
+        if (!items) return null;
         return (
             <>
             <div>

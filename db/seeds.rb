@@ -8,17 +8,22 @@
 
 require 'open-uri'
 
+#clear id and have id start from one
+
 User.destroy_all
+Property.destroy_all
+CartItem.destroy_all
+
+ActiveRecord::Base.connection.tables.each do |t|
+  ActiveRecord::Base.connection.reset_pk_sequence!(t)
+end
+
 demo = User.create(email:'demo@gmail.com', password:'12345678')
 test1 = User.create(email:'test1@email.com', password:'12345678')
 test2 = User.create(email:'test2@email.com', password:'12345678')
 test3 = User.create(email:'test3@email.com', password:'12345678')
 
 
-Property.destroy_all
-ActiveRecord::Base.connection.tables.each do |t|
-  ActiveRecord::Base.connection.reset_pk_sequence!(t)
-end
 
 (1..23).each do |house_num|
     bedrooms = rand(3..10)
@@ -75,3 +80,5 @@ end
 #     owner_id: demo.id, bedroom:3, bathroom:2,sqft:1050, 
 #     address:'100 wonderland', city:'Los Angeles', state:'CA', zipcode:90000,longitude:321.22, altitude:231.22, 
 #     price:99999, rent:3000, cap_rate:0.08, annualized_return:0.08, total_return:0.35, gross_yield:0.066)
+
+CartItem.create(property_id:1,user_id:1,price:100000,terms:'downpayment 20k')

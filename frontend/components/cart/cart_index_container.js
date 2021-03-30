@@ -5,17 +5,17 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
     return {
-        items: itemsArray(state.entities)
+        items: state.entities.items
     }
 }
 
 
-const mapDispatchToProps = dispatch => {
+function mapDispatchToProps(dispatch) {
     return {
         fetchCartItems: () => dispatch(fetchCartItems()),
         deleteCartItem: (id) => dispatch(deleteCartItem(id)),
         updateCartItem: (id, cartitem, price, terms) => dispatch(updateCartItem(id, cartitem, price, terms))
-    }
+    };
 }
 
 

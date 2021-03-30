@@ -6,40 +6,46 @@ class PropertyMap extends React.Component {
     super(props)
   }
   componentDidMount() {
-    debugger
     let mapLoc
     if (Array.isArray(this.props.property)) {
       mapLoc = {
+                initialCenter:{
+                  lat: 36.778259,
+                  lng: -119.417931,
+                  },
         center: {
           // lat: +this.props.property[0].altitude,
           // lng: +this.props.property[0].longitude,
-          lat: 37.62668435579264,
-          lng: -122.07381861400056,
+          lat: +37.62668435579264,
+          lng: +-122.07381861400056,
         },
-        zoom: 10,
-        mapTypeControl: false,
-        scaleControl: false,
-        streetViewControl: false,
-        rotateControl: false,
-        fullscreenControl: true,
+        zoom: 15,
+        // mapTypeControl: false,
+        // scaleControl: false,
+        // streetViewControl: false,
+        // rotateControl: false,
+        // fullscreenControl: true,
       }
     } else {
       mapLoc = {
+        initialCenter:{
+                      lat: +36.778259,
+                      lng: +-119.417931,
+                    },
         center: {
           // lat: +this.props.property.altitude,
           // lng: +this.props.property.longitude,
-                    lat: 37.62668435579264,
-          lng: -122.07381861400056,
+                    lat: +37.62668435579264,
+          lng: +-122.07381861400056,
         },
-        zoom: 10,
-        mapTypeControl: false,
-        scaleControl: false,
-        streetViewControl: false,
-        rotateControl: false,
-        fullscreenControl: true,
+        zoom: 15,
+        // mapTypeControl: false,
+        // scaleControl: false,
+        // streetViewControl: false,
+        // rotateControl: false,
+        // fullscreenControl: true,
       }
     }
-
     this.map = new google.maps.Map(this.mapNode, mapLoc)
 
     // this.MarkerManager = new MarkerManager(this.map)
@@ -50,33 +56,41 @@ class PropertyMap extends React.Component {
     let mapLoc
     if (Array.isArray(this.props.property)) {
       mapLoc = {
+        initialCenter:{
+                      lat: +36.778259,
+                      lng: +-119.417931,
+                    },
         center: {
           // lat: +this.props.property[0].altitude,
           // lng: +this.props.property[0].longitude,
-                    lat: 37.62668435579264,
-          lng: -122.07381861400056,
+                    lat: +37.62668435579264,
+          lng: +-122.07381861400056,
         },
-        zoom: 10,
-        mapTypeControl: false,
-        scaleControl: false,
-        streetViewControl: false,
-        rotateControl: false,
-        fullscreenControl: true,
+        zoom: 15,
+        // mapTypeControl: false,
+        // scaleControl: false,
+        // streetViewControl: false,
+        // rotateControl: false,
+        // fullscreenControl: true,
       }
     } else {
       mapLoc = {
+        initialCenter:{
+                      lat: +36.778259,
+                      lng: +-119.417931,
+                    },
         center: {
           // lat: +this.props.property.altitude,
           // lng: +this.props.property.longitude,
-                    lat: 37.62668435579264,
-          lng: -122.07381861400056,
+                    lat: +37.62668435579264,
+          lng: +-122.07381861400056,
         },
-        zoom: 10,
-        mapTypeControl: false,
-        scaleControl: false,
-        streetViewControl: false,
-        rotateControl: false,
-        fullscreenControl: true,
+        zoom: 15,
+        // mapTypeControl: false,
+        // scaleControl: false,
+        // streetViewControl: false,
+        // rotateControl: false,
+        // fullscreenControl: true,
       }
     }
 
