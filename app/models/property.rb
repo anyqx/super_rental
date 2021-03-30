@@ -13,7 +13,8 @@ class Property < ApplicationRecord
     has_one_attached :photo
 
     has_many :carts,
-    foreign_key: property_id,
-    className: :CartItem
+        primary_key: :id,
+        foreign_key: :property_id,
+        class_name: :CartItem
     
 end

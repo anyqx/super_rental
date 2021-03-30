@@ -18,7 +18,7 @@ class User < ApplicationRecord
 
     has_many :properties,
     through: :cartitems,
-    source: :product
+    source: :property
 
     #SPIRE
     def self.find_by_credentials(email, pw)
