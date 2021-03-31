@@ -13,15 +13,15 @@ class CartItem extends React.Component {
         this.handleClick = this.handleClick.bind(this);
         this.removeItem = this.removeItem.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.updateDB = this.updateDB.bind(this);
+        this.handleUpdate = this.handleUpdate.bind(this);
     }
     handleChange(field){
         this.setState({[field]: e.target.value}, ()=>{
-            this.updateDB();
+            this.handleUpdate();
         });
     }
 
-    updateDB(){
+    handleUpdate(){
         const { item } = this.props;
         const cartitem = {property_id: item.property_id, user_id: item.user_id, price: this.state.price, terms: this.state.terms}
         this.props.updateCartItem(item.id, cartitem);

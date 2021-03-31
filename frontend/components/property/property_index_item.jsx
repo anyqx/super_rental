@@ -4,9 +4,6 @@ import { withRouter, Link } from 'react-router-dom';
 class PropertyIndexItem extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            properties: []
-        }
         this.handleClick = this.handleClick.bind(this);
     }
 

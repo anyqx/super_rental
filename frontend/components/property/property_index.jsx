@@ -14,7 +14,6 @@ class PropertyIndex extends React.Component {
     render() {
         const { properties } = this.props;
         if (!properties) return null;
-        console.log(properties);
         return (
             <>
             <div>
