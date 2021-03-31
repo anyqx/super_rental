@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
     const items = Object.values(state.entities.items)
-    debugger
     return {
         items: items
     }
