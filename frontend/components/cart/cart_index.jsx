@@ -11,14 +11,15 @@ class CartIndex extends React.Component {
     }
 
     render() {
-        const {items} = this.props.items;
+        const {items} = this.props;
+        debugger
         if (!items) return null;
         return (
             <>
             <div>
                 <h1>Browse All Properties in Cart</h1>
                 <ul className='Cart-index-container'>
-                    {cartitems.map(item => {
+                    {items.map(item => {
                         return <CartItem item={item} key={item.id} 
                         updateCartItem={this.props.updateCartItem}
                         deleteCartItem={this.props.deleteCartItem}/>

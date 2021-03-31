@@ -29,7 +29,7 @@ class PropertyShow extends React.Component {
                     <PropertyMap property={property} type="show" zoom="false" />
                 </div>
             <div className='property-show-container'>
-                {/* <h2>Property</h2> */}
+                <h2>Property</h2>
                 <p id='address1'>
                     {property.address}
                 </p>

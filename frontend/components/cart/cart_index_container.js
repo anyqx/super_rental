@@ -4,8 +4,10 @@ import { itemsArray } from '../../reducers/selectors';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
+    const items = Object.values(state.entities.items)
+    debugger
     return {
-        items: itemsArray(state.entities)
+        items: items
     }
 }
 
