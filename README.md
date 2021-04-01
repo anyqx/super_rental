@@ -27,3 +27,5 @@ Things you may want to cover:
 rails s
 npm start
 localhost:3000
+
+WIP: google API, update cart
