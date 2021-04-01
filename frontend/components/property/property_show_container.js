@@ -6,7 +6,6 @@ import { selectProperty } from '../../reducers/selectors';
 const mapStateToProps = (state, {match}) => {
     const propertyId = parseInt(match.params.propertyId);
     const property = selectProperty(state.entities, propertyId);
-    console.log("propertyId",propertyId)
     // const cartitemId = 
     return {
         // userId: state.session.id,

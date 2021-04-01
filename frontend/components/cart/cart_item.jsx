@@ -5,8 +5,6 @@ class CartItem extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            // price: this.props.item.price,
-            // terms: this.props.item.terms
             cartitems: []
         };
 
@@ -40,33 +38,35 @@ class CartItem extends React.Component {
             <>
             <li key={item.id} className="items-container">
                 <div className="item photo">
-                    <Link to={`/properties/${item.property_id}`} onClick={() => this.handleClick}>
-                        <img src={item.photoUrl} alt="" />
-                    </Link>
+                    <h1>{item.address}</h1>
+                    <img src={item.photoUrl} alt="" />
+            
 
                 </div>
                 <div className="item title">
-                    <span>{item.title}</span>
                     <div>
-                        <Link to={`/properties/${item.property_id}`} onClick={() => this.handleClick}>
-                            <p>{item.title}</p>
-                        </Link>
-                        
-                        <text 
+                        <h2>Edit your offer</h2>
+                
+                        <p>current offer price: {item.price}</p>
+                        <p>current terms: {item.terms}</p>
+                        <textarea 
                             type="text" 
                             value={this.state.price} 
                             placeholder='your bid price'
-                            onClick={this.handleClick}
-                            onChange={this.handleChange} />
+                            // onClick={this.handleClick}
+                            onChange={this.handleUpdate} />
 
                         <textarea
                             type="text" 
                             value={this.state.terms}
                             placeholder='input your terms'
-                            onClick={this.handleClick}
-                            onChange={this.handleChange} />
+                            // onClick={this.handleClick}
+                            onChange={this.handleUpdate} />
+
+                        <button onClick={this.handleClick}>Submit Change</button>
                     </div>
-                    <button onClick={this.removeItem} >Remove</button>
+                    <h2>Delete Form</h2>
+                    <button onClick={this.removeItem} >delete this property</button>
                 </div>
 
             </li>

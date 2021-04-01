@@ -22,7 +22,6 @@ class PropertyShow extends React.Component {
     // }
     render() {
         const {property} = this.props;
-        console.log(property)
         if (!property) return null;
         return (
             <>

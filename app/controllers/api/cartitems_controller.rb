@@ -53,6 +53,6 @@ class Api::CartitemsController < ApplicationController
     private
 
     def cartitem_params
-        params.require(:cartitem).permit(:property_id, :user_id, :price, :terms)
+        params.require(:cartitem).permit(:property_id, :user_id, :offer_price, :terms)
     end
 end

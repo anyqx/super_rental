@@ -81,4 +81,4 @@ end
 #     address:'100 wonderland', city:'Los Angeles', state:'CA', zipcode:90000,longitude:321.22, altitude:231.22, 
 #     price:99999, rent:3000, cap_rate:0.08, annualized_return:0.08, total_return:0.35, gross_yield:0.066)
 
-CartItem.create(property_id:1,user_id:1,price:100000,terms:'downpayment 20k')
+CartItem.create(property_id:1,user_id:1,offer_price:100000,terms:'downpayment 20k, finance the rest, 30yr fixed')

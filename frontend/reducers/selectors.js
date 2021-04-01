@@ -1,5 +1,4 @@
 export const selectProperty = ({properties}, propertyId) => {
-    console.log(properties);
     return properties[propertyId];
 }
 

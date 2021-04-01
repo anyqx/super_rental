@@ -6,7 +6,6 @@ const cartItemsReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_ITEMS:
-            console.log('cartitems reducer', action.items)
             return Object.assign({}, action.items);
         case REMOVE_ITEM:
             const newState = Object.assign({}, state);

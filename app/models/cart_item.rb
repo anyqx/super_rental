@@ -1,5 +1,5 @@
 class CartItem < ApplicationRecord
-    validates :property_id, :user_id, :price, :terms, presence: true
+    validates :property_id, :user_id, :offer_price, :terms, presence: true
 
     belongs_to :property,
     foreign_key: :property_id,
