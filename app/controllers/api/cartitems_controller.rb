@@ -26,7 +26,7 @@ class Api::CartitemsController < ApplicationController
     def update
         if logged_in?
             @cartitem = current_user.cartitems.find_by(id: params[:id])
-            debugger
+            # debugger
             if @cartitem.update_attributes(offer_price: offer_price, terms: terms)
                 @cartitems = current_user.cartitems
                 render :index
