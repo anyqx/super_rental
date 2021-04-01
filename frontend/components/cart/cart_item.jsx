@@ -23,7 +23,7 @@ class CartItem extends React.Component {
 
     handleUpdate(){
         const { item } = this.props;
-        const cartitem = {property_id: item.property_id, user_id: item.user_id, price: this.state.price, terms: this.state.terms}
+        const cartitem = {property_id: item.property_id, user_id: item.user_id, price: this.state.price, terms: this.state.terms};
         this.props.updateCartItem(item.id, cartitem);
     }
 

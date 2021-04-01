@@ -15,9 +15,9 @@ class CartIndex extends React.Component {
         if (!items) return null;
         return (
             <>
-            <div>
+            <div className='cart-index-container'>
                 <h1>Browse All Properties in Cart</h1>
-                <ul className='Cart-index-container'>
+                <ul>
                     {items.map(item => {
                         return <CartItem item={item} key={item.id} 
                         updateCartItem={this.props.updateCartItem}

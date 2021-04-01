@@ -19,7 +19,7 @@ export const receiveProperty = property => {
 
 export const fetchProperties = () => dispatch => {
     return APIUtil.fetchProperties()
-        .then( properties => dispatch(receiveProperties(properties)))
+        .then( properties => {console.log('fetch properties', properties); dispatch(receiveProperties(properties))})
 }
 export const fetchProperty = id => dispatch => {
     return APIUtil.fetchProperty(id)

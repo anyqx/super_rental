@@ -1,11 +1,9 @@
 class Api::CartitemsController < ApplicationController
     def index
-        # @cartitems = CartItem.all.select{|item| item.user_id == current_user.id }
         if current_user
             @cartitems = current_user.cartitems
             render 'api/cartitems/index'
         end
-        # render 'api/cartitems/index'
     end
 
     # def show
@@ -41,9 +39,10 @@ class Api::CartitemsController < ApplicationController
 
     def destroy
         if logged_in?
-            @cartitem = CartItem.find_by(id: params[:id])
+            @cartitem = current_user.cartitems.find_by(id: params[:id])
+            # debugger
             @cartitem.destroy
-            @cartitems = CartItem.all.select{ |item| item.user_id == current_user.id }
+            @cartitems = current_user.cartitems
             render :index
         else
             require_login

@@ -6,7 +6,7 @@ class PropertyMap extends React.Component {
     super(props)
   }
   componentDidMount() {
-    let mapLoc
+    let mapLoc;
     if (Array.isArray(this.props.property)) {
       mapLoc = {
                 // initialCenter:{
@@ -25,7 +25,7 @@ class PropertyMap extends React.Component {
         streetViewControl: false,
         rotateControl: false,
         fullscreenControl: true,
-      }
+      };
     } else {
       mapLoc = {
         initialCenter:{
@@ -44,7 +44,7 @@ class PropertyMap extends React.Component {
         streetViewControl: false,
         rotateControl: false,
         fullscreenControl: true,
-      }
+      };
     }
     this.map = new google.maps.Map(this.mapNode, mapLoc)
 
@@ -53,7 +53,7 @@ class PropertyMap extends React.Component {
   }
 
   componentDidUpdate() {
-    let mapLoc
+    let mapLoc;
     if (Array.isArray(this.props.property)) {
       mapLoc = {
         // initialCenter:{
@@ -94,13 +94,13 @@ class PropertyMap extends React.Component {
       }
     }
 
-    this.map = new google.maps.Map(this.mapNode, mapLoc)
-    this.MarkerManager = new MarkerManager(this.map)
-    this.MarkerManager.updateMarkers(this.props.property)
+    this.map = new google.maps.Map(this.mapNode, mapLoc);
+    this.MarkerManager = new MarkerManager(this.map);
+    this.MarkerManager.updateMarkers(this.props.property);
   }
 
   render() {
-    if (!this.props.property) return null
+    if (!this.props.property) return null;
     return (
       <div style={{ height: '100%' }} ref={(map) => (this.mapNode = map)}></div>
     )

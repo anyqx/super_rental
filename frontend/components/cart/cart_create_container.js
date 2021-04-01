@@ -2,7 +2,7 @@ import CartForm from "./cart_create";
 import { addCartItem } from '../../actions/cartitem_actions';
 import { connect } from 'react-redux';
 
-const mapStateToProps = (state, {match}) => {
+const mapStateToProps = (state) => {
     return {
         userId: state.session.id
     }

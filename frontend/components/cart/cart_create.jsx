@@ -16,7 +16,7 @@ class CartForm extends React.Component {
         const {addCartItem, propertyId, userId} = this.props;
         const {price, terms} = this.state;
         const cartitem = { property_id: propertyId, user_id: userId, price: price, terms: terms };
-        addCartItem(cartitem)
+        addCartItem(cartitem);
     }
 
     handlePrice(e) {
