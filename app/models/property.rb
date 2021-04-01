@@ -16,5 +16,15 @@ class Property < ApplicationRecord
         primary_key: :id,
         foreign_key: :property_id,
         class_name: :CartItem
+
+    has_many :favorites,
+        primary_key: :id,
+        foreign_key: :property_id,
+        class_name: :Favorite
+
+    has_one :user,
+        through: :favorites,
+        source: :user
+
     
 end

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resources :properties, only: [:show, :index]
     resources :cartitems, only: [:index, :create, :update, :destroy]
-    # resources :favorites, only: [:create, :destroy]
+    resources :favorites, only: [:index, :create, :destroy]
   end
   root to: 'static_pages#root'
   

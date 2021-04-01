@@ -20,6 +20,15 @@ class User < ApplicationRecord
     through: :cartitems,
     source: :property
 
+    has_one :favorite,
+      primary_key: :id,
+      foreign_key: :user_id,
+      class_name: :Favorite
+
+    has_many :favorites,
+        through: :favorite,
+        source: :property
+
     #SPIRE
     def self.find_by_credentials(email, pw)
         user = User.find_by(email: email)
