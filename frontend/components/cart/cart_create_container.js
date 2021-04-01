@@ -1,4 +1,4 @@
-import CartForm from "./cart_create";
+import CartCreateForm from "./cart_create";
 import { addCartItem } from '../../actions/cartitem_actions';
 import { connect } from 'react-redux';
 
@@ -16,4 +16,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(CartForm);
+export default connect(mapStateToProps, mapDispatchToProps)(CartCreateForm);
