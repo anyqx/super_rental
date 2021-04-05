@@ -28,7 +28,6 @@ export const removeCartitem = id => {
 }
 
 export const updateCartitem = (cartitem) => {
-    console.log(cartitem)
     return $.ajax({
         method: 'PATCH',
         url: `/api/cartitems/${cartitem.id}`,

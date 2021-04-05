@@ -26,12 +26,11 @@ class Api::CartitemsController < ApplicationController
     def update
         if logged_in?
             @cartitem = current_user.cartitems.find_by(id: params[:id])
-            # debugger
-            if @cartitem.update_attributes(offer_price: offer_price, terms: terms)
+            if @cartitem.update_attributes(offer_price: cartitem_params[:offer_price], terms: cartitem_params[:terms])
                 @cartitems = current_user.cartitems
                 render :index
             else
-                render json: @cartitem.errors.full_messages, status: 404
+                render json: @cartitems.errors.full_messages, status: 404
             end
         else
             require_login

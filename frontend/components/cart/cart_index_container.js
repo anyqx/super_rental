@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
     const items = Object.values(state.entities.items);
-    debugger
+    // debugger
     return {
         items: items
     }
@@ -13,7 +13,7 @@ const mapStateToProps = state => {
 
 
 function mapDispatchToProps(dispatch) {
-    debugger
+    // debugger
     return {
         fetchCartItems: () => dispatch(fetchCartItems()),
         deleteCartItem: (id) => dispatch(deleteCartItem(id)),
