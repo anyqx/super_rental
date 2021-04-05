@@ -55,29 +55,30 @@ class CartItem extends React.Component {
         const { item } = this.props;
         return (
             <>
-            <li key={item.id} className="items-container">
+            <div className="items-container">
+            <li key={item.id}>
                 <div className="item photo">
-                    <h1>{item.address}</h1>
+                    <p>{item.address}</p>
                     <img src={item.photoUrl} alt="" />
             
 
                 </div>
                 <div className="item title">
                     <div>
-                        <h2>Edit your offer</h2>
-                
+                        <p>Edit your offer</p>
+    
                         <p>current offer price: {item.offer_price}</p>
                         <p>current terms: {item.terms}</p>
                         <br/><br/>
                         <div>
-                            <label>change offer price</label>
+                            <label>Update offer price</label>
                             <input 
                                 type="text" 
                                 value={this.state.offer_price} 
                                 placeholder='your bid price'
                                 // onClick={this.handleSubmit}
                                 onChange={this.update('offer_price')} />
-                            <label>change offer terms</label>
+                            <label>Update offer terms</label>
                             <textarea
                                 type="text" 
                                 value={this.state.terms}
@@ -85,15 +86,16 @@ class CartItem extends React.Component {
                                 // onClick={this.handleSubmit}
                                 onChange={this.update('terms')} />
                         </div>
-                        <button onClick={this.handleSubmit}>Save Offer</button>
+                        <button onClick={this.handleSubmit}>Update Offer</button>
                     </div>
                     <div>
-                        <h2>Delete Form</h2>
+                        <p>Delete Form</p>
                         <button onClick={this.removeItem} >delete this property</button>
                     </div>
                 </div>
 
             </li>
+            </div>
         </>
         )
     }
