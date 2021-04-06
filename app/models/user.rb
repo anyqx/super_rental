@@ -20,13 +20,13 @@ class User < ApplicationRecord
     through: :cartitems,
     source: :property
 
-    has_one :favorite,
+    has_many :favorites,
       primary_key: :id,
       foreign_key: :user_id,
       class_name: :Favorite
 
-    has_many :favorites,
-        through: :favorite,
+    has_many :properties,
+        through: :favorites,
         source: :property
 
     #SPIRE

@@ -6,6 +6,7 @@ class PropertyMap extends React.Component {
     super(props)
   }
   componentDidMount() {
+    // let latLng = new google.maps.LatLng(-8.064903, -34.896872);
     let mapLoc;
     if (Array.isArray(this.props.property)) {
       mapLoc = {
@@ -13,9 +14,14 @@ class PropertyMap extends React.Component {
                 //   lat: 36.778259,
                 //   lng: -119.417931,
                 //   },
+        // center: latLng,
+          // lat: +this.props.property[0].altitude,
+          // lng: +this.props.property[0].longitude,
+          // lat: +37.62668435579264,
+          // lng: +-122.07381861400056,
         center: {
-          lat: +this.props.property[0].altitude,
-          lng: +this.props.property[0].longitude,
+          lat: +this.props.property.altitude,
+          lng: +this.props.property.longitude,
           // lat: +37.62668435579264,
           // lng: +-122.07381861400056,
         },
@@ -28,10 +34,12 @@ class PropertyMap extends React.Component {
       };
     } else {
       mapLoc = {
-        initialCenter:{
-                      lat: +36.778259,
-                      lng: +-119.417931,
-                    },
+        // initialCenter:{
+        //               lat: +36.778259,
+        //               lng: +-119.417931,
+        //             },
+        // center: latLng,
+        
         center: {
           lat: +this.props.property.altitude,
           lng: +this.props.property.longitude,
@@ -46,6 +54,7 @@ class PropertyMap extends React.Component {
         fullscreenControl: true,
       };
     }
+    // debugger
     this.map = new google.maps.Map(this.mapNode, mapLoc)
 
     this.MarkerManager = new MarkerManager(this.map)
@@ -93,14 +102,16 @@ class PropertyMap extends React.Component {
         fullscreenControl: true,
       }
     }
-
+    // debugger
     this.map = new google.maps.Map(this.mapNode, mapLoc);
+    // debugger
     this.MarkerManager = new MarkerManager(this.map);
     this.MarkerManager.updateMarkers(this.props.property);
   }
 
   render() {
     if (!this.props.property) return null;
+    // debugger
     return (
       <div style={{ height: '100%' }} ref={(map) => (this.mapNode = map)}></div>
     )

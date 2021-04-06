@@ -35,6 +35,10 @@ export const fetchFavorite = id => dispatch => {
         .then (favorite => dispatch(receiveFavorite(favorite)));
 }
 
+export const addFavorite = favorite => dispatch => {
+    return APIUtil.createFavorite(favorite).then(favorites => dispatch(receiveFavorites(favorites)));
+}
+
 export const deleteFavorite = id => dispatch => {
     return APIUtil.removeFavorite(id)
         .then( () => dispatch(removeFavorite(id)));

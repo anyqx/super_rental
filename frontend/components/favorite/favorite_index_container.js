@@ -1,24 +1,23 @@
-import { connect } from 'react-redux'
-import PropertyShow from './property_show'
-import { fetchFavorite, deleteFavorite } from '../../actions/favorite_actions';
+import FavoriteIndex from "./favorite_index";
+import { fetchFavorites, deleteFavorite } from '../../actions/favorite_actions';
+import { connect } from 'react-redux';
 
-const mapStateToProps = (state, {match}) => {
-    const propertyId = parseInt(match.params.propertyId);
-    const property = selectProperty(state.entities, propertyId);
-    // const cartitemId = 
+const mapStateToProps = state => {
+    const favorites = Object.values(state.entities.favorites);
+    // debugger
     return {
-        // userId: state.session.id,
-        // currentUser: state.entities.users[session.id],
-        propertyId,
-        property
+        favorites: favorites
     }
 }
 
-const mapDispatchToProps = dispatch => {
+
+function mapDispatchToProps(dispatch) {
+    // debugger
     return {
-        fetchFavorite: () => dispatch(fetchFavorite()),
-        deleteFavorite: id => dispatch(deleteFavorite(id))
-    }
+        fetchFavorites: () => dispatch(fetchFavorites()),
+        deleteFavorite: (id) => dispatch(deleteFavorite(id)),
+    };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PropertyShow)
+
+export default connect(mapStateToProps, mapDispatchToProps)(FavoriteIndex);

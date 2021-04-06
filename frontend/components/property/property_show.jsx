@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import CartCreateContainer from '../cart/cart_create_container';
 import PropertyMap from './property_map'
+import FavoriteCreateContainer from '../favorite/favorite_create_container';
 
 class PropertyShow extends React.Component {
     constructor(props) {
@@ -13,6 +14,7 @@ class PropertyShow extends React.Component {
     componentDidMount(){
         const propertyId = this.props.propertyId;
         this.props.fetchProperties(propertyId);
+
     }
 
     // handleClick() {
@@ -21,7 +23,7 @@ class PropertyShow extends React.Component {
     //     currentUser ? addCartItem({propertyId: propertyId, user_id: userId}) :  '/login'
     // }
     render() {
-        const {property} = this.props;
+        const {property, favorite} = this.props;
         if (!property) return null;
         return (
             <>
@@ -47,11 +49,13 @@ class PropertyShow extends React.Component {
                 {/* get direction  */}
                 <a
                       className="location-link"
-                      href={`https://www.google.com/maps/dir/?api=1&destination=${property.lat},${property.lng}`}
+                      href={`https://www.google.com/maps/dir/?api=1&destination=${property.altitude},${property.longitude}`}
                       target="_blank"
                     ></a>
             </div>
                 <CartCreateContainer propertyId={property.id}/>
+                <FavoriteCreateContainer propertyId={property.id} />
+
                 <div>
             </div>
             </>

@@ -10,6 +10,7 @@ import Splash from './splash/splash';
 import PropertyIndexContainer from './property/property_index_container';
 import PropertyShowContainer from './property/property_show_container';
 import CartIndexContainer from './cart/cart_index_container';
+import FavoriteIndexContainer from './favorite/favorite_index_container';
 
 //functional component
 const App = () => (
@@ -23,6 +24,7 @@ const App = () => (
             <AuthRoute exact path='/signup' component={SignupContainer} />
             <Route exact path='/' component={Splash} />
             <Route exact path='/cart' component={CartIndexContainer} />
+            {/* <Route exact path='/favorite' component={FavoriteIndexContainer} /> */}
             <Route exact path='/properties' component={PropertyIndexContainer} />
             <Route exact path='/properties/:propertyId' component={PropertyShowContainer} />
             <Route exact path='*' component={PageNotFound} />

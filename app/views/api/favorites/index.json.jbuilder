@@ -1,1 +1,1 @@
-json.partial! '/api/favorites/favorite', favorites: @favorite;
+json.partial! '/api/favorites/favorite', favorites: @favorites;

@@ -22,9 +22,9 @@ class Property < ApplicationRecord
         foreign_key: :property_id,
         class_name: :Favorite
 
-    has_one :user,
-        through: :favorites,
-        source: :user
+    # has_one :user,
+    #     through: :favorites,
+    #     source: :user
 
     
 end

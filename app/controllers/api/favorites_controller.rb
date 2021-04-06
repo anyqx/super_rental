@@ -14,7 +14,7 @@ class Api::FavoritesController < ApplicationController
             render json: ["User not logged in"]
         else
             # property_id = params[:propertyId].to_i
-            @favorite = Favorite.new(user_id: current_user.id, property_id: property_id)
+            @favorite = Favorite.new(favorite_params)
             if @favorite.save
                 redirect_to action: 'index'
             else
@@ -25,16 +25,19 @@ class Api::FavoritesController < ApplicationController
 
     def destroy
         if logged_in?
-            @unfavorite = Favorite.find_by(user_id: current_user.id, property_id: property_id)
-            @unfavorite.destroy
+            @favorite = current_user.favorites.find_by(id: parmas[:id])
+            @favorite.destroy
             @favorites = current_user.favorites
             render :index
         else
             render json:["This Property is not one of your favorites!"], status:422
             require_login
         end
-            
-    
+    end
 
+    private
 
+    def favorite_params
+        params.require(:favorite).permit(:property_id, :user_id)
+    end
 end
