@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
     const favorites = Object.values(state.entities.favorites);
-    // debugger
     return {
         favorites: favorites
     }
@@ -12,7 +11,6 @@ const mapStateToProps = state => {
 
 
 function mapDispatchToProps(dispatch) {
-    // debugger
     return {
         fetchFavorites: () => dispatch(fetchFavorites()),
         deleteFavorite: (id) => dispatch(deleteFavorite(id)),

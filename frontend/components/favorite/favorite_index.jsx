@@ -16,10 +16,10 @@ class FavoriteIndex extends React.Component {
         return (
             <>
             <div className='favorite-index-container'>
-                <p>Browse All Properties in Cart</p>
+                <p>Browse Favorites</p>
                 <ul className='favorite-item-container'>
-                    {favorites.map(item => {
-                        return <FavoriteItem item={favorite} key={favorite.id} 
+                    {favorites.map(favorite => {
+                        return <FavoriteItem favorite={favorite} key={favorite.id} 
                         deleteFavorite={this.props.deleteFavorite}/>
                     })}
                 </ul>

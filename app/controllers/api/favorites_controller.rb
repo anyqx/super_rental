@@ -25,7 +25,7 @@ class Api::FavoritesController < ApplicationController
 
     def destroy
         if logged_in?
-            @favorite = current_user.favorites.find_by(id: parmas[:id])
+            @favorite = current_user.favorites.find_by(id: params[:id])
             @favorite.destroy
             @favorites = current_user.favorites
             render :index

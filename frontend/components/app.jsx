@@ -24,7 +24,7 @@ const App = () => (
             <AuthRoute exact path='/signup' component={SignupContainer} />
             <Route exact path='/' component={Splash} />
             <Route exact path='/cart' component={CartIndexContainer} />
-            {/* <Route exact path='/favorite' component={FavoriteIndexContainer} /> */}
+            <Route exact path='/favorites' component={FavoriteIndexContainer} />
             <Route exact path='/properties' component={PropertyIndexContainer} />
             <Route exact path='/properties/:propertyId' component={PropertyShowContainer} />
             <Route exact path='*' component={PageNotFound} />

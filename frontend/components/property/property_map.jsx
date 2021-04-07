@@ -54,7 +54,6 @@ class PropertyMap extends React.Component {
         fullscreenControl: true,
       };
     }
-    // debugger
     this.map = new google.maps.Map(this.mapNode, mapLoc)
 
     this.MarkerManager = new MarkerManager(this.map)
@@ -102,16 +101,13 @@ class PropertyMap extends React.Component {
         fullscreenControl: true,
       }
     }
-    // debugger
     this.map = new google.maps.Map(this.mapNode, mapLoc);
-    // debugger
     this.MarkerManager = new MarkerManager(this.map);
     this.MarkerManager.updateMarkers(this.props.property);
   }
 
   render() {
     if (!this.props.property) return null;
-    // debugger
     return (
       <div style={{ height: '100%' }} ref={(map) => (this.mapNode = map)}></div>
     )

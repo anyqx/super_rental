@@ -4,7 +4,6 @@ class FavoriteCreate extends React.Component {
 
     constructor(props) {
         super(props);
-        debugger
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -16,7 +15,6 @@ class FavoriteCreate extends React.Component {
     }
 
     render() {
-        debugger
         return (
             <div className='cart-container'>
                 <h2>Favorite feature</h2>

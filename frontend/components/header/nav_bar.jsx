@@ -33,10 +33,13 @@ class NavBar extends React.Component {
                 ) : (
                     <div className="right-nav">
                         <span>Welcome! &nbsp; &nbsp;&nbsp;&nbsp;</span>
-                        <span>
+                        <span className='logged-in-navbox'>
+                            <Link to='/favorites' className='button'>Favorites</Link>
+                        </span >
+                        <span className='logged-in-navbox'>
                             <Link to='/cart' className='button'>Cart</Link>
                         </span>
-                        <span className='logout-box'>
+                        <span className='logged-in-navbox'>
                             <div onClick={this.handleLogout} className='button'>LOG OUT</div>
                             {/* <span>{this.props.currentUser}</span> */}
                         </span>

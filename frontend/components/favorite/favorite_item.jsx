@@ -6,8 +6,7 @@ class FavoriteItem extends React.Component {
         super(props);
         this.state = {
             favorites: [],
-            id: this.props.favorite.id,
-            
+            id: this.props.favorite.id, 
         };
 
         // this.handleSubmit = this.handleSubmit.bind(this);
