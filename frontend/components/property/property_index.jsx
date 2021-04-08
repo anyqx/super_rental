@@ -1,6 +1,8 @@
 import React from 'react';
 import PropertyIndexItem from './property_index_item';
 import PropertyMap from './property_map';
+import FavoriteCreateContainer from '../favorite/favorite_create_container';
+
 
 class PropertyIndex extends React.Component {
     constructor(props) {
@@ -20,7 +22,10 @@ class PropertyIndex extends React.Component {
                 <h1>Browse All Properties</h1>
                 <ul className='properties-index-container'>
                     {properties.map(property => {
-                        return <PropertyIndexItem property={property} key={property.id} />
+                        return (
+                            <PropertyIndexItem property={property} key={property.id} />
+                            // <FavoriteCreateContainer propertyId={property.id} key={property.id} />
+                        )
                     })}
                 </ul>
             </div>

@@ -6,41 +6,47 @@ class FavoriteItem extends React.Component {
         super(props);
         this.state = {
             favorites: [],
-            id: this.props.favorite.id, 
+            id: this.props.favorite.id,
         };
 
-        // this.handleSubmit = this.handleSubmit.bind(this);
+
         this.removeFavorite = this.removeFavorite.bind(this);
     }
 
-
-    // handleSubmit(e) {
-    //     e.preventDefault();
-    //     this.props.updateCartItem(this.state);
-    //     // this.props.history.push(`/cart`);
-    // }
-
     removeFavorite(e){
-        this.props.deleteFavorite(this.props.favorite.id);
+        const favorite = this.props.favorite.id;
+        const {favorites} = this.props;
+        this.props.deleteFavorite(favorite);
+        // this.props.history.push('./favorites')
+        this.setState({
+            favorites: favorites,
+            id: ''
+        })
     }
     render() {
         const { favorite } = this.props;
         return (
             <>
             <div className="favorites-container">
-            <li key={favorite.id}>
-                <div className="favorite photo">
-                    <p>{favorite.address}</p>
-                    <img src={favorite.photoUrl} alt="" />
-            
-
+            <ul key={favorite.id}>
+                <div className="favorite-item">
+                    <p>{favorite.address} &nbsp;
+                        {favorite.city}, {favorite.state} &nbsp; {favorite.zipcode}
+                    </p>
+                    <img src={favorite.photoUrl} alt=""/>
+                    <p>$ {favorite.price}</p>
+                    <p>{favorite.bedroom} bd, {favorite.bathroom} ba | {favorite.sqft} sqft</p>
+                    <p>Current Rent${favorite.rent}</p>
+                    <p>Cap Rate {favorite.cap_rate}%</p>
+                    <p>Gross Yield: {favorite.gross_yield}%</p>
+                    <p>Annualized Return: {favorite.annualized_return} %</p>
+                    <p>10 year total return: ${favorite.total_return} </p>
+                    <img id='heart-img' onClick={this.removeFavorite} src={window.favoriteHeartURL}  />
+                    {/* <button id='unfavorite-button' onClick={this.removeFavorite} >Unfavorite</button> */}
                 </div>
-                    <div>
-                        <p>Unfavorite</p>
-                        <button onClick={this.removeFavorite} >Unfavorite this property</button>
-                    </div>
 
-            </li>
+
+            </ul>
             </div>
             </>
         )

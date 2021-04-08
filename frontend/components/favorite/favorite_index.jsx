@@ -17,12 +17,12 @@ class FavoriteIndex extends React.Component {
             <>
             <div className='favorite-index-container'>
                 <p>Browse Favorites</p>
-                <ul className='favorite-item-container'>
+                <div className='favorite-item-container'>
                     {favorites.map(favorite => {
                         return <FavoriteItem favorite={favorite} key={favorite.id} 
                         deleteFavorite={this.props.deleteFavorite}/>
                     })}
-                </ul>
+                </div>
             </div>
             </>
         )

@@ -1,0 +1,28 @@
+.favorite-index-container {
+    display: flex;
+    margin: 100px;
+    flex-direction: wrap;
+}
+
+// .favorites-container {
+//     list-style: none
+// }
+
+.favorite-item {
+    display: flex;
+    // padding-top: 10px;
+    border: lightgrey solid 1px;
+    border-radius: 10px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    
+    #unfavorite-button {
+        border:none;
+    }
+
+    #heart-img {
+        height: 50px;
+    }
+}
