@@ -18,9 +18,10 @@ class FavoriteCreate extends React.Component {
         return (
             <div className='cart-container'>
                 <h2>Favorite feature</h2>
-                <form className='favorite-create-form'onSubmit={this.handleSubmit}>
-                <button className='submit-button'>Favorite</button>
-                </form>
+                    <img id='heart-img' onClick={this.handleSubmit} src={window.favoriteHeartURL}  />
+                {/* <form className='favorite-create-form'onSubmit={this.handleSubmit}> */}
+                {/* <button className='submit-button'>Favorite</button> */}
+                {/* </form> */}
             </div>
         )
     }

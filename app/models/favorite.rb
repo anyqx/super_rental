@@ -1,5 +1,6 @@
 class Favorite < ApplicationRecord
-    validates :property_id, :user_id, presence: true
+    validates :user_id, presence: true
+    validates :property_id, presence: true, uniqueness: {scope: :user_id}
 
     belongs_to :user,
         foreign_key: :user_id,

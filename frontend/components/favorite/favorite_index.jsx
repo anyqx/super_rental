@@ -5,7 +5,20 @@ import { withRouter } from 'react-router-dom';
 class FavoriteIndex extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            favorites: []
+        };
+        
+        this.updateLocalFavoriteStore = this.updateLocalFavoriteStore.bind(this);
+        //this.state on parent component, render from this.state
+
+        //updateLocalFavoriteState (take in an id to remove from parent state)
     }
+
+    updateLocalFavoriteStore( id ) {
+        this.setState (i)
+    }
+    //setState on the new array parent component, pass the whole to the child, so child can call it to handle the delete
     componentDidMount() {
         this.props.fetchFavorites();
     }
