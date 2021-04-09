@@ -1,5 +1,5 @@
 import React from 'react';
-import MarkerManager from '../../util/marker_util'
+// import MarkerManager from '../../util/marker_util';
 
 class PropertyMap extends React.Component {
   constructor(props) {
@@ -10,10 +10,10 @@ class PropertyMap extends React.Component {
     let mapLoc;
     if (Array.isArray(this.props.property)) {
       mapLoc = {
-                // initialCenter:{
-                //   lat: 36.778259,
-                //   lng: -119.417931,
-                //   },
+                initialCenter:{
+                  lat: 36.778259,
+                  lng: -119.417931,
+                  },
         // center: latLng,
           // lat: +this.props.property[0].altitude,
           // lng: +this.props.property[0].longitude,
@@ -34,10 +34,10 @@ class PropertyMap extends React.Component {
       };
     } else {
       mapLoc = {
-        // initialCenter:{
-        //               lat: +36.778259,
-        //               lng: +-119.417931,
-        //             },
+        initialCenter:{
+                      lat: +36.778259,
+                      lng: +-119.417931,
+                    },
         // center: latLng,
         
         center: {
@@ -64,10 +64,10 @@ class PropertyMap extends React.Component {
     let mapLoc;
     if (Array.isArray(this.props.property)) {
       mapLoc = {
-        // initialCenter:{
-        //               lat: +36.778259,
-        //               lng: +-119.417931,
-        //             },
+        initialCenter:{
+                      lat: +36.778259,
+                      lng: +-119.417931,
+                    },
         center: {
           lat: +this.props.property[0].altitude,
           lng: +this.props.property[0].longitude,
@@ -83,10 +83,10 @@ class PropertyMap extends React.Component {
       }
     } else {
       mapLoc = {
-        // initialCenter:{
-        //               lat: +36.778259,
-        //               lng: +-119.417931,
-        //             },
+        initialCenter:{
+                      lat: +36.778259,
+                      lng: +-119.417931,
+                    },
         center: {
           lat: +this.props.property.altitude,
           lng: +this.props.property.longitude,
@@ -102,8 +102,8 @@ class PropertyMap extends React.Component {
       }
     }
     this.map = new google.maps.Map(this.mapNode, mapLoc);
-    this.MarkerManager = new MarkerManager(this.map);
-    this.MarkerManager.updateMarkers(this.props.property);
+    // this.MarkerManager = new MarkerManager(this.map);
+    // this.MarkerManager.updateMarkers(this.props.property);
   }
 
   render() {

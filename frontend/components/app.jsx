@@ -11,6 +11,7 @@ import PropertyIndexContainer from './property/property_index_container';
 import PropertyShowContainer from './property/property_show_container';
 import CartIndexContainer from './cart/cart_index_container';
 import FavoriteIndexContainer from './favorite/favorite_index_container';
+import MapPage from './property/mappage';
 
 //functional component
 const App = () => (
@@ -27,6 +28,7 @@ const App = () => (
             <Route exact path='/favorites' component={FavoriteIndexContainer} />
             <Route exact path='/properties' component={PropertyIndexContainer} />
             <Route exact path='/properties/:propertyId' component={PropertyShowContainer} />
+            <Route exact path='/map' component={MapPage} />
             <Route exact path='*' component={PageNotFound} />
             <Redirect to="/" />
         </Switch>
