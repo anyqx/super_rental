@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
+import FavoriteCreateContainer from '../favorite/favorite_create_container';
+
 
 class PropertyIndexItem extends React.Component {
     constructor(props) {
@@ -27,6 +29,8 @@ class PropertyIndexItem extends React.Component {
                 <p>
                     {property.address}<br></br>{property.city}, {property.state} &nbsp; {property.zipcode}
                 </p>
+                <FavoriteCreateContainer propertyId={property.id} key={property.id} />
+
               </Link>
           </div>
           </>

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropertyIndexItem from './property_index_item';
 import PropertyMap from './property_map';
-import FavoriteCreateContainer from '../favorite/favorite_create_container';
 
 
 class PropertyIndex extends React.Component {
@@ -24,7 +23,6 @@ class PropertyIndex extends React.Component {
                     {properties.map(property => {
                         return (
                             <PropertyIndexItem property={property} key={property.id} />
-                            // <FavoriteCreateContainer propertyId={property.id} key={property.id} />
                         )
                     })}
                 </ul>
