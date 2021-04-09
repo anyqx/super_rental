@@ -30,17 +30,17 @@ class FavoriteItem extends React.Component {
             <div className="favorites-container">
             <ul key={favorite.id}>
                 <div className="favorite-item">
-                    <p>{favorite.address} &nbsp;
+                    <p id='address'>{favorite.address} <br/>
                         {favorite.city}, {favorite.state} &nbsp; {favorite.zipcode}
                     </p>
-                    <img src={favorite.photoUrl} alt=""/>
+                    <img id='property-img' src={favorite.photoUrl} alt=""/>
                     <p>$ {favorite.price}</p>
-                    <p>{favorite.bedroom} bd, {favorite.bathroom} ba | {favorite.sqft} sqft</p>
-                    <p>Current Rent${favorite.rent}</p>
-                    <p>Cap Rate {favorite.cap_rate}%</p>
-                    <p>Gross Yield: {favorite.gross_yield}%</p>
-                    <p>Annualized Return: {favorite.annualized_return} %</p>
-                    <p>10 year total return: ${favorite.total_return} </p>
+                    <p>{favorite.bedroom} bd, {favorite.bathroom} ba <br/> {favorite.sqft} sqft</p>
+                    <p>Current Rent <br/> ${favorite.rent}</p>
+                    <p>Cap Rate <br/>{favorite.cap_rate}%</p>
+                    <p>Gross Yield <br/>{favorite.gross_yield}%</p>
+                    <p>Annualized Return <br/>{favorite.annualized_return} %</p>
+                    <p>10 yr total return <br/>${favorite.total_return} </p>
                     <img id='heart-img' onClick={this.removeFavorite} src={window.favoriteHeartURL}  />
                     {/* <button id='unfavorite-button' onClick={this.removeFavorite} >Unfavorite</button> */}
                 </div>

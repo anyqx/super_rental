@@ -2,16 +2,17 @@
 
 .cart-index-container {
     display: flex;
-    justify-content: center;
+    margin: 100px;
     flex-direction: column;
-    p{
-        margin: auto;
+
+    #title {
+        color: #ff7b04;
+        text-transform: capitalize;
     }
 }
 
 .cart-item-container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     margin: auto;
 }
@@ -21,13 +22,11 @@
 .items-container {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-
-    p{
-        margin: auto;
-    }
 }
 
+.items-description {
+
+}
 .item-title {
     flex-direction: row;
 }

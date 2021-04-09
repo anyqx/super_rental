@@ -9,15 +9,15 @@ class FavoriteIndex extends React.Component {
             favorites: []
         };
         
-        this.updateLocalFavoriteStore = this.updateLocalFavoriteStore.bind(this);
+        // this.updateLocalFavoriteStore = this.updateLocalFavoriteStore.bind(this);
         //this.state on parent component, render from this.state
 
         //updateLocalFavoriteState (take in an id to remove from parent state)
     }
 
-    updateLocalFavoriteStore( id ) {
-        this.setState (i)
-    }
+    // updateLocalFavoriteStore( id ) {
+    //     this.setState (i)
+    // }
     //setState on the new array parent component, pass the whole to the child, so child can call it to handle the delete
     componentDidMount() {
         this.props.fetchFavorites();
@@ -29,7 +29,7 @@ class FavoriteIndex extends React.Component {
         return (
             <>
             <div className='favorite-index-container'>
-                <p>Browse Favorites</p>
+                <p id='title'>Favorite Properties</p>
                 <div className='favorite-item-container'>
                     {favorites.map(favorite => {
                         return <FavoriteItem favorite={favorite} key={favorite.id} 

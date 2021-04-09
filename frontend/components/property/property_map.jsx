@@ -1,5 +1,5 @@
 import React from 'react';
-// import MarkerManager from '../../util/marker_util';
+import MarkerManager from '../../util/marker_util';
 
 class PropertyMap extends React.Component {
   constructor(props) {
@@ -102,8 +102,8 @@ class PropertyMap extends React.Component {
       }
     }
     this.map = new google.maps.Map(this.mapNode, mapLoc);
-    // this.MarkerManager = new MarkerManager(this.map);
-    // this.MarkerManager.updateMarkers(this.props.property);
+    this.MarkerManager = new MarkerManager(this.map);
+    this.MarkerManager.updateMarkers(this.props.property);
   }
 
   render() {
