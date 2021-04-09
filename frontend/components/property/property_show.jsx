@@ -27,18 +27,18 @@ class PropertyShow extends React.Component {
         if (!property) return null;
         return (
             <>
-                <div className="google-maps">
-                    <PropertyMap property={property} type="show" zoom="false" />
-                </div>
+            <div className="google-maps">
+                <PropertyMap property={property} type="show" zoom="false" />
+            </div>
             <div className='property-show-container'>
                 <h2>Property</h2>
+                <img src={property.photoUrl} alt=""/>
                 <p id='address1'>
                     {property.address}
                 </p>
                 <p id='address2'>
                     {property.city}, {property.state} &nbsp; {property.zipcode}
                 </p>
-                <img src={property.photoUrl} alt=""/>
                 <p>$ {property.price}</p>
                 <p>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</p>
                 <p>Current Rent${property.rent}</p>
@@ -55,7 +55,6 @@ class PropertyShow extends React.Component {
             </div>
                 <CartCreateContainer propertyId={property.id}/>
                 <FavoriteCreateContainer propertyId={property.id} />
-
                 <div>
             </div>
             </>

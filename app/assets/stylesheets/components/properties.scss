@@ -10,29 +10,41 @@
 }
 
 
-.property-container {
+.property-index-display {
     display: block;
     margin: 30px;
     flex-direction: column;
-    border: gray solid 1px;
-}
-
-.property-container > li {
-    display: block;
-    border-top: gray solid 0.5px;;
+    border: lightgrey solid 1px;
     border-radius: 5px;
-    padding: 2px;
+    padding: 20px;
+    padding-bottom: 1vh;
+    width: 20vw;
+
+    img {
+        max-height: 25vh;
+        max-width: 20vw;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+    }
+    
+    img:hover {
+        // cursor: pointer;
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+
+    p{
+        border-top: 1px solid #ddd;
+        padding: 2vh;
+    }
 }
 
-img {
-    display: flex;
-    max-height: 25vh;
-    max-width: 20vh;;
+// google maps
+.google-maps {
+    height: 500px;
+    width: 500px;
 }
 
-img:hover {
-    cursor: pointer;
-}
 
 //property show
 
@@ -54,13 +66,13 @@ img:hover {
     }
 
     img{
-        justify-content: center;
+        max-height: 50vh;
+        max-width: 70vw;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
     }
 }
 
-.google-maps {
-    height: 500px;
-    width: 500px;
-}
 
 
