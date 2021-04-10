@@ -44,8 +44,8 @@ test3 = User.create(email:'test3@email.com', password:'12345678')
         'Frozen'
     ]
     zipcode = rand(91000..92000)
-    longitude = rand(35..35.2).round(8)
-    altitude = rand(-118.5..-118).round(8)
+    longitude = rand(-118.5..-118).round(8)
+    altitude = rand(35..35.2).round(8)
     price = rand(200000..1500000)
     rent = price * (rand(0.006..0.009))
     cap_rate = (rent * 12 / price * rand(0.75..0.88) * 100).round(2)

@@ -2,23 +2,50 @@
 <html>
   <head>
     <meta property="og:title" content="Super Rental" />
-     <meta property='og:image' content="<%= image_url('project_pic.png') %>"/>
-     <meta property="og:description"
+    <%# <meta property='og:image' content=" image_url('project_pic.png')"/> %>
+    <meta property="og:description"
        content="Super Rental is a marketplace where users can browse rental properties 
        across the nation and make offers on the property online. "
      />
      <meta property="og:url"
        content="https://superental.herokuapp.com/"
      />
+    <%# <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyDdOoUbjEwNUp41qNxe7RBOx8mhH4ZfQ3o" %> %>
     
     <title>SuperRental</title>
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script>
+      let map;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: -34.397, lng: 150.644 },
+          zoom: 8,
+        });
+      }
+    </script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag    'application' , media: 'all' %>
+
+    <%# <%= stylesheet_link_tag    'application', media: 'all' %> %>
+
     <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyDdOoUbjEwNUp41qNxe7RBOx8mhH4ZfQ3o" %>
     <%# font %>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
     <%# img: sign_up_page %>
     <script type="text/javascript">window.logoURL = "<%= image_url('logo.png') %>"; </script>
@@ -26,7 +53,7 @@
     <script type="text/javascript">window.signup2URL = "<%= image_url('signup_2.png') %>"; </script>
     <script type="text/javascript">window.signup3URL = "<%= image_url('signup_3.png') %>"; </script>
     <%# img: splash_page %>
-    <script type="text/javascript">window.splash1URL = "<%= image_url('splash_1.png') %>"; </script>
+    <script type="text/javascript">window.splash1URL = "<%= image_url('splash_1.png') %>"; </script> %>
     <script type="text/javascript">window.splashWhyInvest1URL = "<%= image_url('splash_why_invest_1.png') %>"; </script>
     <script type="text/javascript">window.splashWhyInvest2URL = "<%= image_url('splash_why_invest_2.png') %>"; </script>
     <script type="text/javascript">window.splashWhyInvest3URL = "<%= image_url('splash_why_invest_3.png') %>"; </script>
@@ -39,15 +66,22 @@
 
   </head>
 
-<% if logged_in? %>
-  <script type="text/javascript">
-      window.currentUser = {
-        'id': <%= current_user.id %>,
-        'email': '<%= current_user.email %>'
-      }
-  </script>
-<% end %>
+  <% if logged_in? %>
+    <script type="text/javascript">
+        window.currentUser = {
+          'id': <%= current_user.id %>,
+          'email': '<%= current_user.email %>'
+        }
+    </script>
+  <% end %>
   <body>
     <%= yield %>
+   <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdOoUbjEwNUp41qNxe7RBOx8mhH4ZfQ3o&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
   </body>
 </html>

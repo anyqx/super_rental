@@ -28,11 +28,11 @@ class PropertyShow extends React.Component {
         // debugger
         return (
             <>
-            <div className="google-maps">
-                <PropertyMap property={property} type="show" zoom="false" />
-            </div>
             <div className='property-show-container'>
                 <h2>Property</h2>
+                <div style={{height: '100%', width: '100%', position: 'absolute' }}>
+                    <PropertyMap property={property} type="show" zoom="false" />
+                </div>
                 <img src={property.photoUrl} alt=""/>
                 <p id='address1'>
                     {property.address}
