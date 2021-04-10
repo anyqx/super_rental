@@ -18,7 +18,7 @@ class FavoriteCreate extends React.Component {
         
         return (
             <div className='cart-container'>
-                <img id='heart-img' onClick={this.handleSubmit} src={window.favoriteHeartURL}  />
+                <img id='heart-img' onClick={this.handleSubmit} src={window.heartURL}  />
             </div>
         )
     }
