@@ -12,7 +12,7 @@ class FavoriteItem extends React.Component {
     }
 
     removeFavorite(e){
-        debugger
+        // debugger
         this.props.deleteFavorite(this.props.favorite.id);
     }
     

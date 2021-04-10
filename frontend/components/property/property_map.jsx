@@ -54,7 +54,7 @@ class PropertyMap extends React.Component {
         fullscreenControl: true,
       };
     }
-    debugger
+    // debugger
     this.map = new google.maps.Map(document.getElementById("map"), {
       center: { lat: -34.397, lng: 150.644 },
       zoom: 8,
@@ -67,7 +67,7 @@ class PropertyMap extends React.Component {
 
   componentDidUpdate() {
     let mapLoc;
-    debugger
+    // debugger
     if (Array.isArray(this.props.property)) {
       mapLoc = {
         initialCenter:{
@@ -115,12 +115,12 @@ class PropertyMap extends React.Component {
   }
 
   mapCallBack(map){
-    debugger
+    // debugger
     return this.mapNode = map;
   }
   render() {
     if (!this.props.property) return null;
-    debugger
+    // debugger
     // <div id='map'></div>
     {/* <div id='map' style={{ height: '100%' }} ref={(map) => (this.mapNode = map)}></div> */}
     return (
