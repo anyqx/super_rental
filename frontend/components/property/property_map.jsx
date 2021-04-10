@@ -14,8 +14,6 @@ class PropertyMap extends React.Component {
         center: {
           lat: +this.props.property.altitude,
           lng: +this.props.property.longitude,
-          // lat: +37.62668435579264,
-          // lng: +-122.07381861400056,
         },
         zoom: 10,
         mapTypeControl: false,
@@ -30,8 +28,6 @@ class PropertyMap extends React.Component {
         center: {
           lat: this.props.property.altitude,
           lng: this.props.property.longitude,
-          // lat: +37.62668435579264,
-          // lng: +-122.07381861400056,
         },
         zoom: 10,
         // mapTypeControl: false,
@@ -54,18 +50,11 @@ class PropertyMap extends React.Component {
 
   componentDidUpdate() {
     let mapLoc;
-    // debugger
     if (Array.isArray(this.props.property)) {
       mapLoc = {
-        // initialCenter:{
-        //               lat: +36.778259,
-        //               lng: +-119.417931,
-        //             },
         center: {
           lat: +this.props.property[0].altitude,
           lng: +this.props.property[0].longitude,
-          // lat: +37.62668435579264,
-          // lng: +-122.07381861400056,
         },
         zoom: 10,
         mapTypeControl: false,
@@ -96,10 +85,6 @@ class PropertyMap extends React.Component {
     this.MarkerManager.updateMarkers(this.props.property);
   }
 
-  // mapCallBack(map){
-  //   // debugger
-  //   return this.mapNode = map;
-  // }
   render() {
     if (!this.props.property) return null;
     return (
