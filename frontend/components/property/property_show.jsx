@@ -30,16 +30,14 @@ class PropertyShow extends React.Component {
             <>
             <div className='property-show-container'>
                 <h2>Property</h2>
-                <div style={{height: '100%', width: '100%', position: 'absolute' }}>
-                    <PropertyMap property={property} type="show" zoom="false" />
-                </div>
-                <img src={property.photoUrl} alt=""/>
+                <FavoriteCreateContainer propertyId={property.id} />
                 <p id='address1'>
                     {property.address}
                 </p>
                 <p id='address2'>
                     {property.city}, {property.state} &nbsp; {property.zipcode}
                 </p>
+                <img src={property.photoUrl} alt=""/>
                 <p>$ {property.price}</p>
                 <p>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</p>
                 <p>Current Rent${property.rent}</p>
@@ -47,6 +45,10 @@ class PropertyShow extends React.Component {
                 <p>Gross Yield: {property.gross_yield}%</p>
                 <p>Annualized Return: {property.annualized_return} %</p>
                 <p>10 year total return: ${property.total_return} </p>
+                
+                <div className='google-map'>
+                    <PropertyMap property={property} type="show" zoom="false" />
+                </div>
                 {/* get direction  */}
                 <a
                       className="location-link"
@@ -55,9 +57,6 @@ class PropertyShow extends React.Component {
                     ></a>
             </div>
                 <CartCreateContainer propertyId={property.id}/>
-                <FavoriteCreateContainer propertyId={property.id} />
-                <div>
-            </div>
             </>
         )
     }
