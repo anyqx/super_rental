@@ -56,8 +56,8 @@ class PropertyMap extends React.Component {
     }
     debugger
     this.map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
+      center: { lat: -34.397, lng: 150.644 },
+      zoom: 8,
     });
     // this.map = new google.maps.Map(this.mapNode, mapLoc)
 

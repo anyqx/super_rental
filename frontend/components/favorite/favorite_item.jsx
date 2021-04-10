@@ -6,23 +6,16 @@ class FavoriteItem extends React.Component {
         super(props);
         this.state = {
             favorites: [],
-            id: this.props.favorite.id,
         };
-
 
         this.removeFavorite = this.removeFavorite.bind(this);
     }
 
     removeFavorite(e){
-        const favorite = this.props.favorite.id;
-        const {favorites} = this.props;
-        this.props.deleteFavorite(favorite);
-        // this.props.history.push('./favorites')
-        this.setState({
-            favorites: favorites,
-            id: ''
-        })
+        debugger
+        this.props.deleteFavorite(this.props.favorite.id);
     }
+    
     render() {
         const { favorite } = this.props;
         return (

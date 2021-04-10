@@ -6,10 +6,10 @@ class FavoriteIndex extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            favorites: []
+            favorites: [],
         };
         
-        // this.updateLocalFavoriteStore = this.updateLocalFavoriteStore.bind(this);
+        // this.updateLocalState = this.updateLocalState.bind(this);
         //this.state on parent component, render from this.state
 
         //updateLocalFavoriteState (take in an id to remove from parent state)
