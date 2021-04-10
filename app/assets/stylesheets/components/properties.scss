@@ -44,19 +44,21 @@
 
 .property-show-container {
     display: flex;
-    justify-content: left;
+    justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
 
+    
     #address1{
         justify-content: center;
         color: #515151;
-        font-size: 18px;
+        font-size: 25px;
+        margin-bottom: 5px;
     }
 
     #address2 {
         color: #a3a2a2;
-        font-size: 14px;
+        font-size: 25px;
     }
 
     img{
@@ -65,12 +67,44 @@
         border: 1px solid #ddd;
         border-radius: 4px;
         padding: 5px;
+        margin-right: 10vw;
+    }
+}
+
+.img-cart {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5vh;
+}
+
+.map-and-summary {
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+.property-summary {
+    display: flex;
+    margin-top: 10vh;
+    flex-direction: column;
+
+    #summary {
+        color: $logo-color;
+        font-weight: bolder;
+    }
+    p {
+        margin: 5px;
+        font-size: 20px;
+        color: #515151;
+        text-align: center;
     }
 }
 .google-map {
     flex: 1;
     height: 50vh;
     width: 50vw;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
 }
 
 

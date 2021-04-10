@@ -43,6 +43,32 @@
         display: flex;
         flex-direction: wrap;
         padding-top: 30px;
-        align-content: center;
+    }
+}
+
+//cart_create.jsx
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+}
+
+.cart-create-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    #offer{
+        width: 30vw;
+        margin: 10px;
+        border: lightgray solid 1px;
+        border-radius: 2px;
+    }
+
+    #terms{
+        width: 30vw;
+        margin-bottom: 15px;
+        border: lightgray solid 1px;
+        border-radius: 2px;
     }
 }

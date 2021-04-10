@@ -29,25 +29,29 @@ class PropertyShow extends React.Component {
         return (
             <>
             <div className='property-show-container'>
-                <h2>Property</h2>
-                <FavoriteCreateContainer propertyId={property.id} />
-                <p id='address1'>
-                    {property.address}
-                </p>
-                <p id='address2'>
-                    {property.city}, {property.state} &nbsp; {property.zipcode}
-                </p>
-                <img src={property.photoUrl} alt=""/>
-                <p>$ {property.price}</p>
-                <p>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</p>
-                <p>Current Rent${property.rent}</p>
-                <p>Cap Rate {property.cap_rate}%</p>
-                <p>Gross Yield: {property.gross_yield}%</p>
-                <p>Annualized Return: {property.annualized_return} %</p>
-                <p>10 year total return: ${property.total_return} </p>
+                <p id='address1'>{property.address}</p>
+                <p id='address2'>{property.city}, {property.state} &nbsp; {property.zipcode}</p>
+                <p><FavoriteCreateContainer propertyId={property.id} /></p>
                 
-                <div className='google-map'>
-                    <PropertyMap property={property} type="show" zoom="false" />
+                <div className='img-cart'>
+                    <img src={property.photoUrl} alt=""/>
+                    <CartCreateContainer propertyId={property.id}/>
+                </div>
+                
+                <div className='map-and-summary'>
+                    <div className='property-summary'>
+                        <p id='summary'>Summary</p>
+                        <p>Price: $ {property.price}</p>
+                        <p>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</p>
+                        <p>Current Rent: ${property.rent}</p>
+                        <p>Cap Rate {property.cap_rate}%</p>
+                        <p>Gross Yield: {property.gross_yield}%</p>
+                        <p>Annualized Return: {property.annualized_return} %</p>
+                        <p>10 year total return: ${property.total_return} </p>
+                    </div>
+                    <div className='google-map'>
+                        <PropertyMap property={property} type="show" zoom="false" />
+                    </div>
                 </div>
                 {/* get direction  */}
                 <a
@@ -56,7 +60,6 @@ class PropertyShow extends React.Component {
                       target="_blank"
                     ></a>
             </div>
-                <CartCreateContainer propertyId={property.id}/>
             </>
         )
     }

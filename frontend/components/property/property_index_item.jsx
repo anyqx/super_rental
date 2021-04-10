@@ -21,6 +21,7 @@ class PropertyIndexItem extends React.Component {
            <div className='property-index-display' key={property.id} >
               <Link to={`/properties/${property.id}`} onClick={()=> this.handleClick}>
                 <img src={property.photoUrl} alt=""/>
+                <FavoriteCreateContainer id='favorite'propertyId={property.id} key={property.id} />
                 <p>Price: $ {property.price}</p>
                 <p>{property.bedroom} Bed, {property.bathroom} Bath </p>
                 <p> SQFT: {property.sqft}</p>
@@ -29,7 +30,6 @@ class PropertyIndexItem extends React.Component {
                 <p>
                     {property.address}<br></br>{property.city}, {property.state} &nbsp; {property.zipcode}
                 </p>
-                <FavoriteCreateContainer propertyId={property.id} key={property.id} />
 
               </Link>
           </div>
