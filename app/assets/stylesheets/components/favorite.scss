@@ -13,7 +13,7 @@
 
 .favorite-item-container {
     list-style: none;
-    // flex-direction: wrap;
+    justify-content: space-evenly;
 }
 
 //favorite_item.jsx
@@ -31,6 +31,7 @@
 
     p{
         border-right: lightgrey solid 1px;
+        padding: 0vh 2vw 0vh;
     }
     #address {
         column-width: auto;

@@ -54,11 +54,10 @@ class CartItem extends React.Component {
                         <p>current offer price: {item.offer_price}</p>
                         <p>current terms: {item.terms}</p>
                         <br/><br/>
-                        <button onClick={this.removeItem} >delete this property</button>
+                        <button className='submit-button' onClick={this.removeItem} >delete</button>
                     </div>
                     <div className='cart-update-form'>
                         <label>Update offer price</label>
-                            <br/>
                             <br/>
                             <input 
                                 type="text" 
@@ -74,7 +73,7 @@ class CartItem extends React.Component {
                                 value={this.state.terms}
                                 placeholder='type your terms here, such as downpayment and financing options'
                                 onChange={this.update('terms')} />
-                        <button onClick={this.handleSubmit}>Update Offer</button>
+                        <button className='submit-button' onClick={this.handleSubmit}>Update Offer</button>
                     </div>
                 </ul>
             </div>

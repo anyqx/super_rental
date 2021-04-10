@@ -34,7 +34,7 @@ class FavoriteItem extends React.Component {
                     <p>Gross Yield <br/>{favorite.gross_yield}%</p>
                     <p>Annualized Return <br/>{favorite.annualized_return} %</p>
                     <p>10 yr total return <br/>${favorite.total_return} </p>
-                    <img id='heart-img' onClick={this.removeFavorite} src={window.favoriteHeartURL}  />
+                    <img id='heart-img' onClick={this.removeFavorite} src={window.heartURL}  />
                     {/* <button id='unfavorite-button' onClick={this.removeFavorite} >Unfavorite</button> */}
                 </div>
 
