@@ -25,6 +25,7 @@ class PropertyShow extends React.Component {
     render() {
         const {property, favorite} = this.props;
         if (!property) return null;
+        debugger
         return (
             <>
             <div className="google-maps">

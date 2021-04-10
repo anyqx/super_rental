@@ -3,7 +3,7 @@ import MarkerManager from '../../util/marker_util';
 
 class PropertyMap extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   componentDidMount() {
     // let latLng = new google.maps.LatLng(-8.064903, -34.896872);
@@ -54,7 +54,12 @@ class PropertyMap extends React.Component {
         fullscreenControl: true,
       };
     }
-    this.map = new google.maps.Map(this.mapNode, mapLoc)
+    debugger
+    this.map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8,
+    });
+    // this.map = new google.maps.Map(this.mapNode, mapLoc)
 
     this.MarkerManager = new MarkerManager(this.map)
     this.MarkerManager.updateMarkers(this.props.property)
@@ -62,6 +67,7 @@ class PropertyMap extends React.Component {
 
   componentDidUpdate() {
     let mapLoc;
+    debugger
     if (Array.isArray(this.props.property)) {
       mapLoc = {
         initialCenter:{
@@ -101,15 +107,27 @@ class PropertyMap extends React.Component {
         fullscreenControl: true,
       }
     }
-    this.map = new google.maps.Map(this.mapNode, mapLoc);
+    // this.map = new google.maps.Map(this.mapNode, mapLoc);
+    // this.map = new google.maps.Map(document.getElementById("map"), mapLoc);
+    
     this.MarkerManager = new MarkerManager(this.map);
     this.MarkerManager.updateMarkers(this.props.property);
   }
 
+  mapCallBack(map){
+    debugger
+    return this.mapNode = map;
+  }
   render() {
     if (!this.props.property) return null;
+    debugger
+    // <div id='map'></div>
+    {/* <div id='map' style={{ height: '100%' }} ref={(map) => (this.mapNode = map)}></div> */}
     return (
-      <div style={{ height: '100%' }} ref={(map) => (this.mapNode = map)}></div>
+      <>
+    <div id='map' style={{ height: '100%' }} ></div>
+
+      </>
     )
   }
 }
