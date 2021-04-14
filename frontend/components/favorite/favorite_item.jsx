@@ -12,7 +12,6 @@ class FavoriteItem extends React.Component {
     }
 
     removeFavorite(e){
-        // debugger
         this.props.deleteFavorite(this.props.favorite.id)
             .then(()=> this.props.fetchFavorites(this.props.favorites))
 
@@ -37,7 +36,6 @@ class FavoriteItem extends React.Component {
                     <p>Annualized Return <br/>{favorite.annualized_return} %</p>
                     <p>10 yr total return <br/>${favorite.total_return} </p>
                     <img id='heart-img' onClick={this.removeFavorite} src={window.heartURL}  />
-                    {/* <button id='unfavorite-button' onClick={this.removeFavorite} >Unfavorite</button> */}
                 </div>
 
 
