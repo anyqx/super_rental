@@ -11,7 +11,7 @@ const mapStateToProps = state => {
 }
 
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch => {
     return {
         fetchCartItems: () => dispatch(fetchCartItems()),
         deleteCartItem: (id) => dispatch(deleteCartItem(id)),

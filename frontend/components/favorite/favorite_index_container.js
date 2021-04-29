@@ -10,7 +10,7 @@ const mapStateToProps = state => {
 }
 
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch => {
     return {
         fetchFavorites: () => dispatch(fetchFavorites()),
         deleteFavorite: (id) => dispatch(deleteFavorite(id)),

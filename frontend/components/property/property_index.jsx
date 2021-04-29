@@ -9,10 +9,11 @@ class PropertyIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchProperties();
+        // this.props.fetchFavorites();
     }
 
     render() {
-        const { properties } = this.props;
+        const { properties} = this.props;
         if (!properties) return null;
         return (
             <>

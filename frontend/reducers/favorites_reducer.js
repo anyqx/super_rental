@@ -8,7 +8,10 @@ const favoritesReducer = (state = {}, action) => {
         case RECEIVE_FAVORITES:
             return Object.assign({}, action.favorites);
         case RECEIVE_FAVORITE:
-            return Object.assign({}, action.favorite);
+            const newFavorite = {[action.favorite.id]: action.favorite.id}
+            // return Object.assign({}, action.favorite);
+            // can it assign to property_id?
+            return Object.assign({}, newFavorite)
         case REMOVE_FAVORITE:
             const newState = Object.assign({}, state);
             delete newState[action.favoriteId];

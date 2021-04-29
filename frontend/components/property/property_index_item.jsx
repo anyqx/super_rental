@@ -9,7 +9,6 @@ class PropertyIndexItem extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
-
     handleClick(e) {
         const propertyId = this.props.property.id;
         this.props.history.push(`/properties/${propertyId}`);

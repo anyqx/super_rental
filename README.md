@@ -33,4 +33,6 @@ WIP: google API, update cart
 
 bugs
 1. CSS for cart feature and favorite feature
+
+progress: added component did mount(fetchFavorites) in propertyIndex Page
 2. link 

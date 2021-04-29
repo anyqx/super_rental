@@ -23,9 +23,8 @@ class PropertyShow extends React.Component {
     //     currentUser ? addCartItem({propertyId: propertyId, user_id: userId}) :  '/login'
     // }
     render() {
-        const {property, favorite} = this.props;
+        const {property} = this.props;
         if (!property) return null;
-        // debugger
         return (
             <>
             <div className='property-show-container'>
