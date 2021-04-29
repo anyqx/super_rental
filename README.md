@@ -29,3 +29,8 @@ npm start
 localhost:3000
 
 WIP: google API, update cart
+
+
+bugs
+1. CSS for cart feature and favorite feature
+2. link 

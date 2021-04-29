@@ -34,6 +34,7 @@ class CartCreateForm extends React.Component {
                 <form className='cart-create-form' onSubmit={this.handleSubmit}>
                     <input id='offer' type="text" value={this.state.offer_price} onChange={this.handleOffer} placeholder='Your magic number...'/>
                     <textarea id='terms'type="text" value={this.state.terms} onChange={this.handleTerms} placeholder='terms: downpayment. mortgage amount, etc' />
+                {/* <Link to='/cart 'className='submit-button'>Make an Offer</Link> */}
                 <button className='submit-button'>Make An Offer</button>
                 </form>
             </div>
