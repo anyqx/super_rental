@@ -27,7 +27,9 @@ class FavoriteItem extends React.Component {
                     <p id='address'>{favorite.address} <br/>
                         {favorite.city}, {favorite.state} &nbsp; {favorite.zipcode}
                     </p>
-                    <img id='property-img' src={favorite.photoUrl} alt=""/>
+                    <Link to={ `/properties/${favorite.property_id}`}>
+                        <img id='property-img' src={favorite.photoUrl} alt=""/>
+                    </Link>
                     <p>$ {favorite.price}</p>
                     <p>{favorite.bedroom} bd, {favorite.bathroom} ba <br/> {favorite.sqft} sqft</p>
                     <p>Current Rent <br/> ${favorite.rent}</p>

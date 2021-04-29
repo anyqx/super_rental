@@ -21,7 +21,7 @@ class FavoriteIndex extends React.Component {
         return (
             <>
             <div className='favorite-index-container'>
-                <p id='title'>Favorite Properties</p>
+                <div id='title'>Favorite Properties</div>
                 <div className='favorite-item-container'>
                     {favorites.map(favorite => {
                         return <FavoriteItem favorite={favorite} key={favorite.id} 

@@ -40,7 +40,9 @@ class CartItem extends React.Component {
             <div className="items-container">
                 <ul key={item.id}>
                     <div className='items-description'>
-                        <img id='property-img' src={item.photoUrl} alt=""/>
+                        <Link to={`/properties/${item.property_id}`}>
+                            <img id='property-img' src={item.photoUrl} alt=""/>
+                        </Link>
                         <p>{item.address} <br/>
                             {item.city}, {item.state} &nbsp; {item.zipcode}
                         </p>
@@ -73,7 +75,8 @@ class CartItem extends React.Component {
                                 value={this.state.terms}
                                 placeholder='type your terms here, such as downpayment and financing options'
                                 onChange={this.update('terms')} />
-                        <button className='submit-button' onClick={this.handleSubmit}>Update Offer</button>
+                            <button className='submit-button' onClick={this.handleSubmit}>Update Offer</button>
+    
                     </div>
                 </ul>
             </div>
