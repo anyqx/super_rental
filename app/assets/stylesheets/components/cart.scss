@@ -14,7 +14,8 @@
 .cart-item-container {
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin: 10vh;
+    flex-direction: column;
 }
 
 //cart_item.jsx
@@ -33,7 +34,7 @@
     
     .items-description {
         display: flex;
-        flex-direction: wrap;
+        flex-direction: column;
         #property-img {
             height: 100px;
         }
@@ -41,11 +42,9 @@
     
     .cart-update-form {
         display: flex;
-        flex-direction: wrap;
+        flex-direction: column;
         padding-top: 30px;
     }
-
-
 
     #update-button {
         justify-self: right;

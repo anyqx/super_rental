@@ -17,13 +17,13 @@ class CartIndex extends React.Component {
             <>
             <div className='cart-index-container'>
                 <p id='title'>Browse All Properties in Cart</p>
-                <ul className='cart-item-container'>
+                <div className='cart-item-container'>
                     {items.map(item => {
                         return <CartItem item={item} key={item.id} 
                         updateCartItem={this.props.updateCartItem}
                         deleteCartItem={this.props.deleteCartItem}/>
                     })}
-                </ul>
+                </div>
             </div>
             </>
         )

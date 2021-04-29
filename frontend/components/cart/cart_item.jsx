@@ -40,33 +40,33 @@ class CartItem extends React.Component {
             <div className="items-container">
                 <ul key={item.id}>
                     <div className='items-description'>
+                        <img id='property-img' src={item.photoUrl} alt=""/>
                         <p>{item.address} <br/>
                             {item.city}, {item.state} &nbsp; {item.zipcode}
                         </p>
-                        <img id='property-img' src={item.photoUrl} alt=""/>
                         <p>$ {item.price}</p>
                         <p>{item.bedroom} bd, {item.bathroom} ba | {item.sqft} sqft</p>
-                        <p>Current Rent: ${item.rent}</p>
+                        {/* <p>Current Rent: ${item.rent}</p>
                         <p>Cap Rate: {item.cap_rate}%</p>
                         <p>Gross Yield: {item.gross_yield}%</p>
                         <p>Annualized Return: {item.annualized_return} %</p>
-                        <p>10 yr total return: ${item.total_return} </p>
-                        <p>current offer price: {item.offer_price}</p>
-                        <p>current terms: {item.terms}</p>
+                        <p>10 yr total return: ${item.total_return} </p> */}
+                        <p>current offer price: <br/>{item.offer_price}</p>
+                        <p>current offer terms: <br/> {item.terms}</p>
                         <br/><br/>
                         <button className='submit-button' onClick={this.removeItem} >delete</button>
                     </div>
                     <div className='cart-update-form'>
-                        <label>Update offer price</label>
+                        Update My Offer
+                        {/* <label>Update My Offer</label> */}
                             <br/>
                             <input 
                                 type="text" 
                                 value={this.state.offer_price} 
-                                // placeholder={item.offer_price}
                                 placeholder='input your new number'
                                 onChange={this.update('offer_price')} />
                             <br/>
-                        <label>Update offer terms</label>
+                        {/* <label>Update offer terms</label> */}
                             <br/>
                         <textarea
                                 type="text" 
