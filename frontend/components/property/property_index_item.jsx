@@ -13,6 +13,11 @@ class PropertyIndexItem extends React.Component {
         const propertyId = this.props.property.id;
         this.props.history.push(`/properties/${propertyId}`);
     }
+
+    componentDidUpdate(prevProps) {
+        
+    }
+
     render() {
         const { property } = this.props;
         return (

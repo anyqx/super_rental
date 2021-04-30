@@ -7,13 +7,13 @@ import { fetchFavorites } from '../../actions/favorite_actions';
 const mapStateToProps = (state) => {
     return {
         properties: propertyArray(state.entities),
-        // favorites: Object.values(state.entities.favorites)
+        favorites: Object.values(state.entities.favorites)
     }
 }
 
 const mapDispatchToProps = dispatch => ({
     fetchProperties: () => dispatch(fetchProperties()),
-    // fetchFavorites: () => dispatch(fetchFavorites())
+    fetchFavorites: () => dispatch(fetchFavorites())
 })
  
 export default connect(mapStateToProps, mapDispatchToProps)(PropertyIndex)

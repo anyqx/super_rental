@@ -9,7 +9,7 @@ class PropertyIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchProperties();
-        // this.props.fetchFavorites();
+        this.props.fetchFavorites();
     }
 
     render() {

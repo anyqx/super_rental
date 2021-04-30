@@ -8,12 +8,12 @@ class FavoriteIndex extends React.Component {
         this.state = {
             favorites: [],
         };
-
     }
 
     componentDidMount() {
         this.props.fetchFavorites();
     }
+
 
     render() {
         const {favorites} = this.props;

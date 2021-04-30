@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {withRouter} from 'react-router-dom';
 
 class CartCreateForm extends React.Component {
 
@@ -16,7 +17,8 @@ class CartCreateForm extends React.Component {
         const {addCartItem, propertyId, userId} = this.props;
         const {offer_price, terms} = this.state;
         const cartitem = { property_id: propertyId, user_id: userId, offer_price: offer_price, terms: terms };
-        addCartItem(cartitem);
+        addCartItem(cartitem)
+            .then(() => this.props.history.push('/cart'));
     }
 
     handleOffer(e) {
@@ -41,4 +43,4 @@ class CartCreateForm extends React.Component {
     }
 }
 
-export default CartCreateForm;
+export default withRouter(CartCreateForm);

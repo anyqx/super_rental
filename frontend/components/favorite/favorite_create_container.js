@@ -2,9 +2,14 @@ import FavoriteCreate from "./favorite_create";
 import { addFavorite, fetchFavorites } from '../../actions/favorite_actions';
 import { connect } from 'react-redux';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
+    let isFavorited = false;
+    if (Object.keys(state.entities.favorites).includes(ownProps.propertyId.toString())) {
+        isFavorited = true;
+    }
     return {
-        userId: state.session.id
+        userId: state.session.id,
+        isFavorited: isFavorited
     }
 }
 

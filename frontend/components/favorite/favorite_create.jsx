@@ -20,14 +20,13 @@ class FavoriteCreate extends React.Component {
     }
 
     render() {
-        // if (this.props.favorites ) return (
-        //     <div className='cart-container'>
-        //         <img id='heart-img' onClick={this.handleSubmit} src={window.unHeartURL}  />
-        //     </div>
-        // );
+        const redHeart = <img id='heart-img' onClick={this.handleSubmit} src={window.heartURL}  />
+        const whiteHeart = <img id='heart-img' onClick={this.handleSubmit} src={window.unHeartURL}  />
+        let heart = whiteHeart;
+        if (this.props.isFavorited === true) {heart = redHeart}
         return (
             <div className='cart-container'>
-                <img id='heart-img' onClick={this.handleSubmit} src={window.unHeartURL}  />
+                {heart}
             </div>
         )
     }
