@@ -8,9 +8,6 @@ class FavoriteCreate extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    // componentDidMount() {
-    //     this.props.fetchFavorites();
-    // }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -20,7 +17,7 @@ class FavoriteCreate extends React.Component {
     }
 
     render() {
-        const redHeart = <img id='heart-img' onClick={this.handleSubmit} src={window.heartURL}  />
+        const redHeart = <img id='heart-img'  onClick={this.handleSubmit} src={window.heartURL}  />
         const whiteHeart = <img id='heart-img' onClick={this.handleSubmit} src={window.unHeartURL}  />
         let heart = whiteHeart;
         if (this.props.isFavorited === true) {heart = redHeart}
