@@ -1,5 +1,5 @@
 # Super Rental
-=
+
 [Live](http://superental.herokuapp.com/#/)
 
 ![Project-pic](/app/assets/images/project_pic.png)
