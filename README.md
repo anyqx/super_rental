@@ -1,38 +1,32 @@
-# README
+# Super Rental
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# OneRoof
+[Live](http://superental.herokuapp.com/#/)
 
-Things you may want to cover:
+![Project-pic](/app/assets/images/project_pic.png)
 
-* Ruby version
+## Description
+Inspired by Roofstock, Super Rental is an online marketplace that allows users to browse rental properties and make offers online.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* 
+## Technology:
+* Ruby on Rails
+* PostgresQL
+* React
+* Redux
+* AWS S3 for image hosting
+* Google Maps API
 
 
-rails s
-npm start
-localhost:3000
+## Features
+### User Authorization
+* Users can sign up and login/logout.
+* Validation and errors are handled.
 
-WIP: google API, update cart
 
+### Google Maps API
+Users are able to set up and join/unjoin meetings. Meetings have specific details such as beginning and end times, location, image, and subject.
 
-bugs
-1. CSS for cart feature and favorite feature
+### Favorite and Unfavorite a property
+Users have a dashboard where they are able to upload images for chores/meetings and search for specific tasks by name.
 
-progress: added component did mount(fetchFavorites) in propertyIndex Page
-2. link 
+### Make an offer and update the offer on a property

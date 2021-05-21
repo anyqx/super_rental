@@ -30,7 +30,8 @@ class PropertyShow extends React.Component {
             <div className='property-show-container'>
                 <p id='address1'>{property.address}</p>
                 <p id='address2'>{property.city}, {property.state} &nbsp; {property.zipcode}</p>
-                <p><FavoriteCreateContainer propertyId={property.id} /></p>
+                <p><FavoriteCreateContainer propertyId={property.id}/></p>
+                {/* pass a prop and add else/if in the favorite cerate component */}
                 
                 <div className='img-cart'>
                     <img src={property.photoUrl} alt=""/>
