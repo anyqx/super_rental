@@ -1,4 +1,4 @@
-# Super Rental(http://superental.herokuapp.com/#/)
+# [Super Rental](http://superental.herokuapp.com/#/)
 
 [Live](http://superental.herokuapp.com/#/)
 
