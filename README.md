@@ -1,11 +1,8 @@
 # [Super Rental](http://superental.herokuapp.com/#/)
 
-[Live](http://superental.herokuapp.com/#/)
-
-![Project-pic](/app/assets/images/project_pic.png)
-
 ## Description
 Inspired by Roofstock, Super Rental is an online marketplace that allows users to browse rental properties and make offers online.
+![Project-pic](/app/assets/images/project_pic.png)
 
 ## Technology:
 * Ruby on Rails
@@ -14,7 +11,6 @@ Inspired by Roofstock, Super Rental is an online marketplace that allows users t
 * Redux
 * AWS S3 for image hosting
 * Google Maps API
-
 
 ## Features
 ### User Authorization
