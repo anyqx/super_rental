@@ -15,7 +15,7 @@ class PropertyIndex extends React.Component {
     render() {
         const { properties} = this.props;
         if (!properties) return null;
-        return (
+        return ( 
             <>
             <div>
                 <h1>Browse All Properties</h1>
@@ -26,7 +26,7 @@ class PropertyIndex extends React.Component {
                         )
                     })}
                 </ul>
-            </div>
+            </div> 
             </>
         )
     }
