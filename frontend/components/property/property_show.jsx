@@ -43,13 +43,13 @@ class PropertyShow extends React.Component {
                 <div className='map-and-summary'>
                     <div className='property-summary'>
                         <p id='summary'>Summary</p>
-                        <p>Price: $ {property.price}</p>
-                        <p>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</p>
-                        <p>Current Rent: ${property.rent}</p>
-                        <p>Cap Rate {property.cap_rate}%</p>
-                        <p>Gross Yield: {property.gross_yield}%</p>
-                        <p>Annualized Return: {property.annualized_return} %</p>
-                        <p>10 year total return: ${property.total_return} </p>
+                        <p id='intro'>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</p>
+                        <p><span className='columnTitle'>Price: $ </span>{property.price}</p>
+                        <p><span className='columnTitle'>Current Rent: $</span>{property.rent}</p>
+                        <p><span className='columnTitle'>Cap Rate: </span>{property.cap_rate}%</p>
+                        <p><span className='columnTitle'>Gross Yield: </span>{property.gross_yield}%</p>
+                        <p><span className='columnTitle'>Annualized Return: </span>{property.annualized_return} %</p>
+                        <p><span className='columnTitle'>10 year total return: $</span>{property.total_return} </p>
                     </div>
                     <div className='google-map'>
                         <PropertyMap property={property} type="show" zoom="false" />

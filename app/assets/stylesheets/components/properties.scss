@@ -41,7 +41,6 @@
     .columnTitle {
         font-weight: bolder;
         color:black;
-
     }
     
 }
@@ -76,6 +75,9 @@
         padding: 5px;
         margin-right: 10vw;
     }
+
+    
+    
 }
 
 .img-cart {
@@ -97,13 +99,28 @@
 
     #summary {
         color: $logo-color;
-        font-weight: bolder;
+        // font-weight: 900;
+        text-shadow: 1px 0 $logo-color;
+        text-align: center;
     }
-    p {
+
+    #intro {
         margin: 5px;
         font-size: 20px;
         color: #515151;
         text-align: center;
+    }
+
+    p {
+        margin: 5px;
+        font-size: 20px;
+        color: #515151;
+        text-align: left;
+    }
+    .columnTitle {
+        font-weight: 900;
+        // text-shadow: 1px 0 black;
+        color:black;
     }
 }
 .google-map {
