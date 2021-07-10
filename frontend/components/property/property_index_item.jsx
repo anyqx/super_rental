@@ -26,11 +26,11 @@ class PropertyIndexItem extends React.Component {
               <Link to={`/properties/${property.id}`} onClick={()=> this.handleClick}>
                 <img src={property.photoUrl} alt=""/>
                 <FavoriteCreateContainer id='favorite' propertyId={property.id} key={property.id} />
-                <p>Price: $ {property.price}</p>
+                <p><span className='columnTitle'>Price: $</span> {property.price}</p>
                 <p>{property.bedroom} Bed, {property.bathroom} Bath </p>
-                <p> SQFT: {property.sqft}</p>
-                <p>Current Rent: ${property.rent}</p>
-                <p>Cap Rate: {property.cap_rate}%</p>
+                <p><span className='columnTitle'>SQFT: </span>{property.sqft}</p>
+                <p><span className='columnTitle'>Current Rent: $</span>{property.rent}</p>
+                <p><span className='columnTitle'>Cap Rate:</span> {property.cap_rate}%</p>
                 <p>
                     {property.address}<br></br>{property.city}, {property.state} &nbsp; {property.zipcode}
                 </p>
