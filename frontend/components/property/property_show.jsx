@@ -42,7 +42,7 @@ class PropertyShow extends React.Component {
                 
                 <div className='map-and-summary'>
                     <div className='property-summary'>
-                        <p id='summary'>Summary</p>
+                        <p id='summary'>Summary </p>
                         <p id='intro'>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</p>
                         <p><span className='columnTitle'>Price: $ </span>{property.price}</p>
                         <p><span className='columnTitle'>Current Rent: $</span>{property.rent}</p>
