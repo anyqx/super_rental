@@ -25,3 +25,4 @@ Users are able to set up and join/unjoin meetings. Meetings have specific detail
 Users have a dashboard where they are able to upload images for chores/meetings and search for specific tasks by name.
 
 ### Make an offer and update the offer details on a property
+Users can bid on the property by adding a purchase price and finance details. Users can later edit the offer details.
