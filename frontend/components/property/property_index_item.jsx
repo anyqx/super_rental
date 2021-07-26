@@ -30,7 +30,7 @@ class PropertyIndexItem extends React.Component {
                 <p><span className='columnTitle'>SQFT: </span>{property.sqft}</p>
                 <p><span className='columnTitle'>Current Rent: $</span>{property.rent}</p>
                 <p><span className='columnTitle'>Cap Rate:</span> {property.cap_rate}%</p>
-                <p>{property.bedroom} Bed, {property.bathroom} Bath </p>
+                <p>{property.bedroom} Beds, {property.bathroom} Baths </p>
                 <p>
                     {property.address}<br></br>{property.city}, {property.state} &nbsp; {property.zipcode}
                 </p>
