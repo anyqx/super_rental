@@ -56,7 +56,7 @@ class PropertyShow extends React.Component {
                         <PropertyMap property={property} type="show" zoom="false" />
                     </div>
                 </div>
-                {/* get direction  */}
+                {/* get direction    */}
                 <a
                       className="location-link"
                       href={`https://www.google.com/maps/dir/?api=1&destination=${property.altitude},${property.longitude}`}
