@@ -14,10 +14,9 @@ class FavoriteItem extends React.Component {
     removeFavorite(e){
         this.props.deleteFavorite(this.props.favorite.id)
             .then(()=> this.props.fetchFavorites(this.props.favorites))
-
     }
     
-    
+
     render() {
         const { favorite } = this.props;
         return (
