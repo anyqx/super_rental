@@ -17,6 +17,7 @@ class FavoriteItem extends React.Component {
 
     }
     
+    
     render() {
         const { favorite } = this.props;
         return (
