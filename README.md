@@ -1,4 +1,5 @@
-# [Super Rental](http://superental.herokuapp.com/#/)
+# Super Rental 
+[Live Link](http://superental.herokuapp.com/#/)
 
 ## Description
 Inspired by Roofstock, Super Rental is an online marketplace that allows users to browse rental properties and make offers online.
