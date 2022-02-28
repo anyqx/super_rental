@@ -7,7 +7,6 @@ class FavoriteItem extends React.Component {
         this.state = {
             favorites: [],
         };
-
         this.removeFavorite = this.removeFavorite.bind(this);
     }
 
@@ -31,7 +30,7 @@ class FavoriteItem extends React.Component {
                         <img id='property-img' src={favorite.photoUrl} alt=""/>
                     </Link>
                     <p>$ {favorite.price}</p>
-                    <p>{favorite.bedroom} bd, {favorite.bathroom} ba <br/> {favorite.sqft} sqft</p>
+                    <p>{favorite.bedroom} bd, {favorite.bathroom} bath <br/> {favorite.sqft} sqft</p>
                     <p>Current Rent <br/> ${favorite.rent}</p>
                     <p>Cap Rate <br/>{favorite.cap_rate}%</p>
                     <p>Gross Yield <br/>{favorite.gross_yield}%</p>
