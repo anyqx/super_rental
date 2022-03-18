@@ -33,6 +33,11 @@ class CartItem extends React.Component {
     removeItem(e){
         this.props.deleteCartItem(this.props.item.id);
     }
+
+    addComma(num){
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
     render() {
         const { item } = this.props;
         return (
@@ -46,14 +51,14 @@ class CartItem extends React.Component {
                         <p>{item.address} <br/>
                             {item.city}, {item.state} &nbsp; {item.zipcode}
                         </p>
-                        <p>$ {item.price}</p>
-                        <p>{item.bedroom} bd, {item.bathroom} ba | {item.sqft} sqft</p>
+                        <p>$ {this.addComma(item.price)}</p>
+                        <p>{item.bedroom} bd, {item.bathroom} ba | {this.addComma(item.sqft)} sqft</p>
                         {/* <p>Current Rent: ${item.rent}</p>
                         <p>Cap Rate: {item.cap_rate}%</p>
                         <p>Gross Yield: {item.gross_yield}%</p>
                         <p>Annualized Return: {item.annualized_return} %</p>
                         <p>10 yr total return: ${item.total_return} </p> */}
-                        <p>current offer price: <br/>{item.offer_price}</p>
+                        <p>current offer price: <br/>$ {this.addComma(item.offer_price)}</p>
                         <p>current offer terms: <br/> {item.terms}</p>
                         <br/><br/>
                         <button className='submit-button' onClick={this.removeItem} >delete</button>

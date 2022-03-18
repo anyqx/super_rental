@@ -15,6 +15,9 @@ class FavoriteItem extends React.Component {
             .then(()=> this.props.fetchFavorites(this.props.favorites))
     }
     
+    addComma(num){
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
 
     render() {
         const { favorite } = this.props;
@@ -29,9 +32,9 @@ class FavoriteItem extends React.Component {
                     <Link to={ `/properties/${favorite.property_id}`}>
                         <img id='property-img' src={favorite.photoUrl} alt=""/>
                     </Link>
-                    <p>$ {favorite.price}</p>
-                    <p>{favorite.bedroom} bd, {favorite.bathroom} bath <br/> {favorite.sqft} sqft</p>
-                    <p>Current Rent <br/> ${favorite.rent}</p>
+                    <p>$ {this.addComma(favorite.price)}</p>
+                    <p>{favorite.bedroom} bd, {favorite.bathroom} bath <br/> {this.addComma(favorite.sqft)} sqft</p>
+                    <p>Current Rent <br/> ${this.addComma(favorite.rent)}</p>
                     <p>Cap Rate <br/>{favorite.cap_rate}%</p>
                     <p>Gross Yield <br/>{favorite.gross_yield}%</p>
                     <p>Annualized Return <br/>{favorite.annualized_return} %</p>

@@ -3,7 +3,7 @@ import { fetchCartItems, deleteCartItem, updateCartItem } from '../../actions/ca
 import { itemsArray } from '../../reducers/selectors';
 import { connect } from 'react-redux';
 
-const mapStateToProps = state => {
+const mapStateToProps = state => { //accessing redux , passing down objects as props
     const items = Object.values(state.entities.items);
     return {
         items: items
@@ -11,7 +11,7 @@ const mapStateToProps = state => {
 }
 
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = dispatch => { // passing down functions as props
     return {
         fetchCartItems: () => dispatch(fetchCartItems()),
         deleteCartItem: (id) => dispatch(deleteCartItem(id)),
