@@ -22,8 +22,11 @@ class FavoriteCreate extends React.Component {
         let heart = whiteHeart;
         if (this.props.isFavorited === true) {heart = redHeart}
         return (
-            <div className='cart-container'>
-                {heart}
+            <div className='heart-container'>
+                <div className="heart-container-2">
+                    {heart}
+
+                </div>
             </div>
         )
     }

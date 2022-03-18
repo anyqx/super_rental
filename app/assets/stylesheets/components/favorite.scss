@@ -51,11 +51,21 @@
 }
 
 //favorite_create.jsx
-.cart-container {
+.heart-container {
+    position: absolute;
+
+    .heart-container-2 {
+        display: flex;
+        justify-content: flex-end;
+        margin-left:240px;
+        margin-top: 5px;
+
+    }
 
     #heart-img{
-        height: 8vh;
-        width: 8vh;
+        height: 4vh;
+        width: 4vh;
+        border:none;
     }
 
     #heart-img:hover{
