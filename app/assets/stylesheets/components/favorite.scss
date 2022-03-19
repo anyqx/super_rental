@@ -55,15 +55,13 @@
     position: relative;
 
     #heart-img{
-        // position: relative;
         display: flex;
         position: absolute;
         justify-content: flex-end;
-        width: 100%;
         right: 0;
         margin-top: 5px;
-        height: 4vh;
-        width: 4vh;
+        height: 20px;
+        max-width: 23px;
         border:none;
     }
 

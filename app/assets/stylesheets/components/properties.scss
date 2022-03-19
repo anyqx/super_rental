@@ -60,7 +60,7 @@
     
     #address1{
         justify-content: center;
-        color: #515151;
+        color:$main-background;
         font-size: 30px;
         margin-bottom: 5px;
     }
@@ -110,14 +110,14 @@
     #intro {
         margin: 5px;
         font-size: 20px;
-        color: #515151;
+        color: $main-background;
         text-align: center;
     }
 
     p {
         margin: 5px;
         font-size: 20px;
-        color: #515151;
+        color: $main-background;
         text-align: left;
         
     }
