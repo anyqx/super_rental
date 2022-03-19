@@ -38,7 +38,7 @@ class FavoriteItem extends React.Component {
                     <p>Cap Rate <br/>{favorite.cap_rate}%</p>
                     <p>Gross Yield <br/>{favorite.gross_yield}%</p>
                     <p>Annualized Return <br/>{favorite.annualized_return} %</p>
-                    <p>10 yr total return <br/>${favorite.total_return} </p>
+                    <p>10 yr total return <br/>${this.addComma(favorite.total_return)} </p>
                     <img id='heart-img' onClick={this.removeFavorite} src={window.heartURL}  />
                 </div>
 
