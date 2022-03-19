@@ -52,18 +52,22 @@
 
 //favorite_create.jsx
 .heart-container {
-    position: absolute;
+    position: relative;
 
     .heart-container-2 {
         display: flex;
+        position: absolute;
         justify-content: flex-end;
         // margin-left:240px;
         width: 100%;
+        right: 0;
         margin-top: 5px;
 
     }
 
     #heart-img{
+        position: relative;
+        right:0;
         height: 4vh;
         width: 4vh;
         border:none;
