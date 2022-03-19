@@ -26,22 +26,26 @@ class FavoriteItem extends React.Component {
             <div className="favorites-container">
             <ul key={favorite.id}>
                 <div className="favorite-item">
-                    <p id='address'>{favorite.address} <br/>
-                        {favorite.city}, {favorite.state} &nbsp; {favorite.zipcode}
-                    </p>
                     <Link to={ `/properties/${favorite.property_id}`}>
                         <img id='property-img' src={favorite.photoUrl} alt=""/>
                     </Link>
+                    <p id='address'>{favorite.address} <br/>
+                        {favorite.city}, {favorite.state} &nbsp; {favorite.zipcode}
+                        <div className='heart-container'>
+                            <img id='heart-img' onClick={this.removeFavorite} src={window.heartURL}  />
+                        </div>
+                    </p>
                     <p>$ {this.addComma(favorite.price)}</p>
-                    <p>{favorite.bedroom} bd, {favorite.bathroom} bath <br/> {this.addComma(favorite.sqft)} sqft</p>
-                    <p>Current Rent <br/> ${this.addComma(favorite.rent)}</p>
-                    <p>Cap Rate <br/>{favorite.cap_rate}%</p>
-                    <p>Gross Yield <br/>{favorite.gross_yield}%</p>
-                    <p>Annualized Return <br/>{favorite.annualized_return} %</p>
-                    <p>10 yr total return <br/>${this.addComma(favorite.total_return)} </p>
-                    <img id='heart-img' onClick={this.removeFavorite} src={window.heartURL}  />
+                    <p>{favorite.bedroom}</p>
+                    <p>{favorite.bathroom}</p> 
+                    <p>{this.addComma(favorite.sqft)}</p>
+                    <p>${this.addComma(favorite.rent)}</p>
+                    <p>{favorite.gross_yield}%</p>
+                    <p>{favorite.cap_rate}%</p>
+                    <p>{favorite.annualized_return} %</p>
+                    <p>${this.addComma(favorite.total_return)} </p>
                 </div>
-
+            
 
             </ul>
             </div>

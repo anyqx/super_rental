@@ -23,7 +23,6 @@ class CartItem extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.updateCartItem(this.state);
-        // this.props.history.push(`/cart`);
         this.setState({
             offer_price: '',
             terms:''

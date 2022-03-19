@@ -69,7 +69,8 @@
     
 .submit-button {
     text-transform: uppercase;
-    background-color: #6259c3;
+    // background-color: #6259c3;
+    background-color: $logo-color;
     color:white;
     padding: 10px 25px;
     font-size: 16px;
@@ -81,7 +82,9 @@
 
 .submit-button:hover{
     cursor: pointer;
-    background-color: #6259a9;
+    // background-color: #6259a9;
+    background-color: $logo-color-hover;
+
 }
 
 .login-form-container{
@@ -117,7 +120,8 @@
     width: 260px;
     font-size: 16px;
     text-transform: uppercase;
-    background-color: #6259c3;
+    // background-color: #6259c3;
+    background-color: $logo-color;
     color:white;
     padding: 5px 10px;
     border-radius: 5px;
@@ -125,7 +129,9 @@
 
  .demo-button:hover{
     cursor: pointer;
-    background-color: #6259a9;
+    // background-color: #6259a9;
+    background-color: $logo-color-hover;
+    
  }
 
  .session-errors{

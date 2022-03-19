@@ -14,7 +14,6 @@ class NavBar extends React.Component {
     }
     render() {
         return (
-            
             <header className='main-nav-container'>
                 <div className='main-nav'>
                 <span className='left-nav'>

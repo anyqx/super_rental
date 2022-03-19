@@ -17,13 +17,11 @@ class PropertyShow extends React.Component {
 
     }
 
-    // handleClick() {
-    //     e.preventDefault();
-    //     const { currentUser, addCartItem, propertyId, userId } = this.props;
-    //     currentUser ? addCartItem({propertyId: propertyId, user_id: userId}) :  '/login'
-    // }
+    addComma(num){
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
 
-    
+
     render() {
         const {property} = this.props;
         if (!property) return null;
@@ -44,13 +42,13 @@ class PropertyShow extends React.Component {
                 <div className='map-and-summary'>
                     <div className='property-summary'>
                         <p id='summary'>Summary </p>
-                        <p id='intro'>{property.bedroom} bd, {property.bathroom} ba | {property.sqft} sqft</p>
-                        <p><span className='columnTitle'>Price: $ </span>{property.price}</p>
-                        <p><span className='columnTitle'>Current Rent: $</span>{property.rent}</p>
+                        <p id='intro'>{property.bedroom} bd, {property.bathroom} ba | {this.addComma(property.sqft)} sqft</p>
+                        <p><span className='columnTitle'>Price: $ </span>{this.addComma(property.price)}</p>
+                        <p><span className='columnTitle'>Current Rent: $</span>{this.addComma(property.rent)}</p>
                         <p><span className='columnTitle'>Cap Rate: </span>{property.cap_rate}%</p>
                         <p><span className='columnTitle'>Gross Yield: </span>{property.gross_yield}%</p>
                         <p><span className='columnTitle'>Annualized Return: </span>{property.annualized_return} %</p>
-                        <p><span className='columnTitle'>10 year total return: $</span>{property.total_return} </p>
+                        <p><span className='columnTitle'>10 year total return: $</span>{this.addComma(property.total_return)} </p>
                     </div>
                     <div className='google-map'>
                         <PropertyMap property={property} type="show" zoom="false" />

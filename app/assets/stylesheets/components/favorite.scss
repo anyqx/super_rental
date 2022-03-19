@@ -5,9 +5,13 @@
     flex-direction: column;
 
     #title {
+        display: flex;
+        letter-spacing: 1.5px;
         margin: 20px;
-        color: #ff7b04;
-        font-weight: bold;
+        color: $main-font-color;
+        font-weight: 600;
+        align-items: center;
+        margin-bottom: 80px;
     }
 }
 
@@ -21,7 +25,7 @@
     display: flex;
     padding-left: 20px;
     padding-right: 20px;
-    border: lightgrey solid 1px;
+    // border: lightgrey solid 1px; 
     border-radius: 10px;
     text-decoration: none;
     justify-content: center;
@@ -30,7 +34,7 @@
     text-align: center;
 
     p{
-        border-right: lightgrey solid 1px;
+        // border-right: lightgrey solid 1px;
         padding: 0vh 2vw 0vh;
     }
     #address {
