@@ -14,11 +14,12 @@
     display: block;
     margin: 30px;
     flex-direction: column;
-    border: lightgrey solid 1px;
+    // border: lightgrey solid 1px;
     border-radius: 5px;
     padding: 20px;
-    padding-bottom: 1vh;
+    // padding-bottom: 1vh;
     width: 20vw;
+    box-shadow: 0 0 1px 1px lightgray inset;
 
     img {
         max-height: 25vh;
@@ -29,6 +30,7 @@
         border-radius: 4px;
         padding: 5px;
         object-fit: cover;
+        margin:1px;
     }
     
     img:hover {
@@ -51,7 +53,7 @@
     }
 
     p{
-        border-top: 1px solid #ddd;
+        // border-top: 1px solid #ddd;
         padding: 2vh;
     }
 
@@ -61,10 +63,22 @@
         font-weight: 900;
     }
 
-    // .3rdRow {
-    //     display: flex;
-    //     justify-content: space-evenly;
-    // }
+    .thirdRow {
+        display: flex;
+        justify-content: space-between;
+        line-height:0;
+        margin:0px;
+        
+        #num {
+            font-size: 16px;
+            font-weight: 900;
+            color: #3e3e3e;
+        }
+        #caption {
+            font-size: 12px;
+            color: #8c8c8c;
+        }
+    }
     .columnTitle {
         font-weight: bolder;
         color:black;

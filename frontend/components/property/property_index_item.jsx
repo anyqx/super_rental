@@ -35,14 +35,20 @@ class PropertyIndexItem extends React.Component {
                     <div id='address'>{property.address}, {property.city}, {property.state} &nbsp; {property.zipcode} </div>
                 </div>
                 <p id='price'>$ {this.addComma(property.price)}</p>
-                <p><span id='2ndRow'>{property.bedroom} Beds, {property.bathroom} Baths</span> <span className='2ndRow'>SQFT: </span>{this.addComma(property.sqft)}
-                    <span id='2ndRow'>  Rent: $</span>{this.addComma(property.rent)}</p>
-                <p className='3rdRow'><span id='3rdRowNum'>{property.cap_rate}%</span>
-                    <span id='3rdRowCaption'>Cap Rate:</span> 
-                    <span id='3rdRowNum'>{property.gross_yield}%</span>
-                    <span id='3rdRowCaption'>Gross Yield</span>
-                    <span id='3rdRowNum'>{property.annualized_return}%</span>
-                    <span id='3rdRowCaption'>Ann. Return</span> 
+                <p><span id='row'>{property.bedroom} Beds, {property.bathroom} Baths</span> <span className='2ndRow'>SQFT: </span>{this.addComma(property.sqft)}
+                    <span id='row'>  Rent: $</span>{this.addComma(property.rent)}</p>
+                
+                
+                <p className='thirdRow'>
+                    <span id='num'>{property.cap_rate}%</span>
+                    <span id='num'>{property.gross_yield}%</span>
+                    <span id='num'>{property.annualized_return}%</span>
+                </p>
+                
+                <p className='thirdRow'>
+                    <span id='caption'>Cap Rate</span> 
+                    <span id='caption'>Gross Yield</span>
+                    <span id='caption'>Ann. Return</span> 
                 </p>
                 
 
