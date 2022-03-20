@@ -74,12 +74,12 @@ class CartItem extends React.Component {
                         <input 
                             type="text" 
                             value={this.state.offer_price} 
-                            placeholder='input your new number'
+                            placeholder='type new offer price here'
                             onChange={this.update('offer_price')} />
                         <textarea
                             type="text" 
                             value={this.state.terms}
-                            placeholder='type your terms here, such as downpayment and financing options'
+                            placeholder='type new terms here, such as downpayment and financing'
                             onChange={this.update('terms')} />
                         <button id='update-button' onClick={this.handleSubmit}>Update Offer</button>
     
