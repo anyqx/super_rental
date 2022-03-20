@@ -47,39 +47,41 @@ class CartItem extends React.Component {
                         <Link to={`/properties/${item.property_id}`}>
                             <img id='property-img' src={item.photoUrl} alt=""/>
                         </Link>
-                        <p>{item.address} <br/>
-                            {item.city}, {item.state} &nbsp; {item.zipcode}
+                        <p> <span id='address1'>{item.address} <br/></span>
+                            <span id='address2'>{item.city}, {item.state} &nbsp; {item.zipcode}
+                            <br />{item.bedroom} bd, {item.bathroom} ba | {this.addComma(item.sqft)} sqft</span>
                         </p>
-                        <p>$ {this.addComma(item.price)}</p>
-                        <p>{item.bedroom} bd, {item.bathroom} ba | {this.addComma(item.sqft)} sqft</p>
+                        <p>
+                            <span id='column'>Asking Price</span> <br />
+                            <span>$ {this.addComma(item.price)}</span> <br />
+                        </p>
                         {/* <p>Current Rent: ${item.rent}</p>
                         <p>Cap Rate: {item.cap_rate}%</p>
                         <p>Gross Yield: {item.gross_yield}%</p>
                         <p>Annualized Return: {item.annualized_return} %</p>
                         <p>10 yr total return: ${item.total_return} </p> */}
-                        <p>current offer price: <br/>$ {this.addComma(item.offer_price)}</p>
-                        <p>current offer terms: <br/> {item.terms}</p>
-                        <br/><br/>
-                        <button className='submit-button' onClick={this.removeItem} >delete</button>
+                        <p>
+                            <span id='column'>My offer Price <br/></span>
+                            $ {this.addComma(item.offer_price)}
+                        </p>
+                        <p>
+                            <span id='column'>Terms </span><br />{item.terms}
+                        </p>
+                        <button id='cancel-button' onClick={this.removeItem} >cancel <br /> bid</button>
+                        
                     </div>
                     <div className='cart-update-form'>
-                        Update My Offer
-                        {/* <label>Update My Offer</label> */}
-                            <br/>
-                            <input 
-                                type="text" 
-                                value={this.state.offer_price} 
-                                placeholder='input your new number'
-                                onChange={this.update('offer_price')} />
-                            <br/>
-                        {/* <label>Update offer terms</label> */}
-                            <br/>
+                        <input 
+                            type="text" 
+                            value={this.state.offer_price} 
+                            placeholder='input your new number'
+                            onChange={this.update('offer_price')} />
                         <textarea
-                                type="text" 
-                                value={this.state.terms}
-                                placeholder='type your terms here, such as downpayment and financing options'
-                                onChange={this.update('terms')} />
-                            <button className='submit-button' onClick={this.handleSubmit}>Update Offer</button>
+                            type="text" 
+                            value={this.state.terms}
+                            placeholder='type your terms here, such as downpayment and financing options'
+                            onChange={this.update('terms')} />
+                        <button id='update-button' onClick={this.handleSubmit}>Update Offer</button>
     
                     </div>
                 </ul>

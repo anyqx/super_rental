@@ -16,7 +16,7 @@ class CartIndex extends React.Component {
         return (
             <>
             <div className='cart-index-container'>
-                <p id='title'>Browse All Properties in Cart</p>
+                <p id='title'>Browse All Bids</p>
                 <div className='cart-item-container'>
                     {items.map(item => {
                         return <CartItem item={item} key={item.id} 
