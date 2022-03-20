@@ -95,17 +95,26 @@
     flex-direction: column;
     align-items: center;
 
-    
+}
+
+.property-img-cart{
+    display: flex;
+    // justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+
     #address1{
         justify-content: center;
         color:$main-background;
         font-size: 30px;
-        margin-bottom: 5px;
+        padding-bottom: 5px;
     }
 
     #address2 {
         color: #a3a2a2;
         font-size: 20px;
+        padding-bottom: 100px;
+
     }
 
     img{
@@ -116,9 +125,6 @@
         padding: 5px;
         margin-right: 10vw;
     }
-
-    
-    
 }
 
 .img-cart {
@@ -133,9 +139,10 @@
     border: 1px solid #ddd;
     border-radius: 10px;
 }
+
 .property-summary {
     display: flex;
-    margin-top: 10vh;
+    margin: 10vh 8vw 10vh;
     flex-direction: column;
 
     #summary {

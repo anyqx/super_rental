@@ -28,16 +28,18 @@ class PropertyShow extends React.Component {
         return (
             <>
             <div className='property-show-container'>
-                <p id='address1'>{property.address}</p>
-                <p id='address2'>{property.city}, {property.state} &nbsp; {property.zipcode}</p>
-                <p><FavoriteCreateContainer propertyId={property.id}/></p>
+                <div className='property-img-cart'>
+                    <span id='address1'>{property.address}</span> <br />
+                    <span id='address2'>{property.city}, {property.state} &nbsp; {property.zipcode} <br /></span>
+                    <img src={property.photoUrl} alt=""/>   
+                    
+                    <div><FavoriteCreateContainer propertyId={property.id}/></div>
+                    <div className='img-cart'>
+                        <CartCreateContainer propertyId={property.id}/>
+                    </div>
+                </div>
                 {/* pass a prop and add else/if in the favorite cerate component */}
                 
-                
-                <div className='img-cart'>
-                    <img src={property.photoUrl} alt=""/>
-                    <CartCreateContainer propertyId={property.id}/>
-                </div>
                 
                 <div className='map-and-summary'>
                     <div className='property-summary'>
@@ -50,17 +52,20 @@ class PropertyShow extends React.Component {
                         <p><span className='columnTitle'>Annualized Return: </span>{property.annualized_return} %</p>
                         <p><span className='columnTitle'>10 year total return: $</span>{this.addComma(property.total_return)} </p>
                     </div>
-                    <div className='google-map'>
-                        <PropertyMap property={property} type="show" zoom="false" />
-                    </div>
-                </div>
-                {/* get direction    */}
-                <a
+
+                    {/* Google Map */}
+                    <a
                       className="location-link"
                       href={`https://www.google.com/maps/dir/?api=1&destination=${property.altitude},${property.longitude}`}
                       target="_blank"
                     ></a>
+                
+                    <div className='google-map'>
+                        <PropertyMap property={property} type="show" zoom="false" />
+                    </div>
+                </div>
             </div>
+                    
             </>
         )
     }
