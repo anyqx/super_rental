@@ -21,17 +21,18 @@ class FavoriteIndex extends React.Component {
             <>
             <div className='favorite-index-container'>
                 <div id='title'>Favorites | Market</div>
-                <div className='favorite-item'>
+                <div className='favorite-column-name'>
                     <p>Address</p>
                     <p>Price</p>
                     <p>Bed</p>
                     <p>Bath</p>
                     <p>Sq Ft</p>
-                    <p>Current Rent</p>
-                    <p>Gross Yield</p>
-                    <p>Cap Rate</p>
-                    <p>Annualized Return</p>
-                    <p>10 Y Return</p>
+                    <p>Current <br /> Rent</p>
+                    <p>Gross <br />Yield</p>
+                    <p>Cap <br />Rate</p>
+                    <p>Annua. <br />Return</p>
+                    <p>10 Y <br />Total <br />Return</p>
+                    <p></p>
 
                 </div>
                 <div className='favorite-item-container'>

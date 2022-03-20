@@ -21,7 +21,8 @@
 //cart_item.jsx
 
 .items-container {
-    display: flex;
+    // display: grid;
+    // grid-template-columns: repeat(2 1fr);
     justify-content: center;
     padding: 20px;
     border: lightgrey solid 1px;

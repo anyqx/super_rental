@@ -26,15 +26,17 @@ class FavoriteItem extends React.Component {
             <div className="favorites-container">
             <ul key={favorite.id}>
                 <div className="favorite-item">
-                    <Link to={ `/properties/${favorite.property_id}`}>
-                        <img id='property-img' src={favorite.photoUrl} alt=""/>
-                    </Link>
-                    <p id='address'>{favorite.address} <br/>
-                        {favorite.city}, {favorite.state} &nbsp; {favorite.zipcode}
-                        <div className='heart-container'>
-                            <img id='heart-img' onClick={this.removeFavorite} src={window.heartURL}  />
+                    <div id='address-column'>
+                        <div><Link to={ `/properties/${favorite.property_id}`}>
+                                <img id='property-img' src={favorite.photoUrl} alt=""/>
+                            </Link>
                         </div>
-                    </p>
+                        <div><span id='address1'>{favorite.address} <br/></span>
+                            <span id='address2'>{favorite.city}, {favorite.state} <br/> {favorite.zipcode}</span>
+                        </div>
+                    
+                    </div>
+                    
                     <p>$ {this.addComma(favorite.price)}</p>
                     <p>{favorite.bedroom}</p>
                     <p>{favorite.bathroom}</p> 
@@ -44,7 +46,12 @@ class FavoriteItem extends React.Component {
                     <p>{favorite.cap_rate}%</p>
                     <p>{favorite.annualized_return} %</p>
                     <p>${this.addComma(favorite.total_return)} </p>
+                    
+                    <div className='heart-container'>
+                        <img id='heart-img' onClick={this.removeFavorite} src={window.heartURL}  />
+                    </div>
                 </div>
+
             
 
             </ul>
