@@ -31,10 +31,14 @@ class PropertyIndexItem extends React.Component {
                 <Link to={`/properties/${property.id}`} onClick={()=> this.handleClick}>
                 <FavoriteCreateContainer id='favorite' propertyId={property.id} key={property.id} />
                 <img src={property.photoUrl} alt=""/>
-                <div className='address-container'>
+                {/* <div className='address-container'>
                     <div id='address'>{property.address}, {property.city}, {property.state} &nbsp; {property.zipcode} </div>
-                </div>
+                </div> */}
+
                 <p id='price'>$ {this.addComma(property.price)}</p>
+
+                <p>{property.address}, {property.city}, {property.state} &nbsp; {property.zipcode} </p>
+                
                 <p><span id='row'>{property.bedroom} Beds, {property.bathroom} Baths</span> <span className='2ndRow'>SQFT: </span>{this.addComma(property.sqft)}
                     <span id='row'>  Rent: $</span>{this.addComma(property.rent)}</p>
                 
