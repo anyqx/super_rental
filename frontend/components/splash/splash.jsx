@@ -6,6 +6,21 @@ class Splash extends React.Component {
         super(props);
         this.state = {}
     }
+
+    
+    // randomViewAll() {
+    //     if (Math.random() < 0.5) {
+    //         return <Link to='/properties' className='link-button'>view all properties</Link>
+    //     } else {
+    //         return <Link to='/properties' className='link-button'>go to listings</Link>
+    //     };
+    // }
+
+    randomViewAll(){
+        return Math.random() < 0.5;
+    }
+
+
     render() {
         return (
             <>
@@ -15,7 +30,11 @@ class Splash extends React.Component {
                     <li id='line1'>for investors</li>
                     <li id='line2'>Build wealth through real estate</li>
                     <li id='line3'>SuperRental makes investing in single-family properties radically simple.</li>
-                    <Link to='/properties' className='link-button'>view all properties</Link>
+                    { this.randomViewAll() ? (<Link to='/properties' className='link-button'>View All</Link>)
+                    : (<Link to='/properties' className='link-button'>go to listings</Link>)} 
+            
+
+                        
                 </ul>
                 <img id='main-img' src={window.splash1URL}></img>
 
