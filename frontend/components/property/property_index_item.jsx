@@ -6,7 +6,18 @@ import FavoriteCreateContainer from '../favorite/favorite_create_container';
 class PropertyIndexItem extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            favorite: 0
+        }
         this.handleClick = this.handleClick.bind(this);
+        this.findFavorite();
+        this.favorite = 0;
+
+    }
+
+    componentDidMount() {
+        // if (!this.props.favorites) return;
+        this.findFavorite();
     }
 
     handleClick(e) {
@@ -14,8 +25,14 @@ class PropertyIndexItem extends React.Component {
         this.props.history.push(`/properties/${propertyId}`);
     }
 
-    componentDidUpdate(prevProps) {
-        
+    findFavorite(){
+        let favoriteObject = false;
+        if (!this.props.favorites) return 
+        this.props.favorites.forEach (favorite => favorite.property_id === this.props.property.id ? favoriteObject = favorite : null)
+        // this.setState({
+        //     favorite: favoriteObject
+        // })
+        this.favorite = favoriteObject;
     }
 
     addComma(num){
@@ -29,7 +46,7 @@ class PropertyIndexItem extends React.Component {
            <>
            <div className='property-index-display' key={property.id} >
                 <Link to={`/properties/${property.id}`} onClick={()=> this.handleClick}>
-                <FavoriteCreateContainer id='favorite' propertyId={property.id} key={property.id} />
+                <FavoriteCreateContainer id='favorite' propertyId={property.id} key={property.id} favorite={this.favorite} />
                 <img src={property.photoUrl} alt=""/>
                 {/* <div className='address-container'>
                     <div id='address'>{property.address}, {property.city}, {property.state} &nbsp; {property.zipcode} </div>

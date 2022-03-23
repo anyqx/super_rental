@@ -4,8 +4,14 @@ class FavoriteCreate extends React.Component {
 
     constructor(props) {
         super(props);
-
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.removeFavorite = this.removeFavorite.bind(this);
+    }
+
+    componentDidUpdate(prevProps, PrevState) {
+        if (prevProps.favorite !== this.props.favorite) {
+
+        }
     }
 
 
@@ -16,11 +22,22 @@ class FavoriteCreate extends React.Component {
         addFavorite(favorite);
     }
 
+    removeFavorite(){
+        this.props.deleteFavorite(this.props.favorite.id);
+    }
+
+
     render() {
-        const redHeart = <img id='heart-img'  onClick={this.handleSubmit} src={window.heartURL}  />
+        const redHeart = <img id='heart-img'  onClick={this.removeFavorite} src={window.heartURL}  />
         const whiteHeart = <img id='heart-img' onClick={this.handleSubmit} src={window.unHeartURL}  />
         let heart = whiteHeart;
-        if (this.props.isFavorited === true) {heart = redHeart}
+        // if (this.props.isFavorited === true) {
+        if (this.props.favorite) {
+
+            heart = redHeart;
+        } else {
+            heart = whiteHeart;
+        }
         return (
             <div className='heart-container'>
                 <div className="heart-container-2">

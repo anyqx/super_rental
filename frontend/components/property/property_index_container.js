@@ -7,7 +7,8 @@ import { fetchFavorites } from '../../actions/favorite_actions';
 const mapStateToProps = (state) => {
     return {
         properties: propertyArray(state.entities),
-        favorites: Object.values(state.entities.favorites)
+        favorites: Object.values(state.entities.favorites),
+        userId: state.session.id
     }
 }
 

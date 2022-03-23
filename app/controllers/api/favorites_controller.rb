@@ -9,6 +9,18 @@ class Api::FavoritesController < ApplicationController
 
     end
 
+    # def show
+    #     if logged_in?
+    #         @favorite = current_user.favorites.find_by(id: params[:id], )
+    #         @favorite.
+    #         @favorites = current_user.favorites
+    #         render :index
+    #     else
+    #         render json:["This Property is not one of your favorites!"], status:422
+    #         require_login
+    #     end
+    # end
+
     def create
         if !current_user 
             render json: ["User not logged in"]
