@@ -11,8 +11,10 @@ Gemfile.lock `bundle install`
 
 package-lock.json `npm install`
 
+run Postgres
 
 ## run the project
-rails s
-npm start
+`rails db:setup`
+`rails s`
+`npm start` (in development)
 localhost:3000
